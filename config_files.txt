@@ -1,0 +1,693 @@
+Fájl: /etc/authselect/user-nsswitch.conf
+passwd:     sss files systemd
+shadow:     files
+group:      sss files systemd
+hosts:      files dns myhostname
+services:   files sss
+netgroup:   sss
+automount:  files sss
+aliases:    files
+ethers:     files
+gshadow:    files
+networks:   files dns
+protocols:  files
+publickey:  files
+rpc:        files
+
+
+Fájl: /etc/sysctl.conf
+
+
+Fájl: /etc/sudo.conf
+Plugin sudoers_policy sudoers.so
+Plugin sudoers_io sudoers.so
+Plugin sudoers_audit sudoers.so
+Set disable_coredump false
+
+
+Fájl: /etc/host.conf
+multi on
+
+
+Fájl: /etc/rsyncd.conf
+
+
+Fájl: /etc/rsyslog.conf
+global(workDirectory="/var/lib/rsyslog")
+module(load="builtin:omfile" Template="RSYSLOG_TraditionalFileFormat")
+module(load="imuxsock" 	  # provides support for local system logging (e.g. via logger command)
+       SysSock.Use="off") # Turn off message reception via local log socket; 
+module(load="imjournal" 	    # provides access to the systemd journal
+       UsePid="system" # PID nummber is retrieved as the ID of the process the journal entry originates from
+       FileCreateMode="0644" # Set the access permissions for the state file
+       StateFile="imjournal.state") # File to store the position in the journal
+include(file="/etc/rsyslog.d/*.conf" mode="optional")
+*.info;mail.none;authpriv.none;cron.none                /var/log/messages
+authpriv.*                                              /var/log/secure
+mail.*                                                  -/var/log/maillog
+cron.*                                                  /var/log/cron
+*.emerg                                                 :omusrmsg:*
+uucp,news.crit                                          /var/log/spooler
+local7.*                                                /var/log/boot.log
+
+
+Fájl: /etc/systemd/sleep.conf
+[Sleep]
+
+
+Fájl: /etc/systemd/coredump.conf
+[Coredump]
+
+
+Fájl: /etc/systemd/pstore.conf
+[PStore]
+
+
+Fájl: /etc/systemd/user.conf
+[Manager]
+
+
+Fájl: /etc/systemd/journald.conf
+[Journal]
+Audit=
+
+
+Fájl: /etc/systemd/system/sshd-keygen@.service.d/disable-sshd-keygen-if-cloud-init-active.conf
+[Unit]
+ConditionPathExists=!/run/systemd/generator.early/multi-user.target.wants/cloud-init.target
+
+
+Fájl: /etc/systemd/system.conf
+[Manager]
+DefaultLimitCORE=0:infinity
+
+
+Fájl: /etc/systemd/logind.conf
+[Login]
+
+
+Fájl: /etc/libreport/events.d/mdadm_event.conf
+EVENT=post-create component=mdadm
+	cat /proc/mdstat >> mdstat_data
+	echo "Saved output of /proc/mdstat"
+
+
+Fájl: /etc/libreport/events.d/collect_dnf.conf
+EVENT=notify component=dnf
+        function fetch()
+        {
+            for log in $*; do
+            new_name=${log//\//_}
+            cp $log $new_name
+            done
+        }
+        logs=`find /var/cache/dnf -iname '*.log'`
+        fetch $logs
+        fetch /var/log/dnf.log
+        journalctl _SYSTEMD_UNIT=dnf-makecache.service &>dnf-makecache.log
+        fetch /var/log/dnf.transaction.log
+        if [[ -r username ]]; then
+            username=`cat username`
+            if [[ $username != "root" ]]; then
+            logs=`find /var/tmp -path "/var/tmp/dnf-${username}-*" -iname '*.log'`
+            fetch $logs
+            fi
+        fi
+
+
+Fájl: /etc/chrony.conf
+server ntp.hetzner.com iburst
+sourcedir /run/chrony-dhcp
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+keyfile /etc/chrony.keys
+ntsdumpdir /var/lib/chrony
+leapsectz right/UTC
+logdir /var/log/chrony
+
+
+Fájl: /etc/rsyslog.d/21-cloudinit.conf
+:syslogtag, isequal, "[CLOUDINIT]" /var/log/cloud-init.log
+& stop
+
+
+Fájl: /etc/ssh/ssh_config.d/50-redhat.conf
+Match final all
+	Include /etc/crypto-policies/back-ends/openssh.config
+	GSSAPIAuthentication yes
+	ForwardX11Trusted yes
+
+
+Fájl: /etc/ssh/sshd_config.d/50-cloud-init.conf
+PasswordAuthentication yes
+
+
+Fájl: /etc/ssh/sshd_config.d/50-redhat.conf
+Include /etc/crypto-policies/back-ends/opensshserver.config
+SyslogFacility AUTHPRIV
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+
+
+Fájl: /etc/lvm/lvm.conf
+config {
+}
+devices {
+}
+allocation {
+}
+log {
+}
+backup {
+}
+shell {
+}
+global {
+}
+activation {
+}
+dmeventd {
+}
+
+
+Fájl: /etc/lvm/lvmlocal.conf
+local {
+}
+
+
+Fájl: /etc/NetworkManager/NetworkManager.conf
+[main]
+[logging]
+
+
+Fájl: /etc/sysconfig/nftables.conf
+
+
+Fájl: /etc/krb5.conf
+includedir /etc/krb5.conf.d/
+[logging]
+    default = FILE:/var/log/krb5libs.log
+    kdc = FILE:/var/log/krb5kdc.log
+    admin_server = FILE:/var/log/kadmind.log
+[libdefaults]
+    dns_lookup_realm = false
+    ticket_lifetime = 24h
+    renew_lifetime = 7d
+    forwardable = true
+    rdns = false
+    pkinit_anchors = FILE:/etc/pki/tls/certs/ca-bundle.crt
+    spake_preauth_groups = edwards25519
+    dns_canonicalize_hostname = fallback
+    qualify_shortname = ""
+    default_ccache_name = KEYRING:persistent:%{uid}
+[realms]
+[domain_realm]
+
+
+Fájl: /etc/ld.so.conf
+include ld.so.conf.d/*.conf
+
+
+Fájl: /etc/dbus-1/session.conf
+<!--
+This configuration file is no longer required and may be removed.
+In older versions of dbus, this file defined the behaviour of the well-known
+session bus. That behaviour is now determined by
+/usr/share/dbus-1/session.conf, which should not be edited.
+For local configuration changes, create a file
+session-local.conf or files matching session.d/*.conf in the same directory
+as this one, with a <busconfig> element containing configuration directives.
+These directives can override D-Bus or OS defaults.
+For upstream or distribution-wide defaults that can be overridden
+by a local sysadmin, create files matching
+/usr/share/dbus-1/session.d/*.conf instead.
+-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig></busconfig>
+
+
+Fájl: /etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+  <policy user="polkitd">
+    <allow own="org.freedesktop.PolicyKit1"/>
+  </policy>
+  <policy context="default">
+    <allow send_destination="org.freedesktop.PolicyKit1"/>
+  </policy>
+  <!-- Allow uid 0 to send messages on the org.freedesktop.PolicyKit1.AuthenticationAgent interface -->
+  <policy user="polkitd">
+    <allow send_interface="org.freedesktop.PolicyKit1.AuthenticationAgent"/>
+  </policy>
+</busconfig>
+
+
+Fájl: /etc/dbus-1/system.d/teamd.conf
+<?xml version="1.0"?> <!--*-nxml-*-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+	"http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+	<policy user="root">
+		<allow own_prefix="org.libteam.teamd"/>
+		<allow send_interface="org.libteam.teamd"/>
+	</policy>
+	<policy context="default">
+		<deny own_prefix="org.libteam.teamd"/>
+	</policy>
+</busconfig>
+
+
+Fájl: /etc/dbus-1/system.conf
+<!--
+This configuration file is no longer required and may be removed.
+In older versions of dbus, this file defined the behaviour of the well-known
+system bus. That behaviour is now determined by
+/usr/share/dbus-1/system.conf, which should not be edited.
+For local configuration changes, create a file
+system-local.conf or files matching system.d/*.conf in the same directory
+as this one, with a <busconfig> element containing configuration directives.
+These directives can override D-Bus or OS defaults.
+For upstream or distribution-wide defaults that can be overridden
+by a local sysadmin, create files matching
+/usr/share/dbus-1/system.d/*.conf instead.
+-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig></busconfig>
+
+
+Fájl: /etc/X11/xorg.conf.d/00-keyboard.conf
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "de,us"
+        Option "XkbVariant" ","
+EndSection
+
+
+Fájl: /etc/audit/auditd.conf
+local_events = yes
+write_logs = yes
+log_file = /var/log/audit/audit.log
+log_group = root
+log_format = ENRICHED
+flush = INCREMENTAL_ASYNC
+freq = 50
+max_log_file = 8
+num_logs = 5
+priority_boost = 4
+name_format = NONE
+max_log_file_action = ROTATE
+space_left = 75
+space_left_action = SYSLOG
+verify_email = yes
+action_mail_acct = root
+admin_space_left = 50
+admin_space_left_action = SUSPEND
+disk_full_action = SUSPEND
+disk_error_action = SUSPEND
+use_libwrap = yes
+tcp_listen_queue = 5
+tcp_max_per_addr = 1
+tcp_client_max_idle = 0
+transport = TCP
+krb5_principal = auditd
+distribute_network = no
+q_depth = 2000
+overflow_action = SYSLOG
+max_restarts = 10
+plugin_dir = /etc/audit/plugins.d
+end_of_event_timeout = 2
+
+
+Fájl: /etc/fwupd/remotes.d/vendor-directory.conf
+[fwupd Remote]
+Enabled=true
+Title=Vendor (Automatic)
+Keyring=none
+MetadataURI=file:///usr/share/fwupd/remotes.d/vendor/firmware
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/remotes.d/lvfs.conf
+[fwupd Remote]
+Enabled=false
+Title=Linux Vendor Firmware Service
+MetadataURI=https://cdn.fwupd.org/downloads/firmware.xml.xz
+ReportURI=https://fwupd.org/lvfs/firmware/report
+SecurityReportURI=https://fwupd.org/lvfs/hsireports/upload
+AutomaticReports=false
+AutomaticSecurityReports=false
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/remotes.d/lvfs-testing.conf
+[fwupd Remote]
+Enabled=false
+Title=Linux Vendor Firmware Service (testing)
+MetadataURI=https://cdn.fwupd.org/downloads/firmware-testing.xml.xz
+ReportURI=https://fwupd.org/lvfs/firmware/report
+OrderBefore=lvfs
+AutomaticReports=false
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/fwupd.conf
+[fwupd]
+
+
+Fájl: /etc/libuser.conf
+[import]
+login_defs = /etc/login.defs
+default_useradd = /etc/default/useradd
+[defaults]
+crypt_style = sha512
+modules = files shadow
+create_modules = files shadow
+[userdefaults]
+LU_USERNAME = %n
+LU_GIDNUMBER = %u
+[groupdefaults]
+LU_GROUPNAME = %n
+[files]
+[shadow]
+[ldap]
+[sasl]
+
+
+Fájl: /etc/depmod.d/dist.conf
+search updates extra built-in weak-updates
+
+
+Fájl: /etc/logrotate.conf
+weekly
+rotate 4
+create
+dateext
+include /etc/logrotate.d
+
+
+Fájl: /etc/dnf/protected.d/sudo.conf
+sudo
+
+
+Fájl: /etc/dnf/protected.d/dnf.conf
+dnf
+
+
+Fájl: /etc/dnf/protected.d/setup.conf
+setup
+
+
+Fájl: /etc/dnf/protected.d/grub2-tools-minimal.conf
+grub2-tools-minimal
+
+
+Fájl: /etc/dnf/protected.d/systemd.conf
+systemd
+systemd-udev
+
+
+Fájl: /etc/dnf/protected.d/yum.conf
+yum
+
+
+Fájl: /etc/dnf/protected.d/grub2-efi-aa64.conf
+grub2-efi-aa64
+
+
+Fájl: /etc/dnf/dnf.conf
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=True
+skip_if_unavailable=False
+
+
+Fájl: /etc/dnf/plugins/copr.conf
+[fedora]
+hostname = copr.fedorainfracloud.org
+protocol = https
+port = 443
+
+
+Fájl: /etc/dnf/plugins/debuginfo-install.conf
+[main]
+enabled=1
+autoupdate=0
+
+
+Fájl: /etc/xattr.conf
+system.posix_acl_access		permissions
+system.posix_acl_default	permissions
+trusted.SGI_ACL_DEFAULT		skip		# xfs specific
+trusted.SGI_ACL_FILE		skip		# xfs specific
+trusted.SGI_CAP_FILE		skip		# xfs specific
+trusted.SGI_DMI_*		skip		# xfs specific
+trusted.SGI_MAC_FILE		skip		# xfs specific
+xfsroot.*			skip		# xfs specific; obsolete
+user.Beagle.*			skip		# ignore Beagle index data
+security.evm			skip		# may only be written by kernel
+afs.*				skip		# AFS metadata and ACLs
+
+
+Fájl: /etc/openldap/ldap.conf
+SASL_NOCANON	on
+
+
+Fájl: /etc/udisks2/udisks2.conf
+[udisks2]
+modules=*
+modules_load_preference=ondemand
+[defaults]
+encryption=luks2
+
+
+Fájl: /etc/security/namespace.conf
+
+
+Fájl: /etc/security/pam_env.conf
+
+
+Fájl: /etc/security/faillock.conf
+
+
+Fájl: /etc/security/time.conf
+
+
+Fájl: /etc/security/chroot.conf
+
+
+Fájl: /etc/security/sepermit.conf
+
+
+Fájl: /etc/security/access.conf
+
+
+Fájl: /etc/security/limits.conf
+
+
+Fájl: /etc/security/pwquality.conf
+
+
+Fájl: /etc/security/pwhistory.conf
+
+
+Fájl: /etc/security/group.conf
+
+
+Fájl: /etc/libaudit.conf
+failure_action = ignore
+
+
+Fájl: /etc/locale.conf
+LANG=en_US.UTF-8
+
+
+Fájl: /etc/vconsole.conf
+KEYMAP="us"
+FONT="latarcyrheb-sun16"
+
+
+Fájl: /etc/sudo-ldap.conf
+
+
+Fájl: /etc/udev/udev.conf
+
+
+Fájl: /etc/selinux/targeted/setrans.conf
+s0=SystemLow
+s0-s0:c0.c1023=SystemLow-SystemHigh
+s0:c0.c1023=SystemHigh
+
+
+Fájl: /etc/selinux/semanage.conf
+module-store = direct
+expand-check=0
+usepasswd=False
+bzip-small=true
+bzip-blocksize=5
+ignoredirs=/root;/bin;/boot;/dev;/etc;/lib;/lib64;/proc;/run;/sbin;/sys;/tmp;/usr;/var
+optimize-policy=true
+[sefcontext_compile]
+path = /usr/sbin/sefcontext_compile
+args = -r $@
+[end]
+
+
+Fájl: /etc/resolv.conf
+search hostfix.hu
+nameserver 185.12.64.1
+nameserver 185.12.64.2
+nameserver 2a01:4ff:ff00::add:1
+nameserver 2a01:4ff:ff00::add:2
+
+
+Fájl: /etc/nsswitch.conf
+passwd:     sss files systemd
+shadow:     files
+group:      sss files systemd
+hosts:      files dns myhostname
+services:   files sss
+netgroup:   sss
+automount:  files sss
+aliases:    files
+ethers:     files
+gshadow:    files
+networks:   files dns
+protocols:  files
+publickey:  files
+rpc:        files
+
+
+Fájl: /etc/kdump.conf
+auto_reset_crashkernel yes
+path /var/crash
+core_collector makedumpfile -l --message-level 7 -d 31
+
+
+Fájl: /etc/dracut.conf
+
+
+Fájl: /etc/mke2fs.conf
+[defaults]
+	base_features = sparse_super,large_file,filetype,resize_inode,dir_index,ext_attr
+	default_mntopts = acl,user_xattr
+	enable_periodic_fsck = 0
+	blocksize = 4096
+	inode_size = 256
+	inode_ratio = 16384
+[fs_types]
+	ext3 = {
+		features = has_journal
+	}
+	ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,metadata_csum,64bit,dir_nlink,extra_isize
+	}
+	rhel6_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,uninit_bg,dir_nlink,extra_isize
+		inode_size = 256
+		enable_periodic_fsck = 1
+		default_mntopts = ""
+	}
+	rhel7_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,uninit_bg,dir_nlink,extra_isize,64bit
+		inode_size = 256
+	}
+	rhel8_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,metadata_csum,64bit,dir_nlink,extra_isize
+		inode_size = 256
+	}
+	small = {
+		blocksize = 1024
+		inode_ratio = 4096
+	}
+	floppy = {
+		blocksize = 1024
+		inode_ratio = 8192
+	}
+	big = {
+		inode_ratio = 32768
+	}
+	huge = {
+		inode_ratio = 65536
+	}
+	news = {
+		inode_ratio = 4096
+	}
+	largefile = {
+		inode_ratio = 1048576
+		blocksize = -1
+	}
+	largefile4 = {
+		inode_ratio = 4194304
+		blocksize = -1
+	}
+	hurd = {
+	     blocksize = 4096
+	     inode_size = 128
+	     warn_y2038_dates = 0
+	}
+
+
+Fájl: /etc/pki/ca-trust/ca-legacy.conf
+legacy=default
+
+
+Fájl: /etc/sestatus.conf
+[files]
+/etc/passwd
+/etc/shadow
+/bin/bash
+/bin/login
+/bin/sh
+/sbin/agetty
+/sbin/init
+/sbin/mingetty
+/usr/sbin/sshd
+/lib/libc.so.6
+/lib/ld-linux.so.2
+/lib/ld.so.1
+[process]
+/sbin/mingetty
+/sbin/agetty
+/usr/sbin/sshd
+
+
+Fájl: /etc/man_db.conf
+MANDATORY_MANPATH			/usr/man
+MANDATORY_MANPATH			/usr/share/man
+MANDATORY_MANPATH			/usr/local/share/man
+MANPATH_MAP	/bin			/usr/share/man
+MANPATH_MAP	/usr/bin		/usr/share/man
+MANPATH_MAP	/sbin			/usr/share/man
+MANPATH_MAP	/usr/sbin		/usr/share/man
+MANPATH_MAP	/usr/local/bin		/usr/local/man
+MANPATH_MAP	/usr/local/bin		/usr/local/share/man
+MANPATH_MAP	/usr/local/sbin		/usr/local/man
+MANPATH_MAP	/usr/local/sbin		/usr/local/share/man
+MANPATH_MAP	/usr/X11R6/bin		/usr/X11R6/man
+MANPATH_MAP	/usr/bin/X11		/usr/X11R6/man
+MANPATH_MAP	/usr/games		/usr/share/man
+MANPATH_MAP	/opt/bin		/opt/man
+MANPATH_MAP	/opt/sbin		/opt/man
+MANDB_MAP	/usr/man		/var/cache/man/fsstnd
+MANDB_MAP	/usr/share/man		/var/cache/man
+MANDB_MAP	/usr/local/man		/var/cache/man/oldlocal
+MANDB_MAP	/usr/local/share/man	/var/cache/man/local
+MANDB_MAP	/usr/X11R6/man		/var/cache/man/X11R6
+MANDB_MAP	/opt/man		/var/cache/man/opt
+MANDB_MAP	/var/lib/snapd/snap/man		/var/cache/man/snap
+SECTION		1 1p 8 2 3 3p 3pm 4 5 6 7 9 0p n l p o 1x 2x 3x 4x 5x 6x 7x 8x
+
+

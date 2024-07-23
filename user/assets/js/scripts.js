@@ -1,6 +1,3 @@
-/* scripts.js */
-
-// Oldalsáv megjelenítése/elrejtése
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const sidebar = document.querySelector('.sidebar');

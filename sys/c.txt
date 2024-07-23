@@ -1,0 +1,2631 @@
+File: /var/www/HostMaster/usergen.py
+
+import mysql.connector
+from mysql.connector import errorcode
+import bcrypt
+
+# Adatbázis kapcsolat beállításai
+db_config = {
+    'user': 'hostmaster_panel',
+    'password': 'erős_jelszó',
+    'host': 'localhost',
+    'database': 'hostmaster'
+}
+
+# Jelszavak
+admin_password = 'Panel_Pass'
+user_password = 'Panel_Code1123'
+
+# Jelszavak hashelése
+hashed_admin_password = bcrypt.hashpw(admin_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+hashed_user_password = bcrypt.hashpw(user_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+# Csatlakozás az adatbázishoz
+try:
+    cnx = mysql.connector.connect(**db_config)
+    cursor = cnx.cursor()
+    print("Sikeresen csatlakoztál az adatbázishoz.")
+
+    # Admin felhasználó hozzáadása
+    add_admin = (
+        "INSERT INTO users (username, password, email, role) "
+        "VALUES (%s, %s, %s, 'admin')"
+    )
+    admin_data = ('panel_admin', hashed_admin_password, 'admin@hostfix.hu')
+    cursor.execute(add_admin, admin_data)
+
+    # Felhasználó hozzáadása
+    add_user = (
+        "INSERT INTO users (username, password, email, role) "
+        "VALUES (%s, %s, %s, 'user')"
+    )
+    user_data = ('panel_user', hashed_user_password, 'user@hostfix.hu')
+    cursor.execute(add_user, user_data)
+
+    # Módosítások mentése
+    cnx.commit()
+
+except mysql.connector.Error as err:
+    if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+        print("Hibás felhasználónév vagy jelszó.")
+    elif err.errno == errorcode.ER_BAD_DB_ERROR:
+        print("Az adatbázis nem létezik.")
+    else:
+        print(err)
+else:
+    cursor.close()
+    cnx.close()
+    print("Adatbázis kapcsolat bezárva.")
+
+
+================================================================================
+
+File: /var/www/HostMaster/installed_packages_rpm.txt
+
+libgcc-11.4.1-3.el9.alma.1.aarch64
+crypto-policies-20240202-1.git283706d.el9.noarch
+tzdata-2024a-1.el9.noarch
+libreport-filesystem-2.15.2-6.el9.alma.noarch
+dnf-data-4.14.0-9.el9.alma.1.noarch
+gawk-all-langpacks-5.1.0-6.el9.aarch64
+python3-setuptools-wheel-53.0.0-12.el9.noarch
+publicsuffix-list-dafsa-20210518-3.el9.noarch
+pcre2-syntax-10.40-5.el9.noarch
+ncurses-base-6.2-10.20210508.el9.noarch
+libssh-config-0.10.4-13.el9.noarch
+kbd-misc-2.4.0-9.el9.noarch
+kbd-legacy-2.4.0-9.el9.noarch
+hwdata-0.348-9.13.el9.noarch
+fonts-filesystem-2.0.5-7.el9.1.noarch
+dejavu-sans-fonts-2.37-18.el9.noarch
+langpacks-core-font-en-3.0-16.el9.noarch
+coreutils-common-8.32-35.el9.aarch64
+almalinux-gpg-keys-9.4-1.el9.aarch64
+almalinux-release-9.4-1.el9.aarch64
+almalinux-repos-9.4-1.el9.aarch64
+setup-2.13.7-10.el9.noarch
+filesystem-3.16-2.el9.aarch64
+efi-filesystem-6-2.el9_0.0.1.noarch
+basesystem-11-13.el9.noarch
+glibc-gconv-extra-2.34-100.el9_4.2.aarch64
+ncurses-libs-6.2-10.20210508.el9.aarch64
+glibc-2.34-100.el9_4.2.aarch64
+bash-5.1.8-9.el9.aarch64
+glibc-common-2.34-100.el9_4.2.aarch64
+glibc-langpack-en-2.34-100.el9_4.2.aarch64
+zlib-1.2.11-40.el9.aarch64
+xz-libs-5.2.5-8.el9_0.aarch64
+libzstd-1.5.1-2.el9.aarch64
+popt-1.18-8.el9.aarch64
+libcap-2.48-9.el9_2.aarch64
+libuuid-2.37.4-18.el9.aarch64
+bzip2-libs-1.0.8-8.el9.aarch64
+libxcrypt-4.4.18-3.el9.aarch64
+sqlite-libs-3.34.1-7.el9_3.aarch64
+libstdc++-11.4.1-3.el9.alma.1.aarch64
+libcom_err-1.46.5-5.el9.aarch64
+libmnl-1.0.4-15.el9.aarch64
+elfutils-libelf-0.190-2.el9.aarch64
+libxml2-2.9.13-6.el9_4.aarch64
+readline-8.1-4.el9.aarch64
+nspr-4.35.0-7.el9_4.aarch64
+nss-util-3.90.0-7.el9_4.aarch64
+alternatives-1.24-1.el9.aarch64
+libcap-ng-0.8.2-7.el9.aarch64
+audit-libs-3.1.2-2.el9.aarch64
+libgpg-error-1.42-5.el9.aarch64
+libunistring-0.9.10-15.el9.aarch64
+lua-libs-5.4.4-4.el9.aarch64
+expat-2.5.0-2.el9_4.aarch64
+gmp-6.2.0-13.el9.aarch64
+libffi-3.4.2-8.el9.aarch64
+libtalloc-2.4.1-1.el9.aarch64
+lz4-libs-1.9.3-5.el9.aarch64
+pcre2-10.40-5.el9.aarch64
+libidn2-2.3.0-7.el9.aarch64
+keyutils-libs-1.6.3-1.el9.aarch64
+libsepol-3.6-1.el9.aarch64
+libselinux-3.6-1.el9.aarch64
+libsmartcols-2.37.4-18.el9.aarch64
+findutils-4.8.0-6.el9.aarch64
+libsemanage-3.6-1.el9.aarch64
+libtevent-0.16.0-1.el9.aarch64
+libgcrypt-1.10.0-10.el9_2.aarch64
+file-libs-5.39-16.el9.aarch64
+gdbm-libs-1.19-4.el9.aarch64
+jansson-2.14-1.el9.aarch64
+json-c-0.14-11.el9.aarch64
+libattr-2.5.1-3.el9.aarch64
+libacl-2.3.1-4.el9.aarch64
+sed-4.8-9.el9.aarch64
+shadow-utils-4.9-8.el9.aarch64
+libedit-3.1-38.20210216cvs.el9.aarch64
+libnl3-3.9.0-1.el9.aarch64
+libtasn1-4.16.0-8.el9_1.aarch64
+p11-kit-0.25.3-2.el9.aarch64
+p11-kit-trust-0.25.3-2.el9.aarch64
+libtdb-1.4.9-1.el9.aarch64
+mpfr-4.1.0-7.el9.aarch64
+libassuan-2.5.5-3.el9.aarch64
+libbpf-1.3.0-2.el9.aarch64
+gdisk-1.0.7-5.el9.aarch64
+efivar-libs-38-3.el9.aarch64
+fuse-libs-2.9.9-15.el9.aarch64
+libbasicobjects-0.1.1-53.el9.aarch64
+libcollection-0.7.0-53.el9.aarch64
+libdb-5.3.28-53.el9.aarch64
+libdhash-0.5.0-53.el9.aarch64
+libgomp-11.4.1-3.el9.alma.1.aarch64
+libref_array-0.1.5-53.el9.aarch64
+libseccomp-2.5.2-2.el9.aarch64
+libsigsegv-2.13-4.el9.aarch64
+gawk-5.1.0-6.el9.aarch64
+libsss_idmap-2.9.4-6.el9_4.aarch64
+lzo-2.10-7.el9.aarch64
+numactl-libs-2.0.16-3.el9.aarch64
+pcre-8.44-3.el9.3.aarch64
+grep-3.6-5.el9.aarch64
+openssl-libs-3.0.7-27.el9.aarch64
+coreutils-8.32-35.el9.aarch64
+ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noarch
+systemd-libs-252-32.el9_4.alma.1.aarch64
+libblkid-2.37.4-18.el9.aarch64
+kmod-libs-28-9.el9.aarch64
+libmount-2.37.4-18.el9.aarch64
+dbus-libs-1.12.20-8.el9.aarch64
+util-linux-core-2.37.4-18.el9.aarch64
+libfdisk-2.37.4-18.el9.aarch64
+gzip-1.12-1.el9.aarch64
+kmod-28-9.el9.aarch64
+cracklib-2.9.6-27.el9.aarch64
+libarchive-3.5.3-4.el9.aarch64
+cracklib-dicts-2.9.6-27.el9.aarch64
+procps-ng-3.3.17-14.el9.aarch64
+libatasmart-0.19-22.el9.aarch64
+python3-pip-wheel-21.2.3-8.el9.noarch
+python-unversioned-command-3.9.18-3.el9_4.1.noarch
+python3-3.9.18-3.el9_4.1.aarch64
+python3-libs-3.9.18-3.el9_4.1.aarch64
+python3-six-1.15.0-9.el9.noarch
+python3-dateutil-2.8.1-7.el9.noarch
+python3-systemd-234-18.el9.aarch64
+openssl-3.0.7-27.el9.aarch64
+libevent-2.1.12-6.el9.aarch64
+libsss_certmap-2.9.4-6.el9_4.aarch64
+mokutil-0.6.0-4.el9.aarch64
+xz-5.2.5-8.el9_0.aarch64
+squashfs-tools-4.4-10.git1.el9.aarch64
+libbytesize-2.5-3.el9.aarch64
+libnl3-cli-3.9.0-1.el9.aarch64
+libteam-1.31-16.el9_1.aarch64
+libutempter-1.2.1-6.el9.aarch64
+acl-2.3.1-4.el9.aarch64
+gettext-libs-0.21-8.el9.aarch64
+gettext-0.21-8.el9.aarch64
+file-5.39-16.el9.aarch64
+libselinux-utils-3.6-1.el9.aarch64
+libpsl-0.21.1-5.el9.aarch64
+libcomps-0.1.18-1.el9.aarch64
+python3-libcomps-0.1.18-1.el9.aarch64
+libksba-1.5.1-6.el9_1.aarch64
+nss-softokn-freebl-3.90.0-7.el9_4.aarch64
+nss-softokn-3.90.0-7.el9_4.aarch64
+ethtool-6.2-1.el9.aarch64
+e2fsprogs-libs-1.46.5-5.el9.aarch64
+libss-1.46.5-5.el9.aarch64
+e2fsprogs-1.46.5-5.el9.aarch64
+groff-base-1.22.4-10.el9.aarch64
+snappy-1.1.8-8.el9.aarch64
+pigz-2.5-4.el9.aarch64
+langpacks-core-en-3.0-16.el9.noarch
+hostname-3.23-6.el9.aarch64
+less-590-4.el9_4.aarch64
+systemd-rpm-macros-252-32.el9_4.alma.1.noarch
+c-ares-1.19.1-2.el9_4.aarch64
+cpio-2.13-16.el9.aarch64
+diffutils-3.7-12.el9.aarch64
+dmidecode-3.5-3.el9.aarch64
+dosfstools-4.2-3.el9.aarch64
+inih-49-6.el9.aarch64
+libatomic-11.4.1-3.el9.alma.1.aarch64
+libusbx-1.0.26-1.el9.aarch64
+libbrotli-1.0.9-6.el9.aarch64
+libcbor-0.7.0-5.el9.aarch64
+libdaemon-0.14-23.el9.aarch64
+teamd-1.31-16.el9_1.aarch64
+libeconf-0.4.1-3.el9_2.aarch64
+libpwquality-1.4.4-8.el9.aarch64
+pam-1.5.1-19.el9.aarch64
+util-linux-2.37.4-18.el9.aarch64
+dbus-1.12.20-8.el9.aarch64
+systemd-pam-252-32.el9_4.alma.1.aarch64
+systemd-252-32.el9_4.alma.1.aarch64
+dbus-common-1.12.20-8.el9.noarch
+dbus-broker-28-7.el9.aarch64
+grub2-common-2.06-80.el9_4.alma.1.noarch
+cronie-anacron-1.5.7-11.el9.aarch64
+cronie-1.5.7-11.el9.aarch64
+crontabs-1.11-27.20190603git.el9_0.noarch
+openssh-8.7p1-38.el9_4.4.aarch64
+authselect-libs-1.2.6-2.el9.aarch64
+device-mapper-libs-1.02.197-2.el9.aarch64
+device-mapper-1.02.197-2.el9.aarch64
+cryptsetup-libs-2.6.0-3.el9.aarch64
+grub2-tools-minimal-2.06-80.el9_4.alma.1.aarch64
+parted-3.5-2.el9.aarch64
+kpartx-0.8.7-27.el9.aarch64
+elfutils-default-yama-scope-0.190-2.el9.noarch
+elfutils-libs-0.190-2.el9.aarch64
+initscripts-service-10.11.6-1.el9.noarch
+iputils-20210202-9.el9.aarch64
+libkcapi-1.4.0-2.el9.aarch64
+libkcapi-hmaccalc-1.4.0-2.el9.aarch64
+logrotate-3.18.0-8.el9.aarch64
+mdadm-4.2-12.el9_4.aarch64
+kbd-2.4.0-9.el9.aarch64
+libndp-1.8-4.el9.aarch64
+libnfnetlink-1.0.1-21.el9.aarch64
+libnetfilter_conntrack-1.0.9-1.el9.aarch64
+iptables-libs-1.8.10-2.el9.aarch64
+libnghttp2-1.43.0-5.el9_4.3.aarch64
+libpath_utils-0.2.1-53.el9.aarch64
+libini_config-1.3.1-53.el9.aarch64
+libpipeline-1.5.3-4.el9.aarch64
+libsss_nss_idmap-2.9.4-6.el9_4.aarch64
+libsss_sudo-2.9.4-6.el9_4.aarch64
+libverto-0.3.2-3.el9.aarch64
+krb5-libs-1.21.1-1.el9.aarch64
+cyrus-sasl-lib-2.1.27-21.el9.aarch64
+openldap-2.6.6-3.el9.aarch64
+libssh-0.10.4-13.el9.aarch64
+libcurl-7.76.1-29.el9_4.aarch64
+tpm2-tss-3.2.2-2.el9.aarch64
+systemd-udev-252-32.el9_4.alma.1.aarch64
+dracut-057-53.git20240104.el9.aarch64
+kernel-modules-core-5.14.0-427.24.1.el9_4.aarch64
+kernel-core-5.14.0-427.24.1.el9_4.aarch64
+elfutils-debuginfod-client-0.190-2.el9.aarch64
+binutils-gold-2.35.2-43.el9.aarch64
+binutils-2.35.2-43.el9.aarch64
+kernel-modules-5.14.0-427.24.1.el9_4.aarch64
+dracut-squash-057-53.git20240104.el9.aarch64
+libfido2-1.13.0-2.el9.aarch64
+os-prober-1.77-10.el9.aarch64
+ima-evm-utils-1.4-4.el9.aarch64
+curl-7.76.1-29.el9_4.aarch64
+rpm-libs-4.16.1.3-29.el9.aarch64
+rpm-4.16.1.3-29.el9.aarch64
+policycoreutils-3.6-2.1.el9.aarch64
+selinux-policy-38.1.35-2.el9_4.2.noarch
+selinux-policy-targeted-38.1.35-2.el9_4.2.noarch
+libsolv-0.7.24-2.el9.aarch64
+rpm-build-libs-4.16.1.3-29.el9.aarch64
+rpm-plugin-systemd-inhibit-4.16.1.3-29.el9.aarch64
+sssd-client-2.9.4-6.el9_4.aarch64
+libyaml-0.2.5-7.el9.aarch64
+lmdb-libs-0.9.29-3.el9.aarch64
+libldb-2.8.0-1.el9.aarch64
+sssd-common-2.9.4-6.el9_4.aarch64
+nettle-3.9.1-1.el9.aarch64
+gnutls-3.8.3-4.el9_4.aarch64
+glib2-2.68.4-14.el9.aarch64
+libblockdev-utils-2.28-10.el9.aarch64
+polkit-libs-0.117-11.el9.aarch64
+python3-dbus-1.2.18-2.el9.aarch64
+polkit-0.117-11.el9.aarch64
+polkit-pkla-compat-0.1-21.el9.aarch64
+NetworkManager-libnm-1.46.0-8.el9_4.aarch64
+NetworkManager-1.46.0-8.el9_4.aarch64
+json-glib-1.6.6-1.el9.aarch64
+libgudev-237-1.el9.aarch64
+libmodulemd-2.13.0-2.el9.aarch64
+shared-mime-info-2.1-5.el9.aarch64
+libxmlb-0.3.10-1.el9.aarch64
+libblockdev-2.28-10.el9.aarch64
+libblockdev-fs-2.28-10.el9.aarch64
+libblockdev-loop-2.28-10.el9.aarch64
+libblockdev-mdraid-2.28-10.el9.aarch64
+libblockdev-part-2.28-10.el9.aarch64
+libblockdev-swap-2.28-10.el9.aarch64
+libgusb-0.3.8-2.el9.aarch64
+libuser-0.63-13.el9.aarch64
+libudisks2-2.9.4-9.el9.aarch64
+npth-1.6-8.el9.aarch64
+gnupg2-2.3.3-4.el9.aarch64
+gpgme-1.15.1-6.el9.aarch64
+libjcat-0.1.6-3.el9.aarch64
+librepo-1.14.5-2.el9.aarch64
+libdnf-0.69.0-8.el9.alma.1.aarch64
+python3-libdnf-0.69.0-8.el9.alma.1.aarch64
+python3-hawkey-0.69.0-8.el9.alma.1.aarch64
+python3-gpg-1.15.1-6.el9.aarch64
+rpm-sign-libs-4.16.1.3-29.el9.aarch64
+python3-rpm-4.16.1.3-29.el9.aarch64
+python3-dnf-4.14.0-9.el9.alma.1.noarch
+dnf-4.14.0-9.el9.alma.1.noarch
+python3-dnf-plugins-core-4.3.0-13.el9.noarch
+oniguruma-6.9.6-1.el9.5.aarch64
+jq-1.6-16.el9.aarch64
+pciutils-libs-3.7.0-5.el9.aarch64
+flashrom-1.2-10.el9.aarch64
+psmisc-23.4-3.el9.aarch64
+iproute-6.2.0-6.el9_4.aarch64
+dracut-network-057-53.git20240104.el9.aarch64
+sg3_utils-libs-1.47-9.el9.aarch64
+slang-2.3.2-11.el9.aarch64
+newt-0.52.21-11.el9.aarch64
+userspace-rcu-0.12.1-6.el9.aarch64
+xfsprogs-6.3.0-1.el9.aarch64
+which-2.21-29.el9.aarch64
+grub2-tools-2.06-80.el9_4.alma.1.aarch64
+grubby-8.40-64.el9.aarch64
+crypto-policies-scripts-20240202-1.git283706d.el9.noarch
+nss-sysinit-3.90.0-7.el9_4.aarch64
+nss-3.90.0-7.el9_4.aarch64
+volume_key-libs-0.3.12-15.el9.aarch64
+libblockdev-crypto-2.28-10.el9.aarch64
+udisks2-2.9.4-9.el9.aarch64
+fwupd-plugin-flashrom-1.9.13-2.el9.alma.1.aarch64
+fwupd-1.9.13-2.el9.alma.1.aarch64
+libestr-0.1.11-4.el9.aarch64
+libfastjson-0.99.9-5.el9.aarch64
+rsyslog-logrotate-8.2310.0-4.el9.aarch64
+rsyslog-8.2310.0-4.el9.aarch64
+liburing-2.5-1.el9.aarch64
+qemu-guest-agent-8.2.0-11.el9_4.4.aarch64
+shim-aa64-15.8-4.el9_3.alma.1.aarch64
+kexec-tools-2.0.27-8.el9.aarch64
+grub2-efi-aa64-2.06-80.el9_4.alma.1.aarch64
+NetworkManager-tui-1.46.0-8.el9_4.aarch64
+sg3_utils-1.47-9.el9.aarch64
+iproute-tc-6.2.0-6.el9_4.aarch64
+dnf-plugins-core-4.3.0-13.el9.noarch
+yum-4.14.0-9.el9.alma.1.noarch
+passwd-0.80-12.el9.aarch64
+NetworkManager-team-1.46.0-8.el9_4.aarch64
+initscripts-rename-device-10.11.6-1.el9.aarch64
+irqbalance-1.9.2-3.el9.aarch64
+chrony-4.5-1.el9.aarch64
+sssd-kcm-2.9.4-6.el9_4.aarch64
+rpm-plugin-selinux-4.16.1.3-29.el9.aarch64
+rpm-plugin-audit-4.16.1.3-29.el9.aarch64
+openssh-clients-8.7p1-38.el9_4.4.aarch64
+kernel-5.14.0-427.24.1.el9_4.aarch64
+dracut-config-rescue-057-53.git20240104.el9.aarch64
+sudo-1.9.5p2-10.el9_3.aarch64
+audit-3.1.2-2.el9.aarch64
+openssh-server-8.7p1-38.el9_4.4.aarch64
+man-db-2.9.3-7.el9.aarch64
+authselect-1.2.6-2.el9.aarch64
+langpacks-en-3.0-16.el9.noarch
+python3-libselinux-3.6-1.el9.aarch64
+prefixdevname-0.1.0-8.el9.aarch64
+rsync-3.2.3-19.el9.aarch64
+efibootmgr-16-12.el9.aarch64
+vim-minimal-8.2.2637-20.el9_1.aarch64
+lshw-B.02.19.2-10.el9.aarch64
+libsysfs-2.1.1-10.el9.aarch64
+lsscsi-0.32-6.el9.aarch64
+ncurses-6.2-10.20210508.el9.aarch64
+rootfiles-8.1-31.el9.noarch
+gpg-pubkey-b86b3716-61e69f29
+device-mapper-event-libs-1.02.197-2.el9.aarch64
+libnftnl-1.2.6-2.el9.aarch64
+libaio-0.3.111-13.el9.aarch64
+device-mapper-event-1.02.197-2.el9.aarch64
+lvm2-libs-2.03.23-2.el9.aarch64
+device-mapper-persistent-data-1.0.9-3.el9_4.aarch64
+lvm2-2.03.23-2.el9.aarch64
+iptables-nft-1.8.10-2.el9.aarch64
+nftables-1.0.9-1.el9.aarch64
+cryptsetup-2.6.0-3.el9.aarch64
+wget-1.21.1-7.el9.aarch64
+python3-setuptools-53.0.0-12.el9.noarch
+python3-distro-1.5.0-7.el9.noarch
+python3-idna-2.10-7.el9_4.1.noarch
+python3-setools-4.4.4-1.el9.aarch64
+python3-pyyaml-5.4.1-6.el9.aarch64
+python3-pysocks-1.7.1-12.el9.noarch
+python3-urllib3-1.26.5-5.el9.noarch
+python3-chardet-4.0.0-5.el9.noarch
+python3-requests-2.25.1-8.el9.noarch
+dhcp-common-4.4.2-19.b1.el9.noarch
+python3-pytz-2021.1-5.el9.noarch
+python3-babel-2.9.1-2.el9.noarch
+python3-pyserial-3.4-12.el9.noarch
+python3-pyrsistent-0.17.3-8.el9.aarch64
+python3-prettytable-0.7.2-27.el9.noarch
+python3-oauthlib-3.1.1-5.el9.noarch
+python3-netifaces-0.10.6-15.el9.aarch64
+python3-markupsafe-1.1.1-12.el9.aarch64
+python3-jinja2-2.11.3-5.el9.noarch
+python3-libsemanage-3.6-1.el9.aarch64
+python3-jsonpointer-2.0-4.el9.noarch
+python3-jsonpatch-1.21-16.el9.noarch
+python3-configobj-5.0.6-25.el9.noarch
+python3-audit-3.1.2-2.el9.aarch64
+python3-attrs-20.3.0-7.el9.noarch
+python3-jsonschema-3.2.0-13.el9.noarch
+libmaxminddb-1.5.2-3.el9.aarch64
+geolite2-country-20191217-6.el9.noarch
+geolite2-city-20191217-6.el9.noarch
+ipcalc-1.0.0-5.el9.aarch64
+dhcp-client-4.4.2-19.b1.el9.aarch64
+checkpolicy-3.6-1.el9.aarch64
+python3-policycoreutils-3.6-2.1.el9.noarch
+cloud-init-23.4-7.el9_4.3.alma.1.noarch
+cloud-utils-growpart-0.33-1.el9.aarch64
+hc-utils-0.0.4-1.el8.noarch
+perl-Digest-1.19-4.el9.noarch
+perl-Digest-MD5-2.58-4.el9.aarch64
+perl-B-1.80-481.el9.aarch64
+perl-FileHandle-2.03-481.el9.noarch
+perl-Data-Dumper-2.174-462.el9.aarch64
+perl-libnet-3.13-4.el9.noarch
+perl-base-2.27-481.el9.noarch
+perl-URI-5.09-3.el9.noarch
+perl-AutoLoader-5.74-481.el9.noarch
+perl-Mozilla-CA-20200520-6.el9.noarch
+perl-if-0.60.800-481.el9.noarch
+perl-IO-Socket-IP-0.41-5.el9.noarch
+perl-Time-Local-1.300-7.el9.noarch
+perl-File-Path-2.18-4.el9.noarch
+perl-Pod-Escapes-1.07-460.el9.noarch
+perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch
+perl-IO-Socket-SSL-2.073-1.el9.noarch
+perl-Net-SSLeay-1.92-2.el9.aarch64
+perl-Class-Struct-0.66-481.el9.noarch
+perl-POSIX-1.94-481.el9.aarch64
+perl-Term-ANSIColor-5.01-461.el9.noarch
+perl-IPC-Open3-1.21-481.el9.noarch
+perl-subs-1.03-481.el9.noarch
+perl-File-Temp-0.231.100-4.el9.noarch
+perl-Term-Cap-1.17-460.el9.noarch
+perl-Pod-Simple-3.42-4.el9.noarch
+perl-HTTP-Tiny-0.076-462.el9.noarch
+perl-Socket-2.031-4.el9.aarch64
+perl-SelectSaver-1.02-481.el9.noarch
+perl-Symbol-1.08-481.el9.noarch
+perl-File-stat-1.09-481.el9.noarch
+perl-podlators-4.14-460.el9.noarch
+perl-Pod-Perldoc-3.28.01-461.el9.noarch
+perl-Fcntl-1.13-481.el9.aarch64
+perl-Text-ParseWords-3.30-460.el9.noarch
+perl-mro-1.23-481.el9.aarch64
+perl-IO-1.43-481.el9.aarch64
+perl-overloading-0.02-481.el9.noarch
+perl-Pod-Usage-2.01-4.el9.noarch
+perl-Errno-1.30-481.el9.aarch64
+perl-File-Basename-2.85-481.el9.noarch
+perl-Getopt-Std-1.12-481.el9.noarch
+perl-MIME-Base64-3.16-4.el9.aarch64
+perl-Scalar-List-Utils-1.56-461.el9.aarch64
+perl-constant-1.33-461.el9.noarch
+perl-Storable-3.21-460.el9.aarch64
+perl-overload-1.31-481.el9.noarch
+perl-parent-0.238-460.el9.noarch
+perl-vars-1.05-481.el9.noarch
+perl-Getopt-Long-2.52-4.el9.noarch
+perl-Carp-1.50-460.el9.noarch
+perl-Exporter-5.74-461.el9.noarch
+perl-NDBM_File-1.15-481.el9.aarch64
+perl-PathTools-3.78-461.el9.aarch64
+perl-Encode-3.08-462.el9.aarch64
+perl-libs-5.32.1-481.el9.aarch64
+perl-interpreter-5.32.1-481.el9.aarch64
+gpm-libs-1.20.7-29.el9.aarch64
+mc-4.8.26-5.el9.aarch64
+tar-1.34-6.el9_1.aarch64
+kernel-modules-core-5.14.0-427.26.1.el9_4.aarch64
+kernel-core-5.14.0-427.26.1.el9_4.aarch64
+kernel-modules-5.14.0-427.26.1.el9_4.aarch64
+kernel-tools-libs-5.14.0-427.26.1.el9_4.aarch64
+kernel-tools-5.14.0-427.26.1.el9_4.aarch64
+kernel-5.14.0-427.26.1.el9_4.aarch64
+git-core-2.43.5-1.el9_4.aarch64
+git-core-doc-2.43.5-1.el9_4.noarch
+perl-lib-0.65-481.el9.aarch64
+perl-File-Find-1.37-481.el9.noarch
+perl-Error-0.17029-7.el9.noarch
+perl-DynaLoader-1.47-481.el9.aarch64
+perl-TermReadKey-2.38-11.el9.aarch64
+emacs-filesystem-27.2-9.el9.noarch
+perl-Git-2.43.5-1.el9_4.noarch
+git-2.43.5-1.el9_4.aarch64
+
+
+================================================================================
+
+File: /var/www/HostMaster/install_hostmaster.py
+
+import subprocess
+import sys
+import time
+from tqdm import tqdm
+import mysql.connector
+from mysql.connector import errorcode
+import bcrypt
+
+def install_required_packages():
+    required_packages = ['tqdm', 'mysql-connector-python', 'bcrypt']
+    installed_packages = subprocess.check_output([sys.executable, '-m', 'pip', 'freeze']).decode('utf-8').split('\n')
+    installed_packages = [package.split('==')[0] for package in installed_packages]
+
+    for package in required_packages:
+        if package not in installed_packages:
+            print(f"Installing {package}...")
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+
+def run_command(command):
+    print(f"Running command: {command}")
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = process.communicate()
+    if process.returncode != 0:
+        print(f"Error running command: {command}\n{err.decode('utf-8')}")
+        return False
+    return True
+
+def hash_password(password):
+    return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+def setup_database():
+    db_config = {
+        'user': 'hostmaster_panel',
+        'password': 'erős_jelszó',
+        'host': 'localhost',
+        'database': 'hostmaster'
+    }
+
+    TABLES = {}
+    TABLES['users'] = (
+        "CREATE TABLE users ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY,"
+        "  username VARCHAR(50) NOT NULL UNIQUE,"
+        "  password VARCHAR(255) NOT NULL,"
+        "  email VARCHAR(100) NOT NULL UNIQUE,"
+        "  role ENUM('admin', 'user') NOT NULL,"
+        "  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
+        ") ENGINE=InnoDB")
+
+    TABLES['domains'] = (
+        "CREATE TABLE domains ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY,"
+        "  user_id INT NOT NULL,"
+        "  domain_name VARCHAR(255) NOT NULL,"
+        "  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+        "  FOREIGN KEY (user_id) REFERENCES users(id)"
+        ") ENGINE=InnoDB")
+
+    TABLES['ftp_accounts'] = (
+        "CREATE TABLE ftp_accounts ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY,"
+        "  user_id INT NOT NULL,"
+        "  username VARCHAR(50) NOT NULL,"
+        "  password VARCHAR(255) NOT NULL,"
+        "  home_directory VARCHAR(255) NOT NULL,"
+        "  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+        "  FOREIGN KEY (user_id) REFERENCES users(id)"
+        ") ENGINE=InnoDB")
+
+    TABLES['emails'] = (
+        "CREATE TABLE emails ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY,"
+        "  user_id INT NOT NULL,"
+        "  email_address VARCHAR(100) NOT NULL,"
+        "  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+        "  FOREIGN KEY (user_id) REFERENCES users(id)"
+        ") ENGINE=InnoDB")
+
+    TABLES['dns_records'] = (
+        "CREATE TABLE dns_records ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY,"
+        "  domain_id INT NOT NULL,"
+        "  record_type VARCHAR(10) NOT NULL,"
+        "  name VARCHAR(255) NOT NULL,"
+        "  content VARCHAR(255) NOT NULL,"
+        "  ttl INT DEFAULT 3600,"
+        "  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+        "  FOREIGN KEY (domain_id) REFERENCES domains(id)"
+        ") ENGINE=InnoDB")
+
+    try:
+        cnx = mysql.connector.connect(**db_config)
+        cursor = cnx.cursor()
+        print("Successfully connected to the database.")
+
+        for table_name in tqdm(TABLES, desc="Creating database tables"):
+            table_description = TABLES[table_name]
+            try:
+                cursor.execute(table_description)
+            except mysql.connector.Error as err:
+                if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+                    print(f"Table {table_name} already exists.")
+                else:
+                    print(err.msg)
+            else:
+                print(f"Table {table_name} created successfully.")
+
+        admin_username = 'panel_admin'
+        admin_password = hash_password('Panel_Pass')
+        admin_email = 'admin@hostfix.hu'
+        add_admin = (
+            "INSERT INTO users (username, password, email, role) "
+            "VALUES (%s, %s, %s, 'admin')"
+        )
+        admin_data = (admin_username, admin_password, admin_email)
+        cursor.execute(add_admin, admin_data)
+
+        user_username = 'panel_user'
+        user_password = hash_password('Panel_Code1123')
+        user_email = 'user@hostfix.hu'
+        add_user = (
+            "INSERT INTO users (username, password, email, role) "
+            "VALUES (%s, %s, %s, 'user')"
+        )
+        user_data = (user_username, user_password, user_email)
+        cursor.execute(add_user, user_data)
+
+        cnx.commit()
+
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Invalid database username or password.")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist.")
+        else:
+            print(err)
+    else:
+        cursor.close()
+        cnx.close()
+        print("Database connection closed.")
+
+if __name__ == "__main__":
+    # Telepítsd a szükséges csomagokat
+    install_required_packages()
+
+    # A telepítéshez és konfiguráláshoz szükséges parancsok listája
+    commands = [
+        "sudo dnf install httpd -y",
+        "sudo systemctl start httpd",
+        "sudo systemctl enable httpd",
+        "sudo dnf install epel-release -y",
+        "sudo dnf install https://rpms.remirepo.net/enterprise/remi-release-9.rpm -y",
+        "sudo dnf module reset php -y",
+        "sudo dnf module enable php:remi-8.1 -y",
+        "sudo dnf install php php-cli php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring php-json php-curl -y",
+        "sudo systemctl start php-fpm",
+        "sudo systemctl enable php-fpm",
+        "sudo dnf install mariadb-server mariadb -y",
+        "sudo systemctl start mariadb",
+        "sudo systemctl enable mariadb",
+        "sudo mysql_secure_installation <<EOF\nn\ny\ny\ny\ny\nEOF",
+        "sudo mysql -u root -e \"CREATE DATABASE hostmaster;\"",
+        "sudo mysql -u root -e \"CREATE USER 'hostmaster_panel'@'localhost' IDENTIFIED BY 'erős_jelszó';\"",
+        "sudo mysql -u root -e \"GRANT ALL PRIVILEGES ON hostmaster.* TO 'hostmaster_panel'@'localhost';\"",
+        "sudo mysql -u root -e \"FLUSH PRIVILEGES;\"",
+        "sudo dnf install phpMyAdmin -y",
+        "echo -e '<VirtualHost *:8085>\\n    ServerAdmin admin@s8.hostfix.hu\\n    DocumentRoot /var/www/HostMaster/user\\n    ServerName s8.hostfix.hu\\n    <Directory /var/www/HostMaster/user>\\n        Options Indexes FollowSymLinks\\n        AllowOverride All\\n        Require all granted\\n    </Directory>\\n    ErrorLog /var/www/HostMaster/logs/error_user.log\\n    CustomLog /var/www/HostMaster/logs/access_user.log combined\\n</VirtualHost>\\n\\n<VirtualHost *:8086>\\n    ServerAdmin admin@s8.hostfix.hu\\n    DocumentRoot /var/www/HostMaster/admin\\n    ServerName admin.s8.hostfix.hu\\n    <Directory /var/www/HostMaster/admin>\\n        Options Indexes FollowSymLinks\\n        AllowOverride All\\n        Require all granted\\n    </Directory>\\n    ErrorLog /var/www/HostMaster/logs/error_admin.log\\n    CustomLog /var/www/HostMaster/logs/access_admin.log combined\\n</VirtualHost>' | sudo tee /etc/httpd/conf.d/hostmaster.conf",
+        "sudo firewall-cmd --permanent --add-port=8085/tcp",
+        "sudo firewall-cmd --permanent --add-port=8086/tcp",
+        "sudo firewall-cmd --reload",
+        "sudo systemctl restart httpd",
+        "sudo chown -R apache:apache /var/www/HostMaster",
+        "sudo chmod -R 755 /var/www/HostMaster",
+        "sudo dnf install pure-ftpd -y",
+        "sudo systemctl start pure-ftpd",
+        "sudo systemctl enable pure-ftpd",
+        "sudo sed -i 's/.*ChrootEveryone.*/ChrootEveryone              yes/' /etc/pure-ftpd/pure-ftpd.conf",
+        "sudo sed -i 's/.*MaxClientsNumber.*/MaxClientsNumber            50/' /etc/pure-ftpd/pure-ftpd.conf",
+        "sudo sed -i 's/.*VerboseLog.*/VerboseLog                  yes/' /etc/pure-ftpd/pure-ftpd.conf",
+        "sudo sed -i 's/.*DisplayDotFiles.*/DisplayDotFiles             yes/' /etc/pure-ftpd/pure-ftpd.conf",
+        "sudo systemctl restart pure-ftpd"
+    ]
+
+    # Futtassuk a parancsokat állapotjelző sávval
+    for command in tqdm(commands, desc="Installation and configuration"):
+        if not run_command(command):
+            print(f"Command failed: {command}")
+            sys.exit(1)  # Ha hiba történik, lépjünk ki a scriptből
+        time.sleep(0.1)  # Csak a progress bar jobb megjelenítése érdekében
+
+    # Adatbázis beállítása
+    setup_database()
+
+
+================================================================================
+
+File: /var/www/HostMaster/config_files.txt
+
+Fájl: /etc/authselect/user-nsswitch.conf
+passwd:     sss files systemd
+shadow:     files
+group:      sss files systemd
+hosts:      files dns myhostname
+services:   files sss
+netgroup:   sss
+automount:  files sss
+aliases:    files
+ethers:     files
+gshadow:    files
+networks:   files dns
+protocols:  files
+publickey:  files
+rpc:        files
+
+
+Fájl: /etc/sysctl.conf
+
+
+Fájl: /etc/sudo.conf
+Plugin sudoers_policy sudoers.so
+Plugin sudoers_io sudoers.so
+Plugin sudoers_audit sudoers.so
+Set disable_coredump false
+
+
+Fájl: /etc/host.conf
+multi on
+
+
+Fájl: /etc/rsyncd.conf
+
+
+Fájl: /etc/rsyslog.conf
+global(workDirectory="/var/lib/rsyslog")
+module(load="builtin:omfile" Template="RSYSLOG_TraditionalFileFormat")
+module(load="imuxsock" 	  # provides support for local system logging (e.g. via logger command)
+       SysSock.Use="off") # Turn off message reception via local log socket; 
+module(load="imjournal" 	    # provides access to the systemd journal
+       UsePid="system" # PID nummber is retrieved as the ID of the process the journal entry originates from
+       FileCreateMode="0644" # Set the access permissions for the state file
+       StateFile="imjournal.state") # File to store the position in the journal
+include(file="/etc/rsyslog.d/*.conf" mode="optional")
+*.info;mail.none;authpriv.none;cron.none                /var/log/messages
+authpriv.*                                              /var/log/secure
+mail.*                                                  -/var/log/maillog
+cron.*                                                  /var/log/cron
+*.emerg                                                 :omusrmsg:*
+uucp,news.crit                                          /var/log/spooler
+local7.*                                                /var/log/boot.log
+
+
+Fájl: /etc/systemd/sleep.conf
+[Sleep]
+
+
+Fájl: /etc/systemd/coredump.conf
+[Coredump]
+
+
+Fájl: /etc/systemd/pstore.conf
+[PStore]
+
+
+Fájl: /etc/systemd/user.conf
+[Manager]
+
+
+Fájl: /etc/systemd/journald.conf
+[Journal]
+Audit=
+
+
+Fájl: /etc/systemd/system/sshd-keygen@.service.d/disable-sshd-keygen-if-cloud-init-active.conf
+[Unit]
+ConditionPathExists=!/run/systemd/generator.early/multi-user.target.wants/cloud-init.target
+
+
+Fájl: /etc/systemd/system.conf
+[Manager]
+DefaultLimitCORE=0:infinity
+
+
+Fájl: /etc/systemd/logind.conf
+[Login]
+
+
+Fájl: /etc/libreport/events.d/mdadm_event.conf
+EVENT=post-create component=mdadm
+	cat /proc/mdstat >> mdstat_data
+	echo "Saved output of /proc/mdstat"
+
+
+Fájl: /etc/libreport/events.d/collect_dnf.conf
+EVENT=notify component=dnf
+        function fetch()
+        {
+            for log in $*; do
+            new_name=${log//\//_}
+            cp $log $new_name
+            done
+        }
+        logs=`find /var/cache/dnf -iname '*.log'`
+        fetch $logs
+        fetch /var/log/dnf.log
+        journalctl _SYSTEMD_UNIT=dnf-makecache.service &>dnf-makecache.log
+        fetch /var/log/dnf.transaction.log
+        if [[ -r username ]]; then
+            username=`cat username`
+            if [[ $username != "root" ]]; then
+            logs=`find /var/tmp -path "/var/tmp/dnf-${username}-*" -iname '*.log'`
+            fetch $logs
+            fi
+        fi
+
+
+Fájl: /etc/chrony.conf
+server ntp.hetzner.com iburst
+sourcedir /run/chrony-dhcp
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+keyfile /etc/chrony.keys
+ntsdumpdir /var/lib/chrony
+leapsectz right/UTC
+logdir /var/log/chrony
+
+
+Fájl: /etc/rsyslog.d/21-cloudinit.conf
+:syslogtag, isequal, "[CLOUDINIT]" /var/log/cloud-init.log
+& stop
+
+
+Fájl: /etc/ssh/ssh_config.d/50-redhat.conf
+Match final all
+	Include /etc/crypto-policies/back-ends/openssh.config
+	GSSAPIAuthentication yes
+	ForwardX11Trusted yes
+
+
+Fájl: /etc/ssh/sshd_config.d/50-cloud-init.conf
+PasswordAuthentication yes
+
+
+Fájl: /etc/ssh/sshd_config.d/50-redhat.conf
+Include /etc/crypto-policies/back-ends/opensshserver.config
+SyslogFacility AUTHPRIV
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+
+
+Fájl: /etc/lvm/lvm.conf
+config {
+}
+devices {
+}
+allocation {
+}
+log {
+}
+backup {
+}
+shell {
+}
+global {
+}
+activation {
+}
+dmeventd {
+}
+
+
+Fájl: /etc/lvm/lvmlocal.conf
+local {
+}
+
+
+Fájl: /etc/NetworkManager/NetworkManager.conf
+[main]
+[logging]
+
+
+Fájl: /etc/sysconfig/nftables.conf
+
+
+Fájl: /etc/krb5.conf
+includedir /etc/krb5.conf.d/
+[logging]
+    default = FILE:/var/log/krb5libs.log
+    kdc = FILE:/var/log/krb5kdc.log
+    admin_server = FILE:/var/log/kadmind.log
+[libdefaults]
+    dns_lookup_realm = false
+    ticket_lifetime = 24h
+    renew_lifetime = 7d
+    forwardable = true
+    rdns = false
+    pkinit_anchors = FILE:/etc/pki/tls/certs/ca-bundle.crt
+    spake_preauth_groups = edwards25519
+    dns_canonicalize_hostname = fallback
+    qualify_shortname = ""
+    default_ccache_name = KEYRING:persistent:%{uid}
+[realms]
+[domain_realm]
+
+
+Fájl: /etc/ld.so.conf
+include ld.so.conf.d/*.conf
+
+
+Fájl: /etc/dbus-1/session.conf
+<!--
+This configuration file is no longer required and may be removed.
+In older versions of dbus, this file defined the behaviour of the well-known
+session bus. That behaviour is now determined by
+/usr/share/dbus-1/session.conf, which should not be edited.
+For local configuration changes, create a file
+session-local.conf or files matching session.d/*.conf in the same directory
+as this one, with a <busconfig> element containing configuration directives.
+These directives can override D-Bus or OS defaults.
+For upstream or distribution-wide defaults that can be overridden
+by a local sysadmin, create files matching
+/usr/share/dbus-1/session.d/*.conf instead.
+-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig></busconfig>
+
+
+Fájl: /etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+  <policy user="polkitd">
+    <allow own="org.freedesktop.PolicyKit1"/>
+  </policy>
+  <policy context="default">
+    <allow send_destination="org.freedesktop.PolicyKit1"/>
+  </policy>
+  <!-- Allow uid 0 to send messages on the org.freedesktop.PolicyKit1.AuthenticationAgent interface -->
+  <policy user="polkitd">
+    <allow send_interface="org.freedesktop.PolicyKit1.AuthenticationAgent"/>
+  </policy>
+</busconfig>
+
+
+Fájl: /etc/dbus-1/system.d/teamd.conf
+<?xml version="1.0"?> <!--*-nxml-*-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+	"http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+	<policy user="root">
+		<allow own_prefix="org.libteam.teamd"/>
+		<allow send_interface="org.libteam.teamd"/>
+	</policy>
+	<policy context="default">
+		<deny own_prefix="org.libteam.teamd"/>
+	</policy>
+</busconfig>
+
+
+Fájl: /etc/dbus-1/system.conf
+<!--
+This configuration file is no longer required and may be removed.
+In older versions of dbus, this file defined the behaviour of the well-known
+system bus. That behaviour is now determined by
+/usr/share/dbus-1/system.conf, which should not be edited.
+For local configuration changes, create a file
+system-local.conf or files matching system.d/*.conf in the same directory
+as this one, with a <busconfig> element containing configuration directives.
+These directives can override D-Bus or OS defaults.
+For upstream or distribution-wide defaults that can be overridden
+by a local sysadmin, create files matching
+/usr/share/dbus-1/system.d/*.conf instead.
+-->
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig></busconfig>
+
+
+Fájl: /etc/X11/xorg.conf.d/00-keyboard.conf
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "de,us"
+        Option "XkbVariant" ","
+EndSection
+
+
+Fájl: /etc/audit/auditd.conf
+local_events = yes
+write_logs = yes
+log_file = /var/log/audit/audit.log
+log_group = root
+log_format = ENRICHED
+flush = INCREMENTAL_ASYNC
+freq = 50
+max_log_file = 8
+num_logs = 5
+priority_boost = 4
+name_format = NONE
+max_log_file_action = ROTATE
+space_left = 75
+space_left_action = SYSLOG
+verify_email = yes
+action_mail_acct = root
+admin_space_left = 50
+admin_space_left_action = SUSPEND
+disk_full_action = SUSPEND
+disk_error_action = SUSPEND
+use_libwrap = yes
+tcp_listen_queue = 5
+tcp_max_per_addr = 1
+tcp_client_max_idle = 0
+transport = TCP
+krb5_principal = auditd
+distribute_network = no
+q_depth = 2000
+overflow_action = SYSLOG
+max_restarts = 10
+plugin_dir = /etc/audit/plugins.d
+end_of_event_timeout = 2
+
+
+Fájl: /etc/fwupd/remotes.d/vendor-directory.conf
+[fwupd Remote]
+Enabled=true
+Title=Vendor (Automatic)
+Keyring=none
+MetadataURI=file:///usr/share/fwupd/remotes.d/vendor/firmware
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/remotes.d/lvfs.conf
+[fwupd Remote]
+Enabled=false
+Title=Linux Vendor Firmware Service
+MetadataURI=https://cdn.fwupd.org/downloads/firmware.xml.xz
+ReportURI=https://fwupd.org/lvfs/firmware/report
+SecurityReportURI=https://fwupd.org/lvfs/hsireports/upload
+AutomaticReports=false
+AutomaticSecurityReports=false
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/remotes.d/lvfs-testing.conf
+[fwupd Remote]
+Enabled=false
+Title=Linux Vendor Firmware Service (testing)
+MetadataURI=https://cdn.fwupd.org/downloads/firmware-testing.xml.xz
+ReportURI=https://fwupd.org/lvfs/firmware/report
+OrderBefore=lvfs
+AutomaticReports=false
+ApprovalRequired=false
+
+
+Fájl: /etc/fwupd/fwupd.conf
+[fwupd]
+
+
+Fájl: /etc/libuser.conf
+[import]
+login_defs = /etc/login.defs
+default_useradd = /etc/default/useradd
+[defaults]
+crypt_style = sha512
+modules = files shadow
+create_modules = files shadow
+[userdefaults]
+LU_USERNAME = %n
+LU_GIDNUMBER = %u
+[groupdefaults]
+LU_GROUPNAME = %n
+[files]
+[shadow]
+[ldap]
+[sasl]
+
+
+Fájl: /etc/depmod.d/dist.conf
+search updates extra built-in weak-updates
+
+
+Fájl: /etc/logrotate.conf
+weekly
+rotate 4
+create
+dateext
+include /etc/logrotate.d
+
+
+Fájl: /etc/dnf/protected.d/sudo.conf
+sudo
+
+
+Fájl: /etc/dnf/protected.d/dnf.conf
+dnf
+
+
+Fájl: /etc/dnf/protected.d/setup.conf
+setup
+
+
+Fájl: /etc/dnf/protected.d/grub2-tools-minimal.conf
+grub2-tools-minimal
+
+
+Fájl: /etc/dnf/protected.d/systemd.conf
+systemd
+systemd-udev
+
+
+Fájl: /etc/dnf/protected.d/yum.conf
+yum
+
+
+Fájl: /etc/dnf/protected.d/grub2-efi-aa64.conf
+grub2-efi-aa64
+
+
+Fájl: /etc/dnf/dnf.conf
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=True
+skip_if_unavailable=False
+
+
+Fájl: /etc/dnf/plugins/copr.conf
+[fedora]
+hostname = copr.fedorainfracloud.org
+protocol = https
+port = 443
+
+
+Fájl: /etc/dnf/plugins/debuginfo-install.conf
+[main]
+enabled=1
+autoupdate=0
+
+
+Fájl: /etc/xattr.conf
+system.posix_acl_access		permissions
+system.posix_acl_default	permissions
+trusted.SGI_ACL_DEFAULT		skip		# xfs specific
+trusted.SGI_ACL_FILE		skip		# xfs specific
+trusted.SGI_CAP_FILE		skip		# xfs specific
+trusted.SGI_DMI_*		skip		# xfs specific
+trusted.SGI_MAC_FILE		skip		# xfs specific
+xfsroot.*			skip		# xfs specific; obsolete
+user.Beagle.*			skip		# ignore Beagle index data
+security.evm			skip		# may only be written by kernel
+afs.*				skip		# AFS metadata and ACLs
+
+
+Fájl: /etc/openldap/ldap.conf
+SASL_NOCANON	on
+
+
+Fájl: /etc/udisks2/udisks2.conf
+[udisks2]
+modules=*
+modules_load_preference=ondemand
+[defaults]
+encryption=luks2
+
+
+Fájl: /etc/security/namespace.conf
+
+
+Fájl: /etc/security/pam_env.conf
+
+
+Fájl: /etc/security/faillock.conf
+
+
+Fájl: /etc/security/time.conf
+
+
+Fájl: /etc/security/chroot.conf
+
+
+Fájl: /etc/security/sepermit.conf
+
+
+Fájl: /etc/security/access.conf
+
+
+Fájl: /etc/security/limits.conf
+
+
+Fájl: /etc/security/pwquality.conf
+
+
+Fájl: /etc/security/pwhistory.conf
+
+
+Fájl: /etc/security/group.conf
+
+
+Fájl: /etc/libaudit.conf
+failure_action = ignore
+
+
+Fájl: /etc/locale.conf
+LANG=en_US.UTF-8
+
+
+Fájl: /etc/vconsole.conf
+KEYMAP="us"
+FONT="latarcyrheb-sun16"
+
+
+Fájl: /etc/sudo-ldap.conf
+
+
+Fájl: /etc/udev/udev.conf
+
+
+Fájl: /etc/selinux/targeted/setrans.conf
+s0=SystemLow
+s0-s0:c0.c1023=SystemLow-SystemHigh
+s0:c0.c1023=SystemHigh
+
+
+Fájl: /etc/selinux/semanage.conf
+module-store = direct
+expand-check=0
+usepasswd=False
+bzip-small=true
+bzip-blocksize=5
+ignoredirs=/root;/bin;/boot;/dev;/etc;/lib;/lib64;/proc;/run;/sbin;/sys;/tmp;/usr;/var
+optimize-policy=true
+[sefcontext_compile]
+path = /usr/sbin/sefcontext_compile
+args = -r $@
+[end]
+
+
+Fájl: /etc/resolv.conf
+search hostfix.hu
+nameserver 185.12.64.1
+nameserver 185.12.64.2
+nameserver 2a01:4ff:ff00::add:1
+nameserver 2a01:4ff:ff00::add:2
+
+
+Fájl: /etc/nsswitch.conf
+passwd:     sss files systemd
+shadow:     files
+group:      sss files systemd
+hosts:      files dns myhostname
+services:   files sss
+netgroup:   sss
+automount:  files sss
+aliases:    files
+ethers:     files
+gshadow:    files
+networks:   files dns
+protocols:  files
+publickey:  files
+rpc:        files
+
+
+Fájl: /etc/kdump.conf
+auto_reset_crashkernel yes
+path /var/crash
+core_collector makedumpfile -l --message-level 7 -d 31
+
+
+Fájl: /etc/dracut.conf
+
+
+Fájl: /etc/mke2fs.conf
+[defaults]
+	base_features = sparse_super,large_file,filetype,resize_inode,dir_index,ext_attr
+	default_mntopts = acl,user_xattr
+	enable_periodic_fsck = 0
+	blocksize = 4096
+	inode_size = 256
+	inode_ratio = 16384
+[fs_types]
+	ext3 = {
+		features = has_journal
+	}
+	ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,metadata_csum,64bit,dir_nlink,extra_isize
+	}
+	rhel6_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,uninit_bg,dir_nlink,extra_isize
+		inode_size = 256
+		enable_periodic_fsck = 1
+		default_mntopts = ""
+	}
+	rhel7_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,uninit_bg,dir_nlink,extra_isize,64bit
+		inode_size = 256
+	}
+	rhel8_ext4 = {
+		features = has_journal,extent,huge_file,flex_bg,metadata_csum,64bit,dir_nlink,extra_isize
+		inode_size = 256
+	}
+	small = {
+		blocksize = 1024
+		inode_ratio = 4096
+	}
+	floppy = {
+		blocksize = 1024
+		inode_ratio = 8192
+	}
+	big = {
+		inode_ratio = 32768
+	}
+	huge = {
+		inode_ratio = 65536
+	}
+	news = {
+		inode_ratio = 4096
+	}
+	largefile = {
+		inode_ratio = 1048576
+		blocksize = -1
+	}
+	largefile4 = {
+		inode_ratio = 4194304
+		blocksize = -1
+	}
+	hurd = {
+	     blocksize = 4096
+	     inode_size = 128
+	     warn_y2038_dates = 0
+	}
+
+
+Fájl: /etc/pki/ca-trust/ca-legacy.conf
+legacy=default
+
+
+Fájl: /etc/sestatus.conf
+[files]
+/etc/passwd
+/etc/shadow
+/bin/bash
+/bin/login
+/bin/sh
+/sbin/agetty
+/sbin/init
+/sbin/mingetty
+/usr/sbin/sshd
+/lib/libc.so.6
+/lib/ld-linux.so.2
+/lib/ld.so.1
+[process]
+/sbin/mingetty
+/sbin/agetty
+/usr/sbin/sshd
+
+
+Fájl: /etc/man_db.conf
+MANDATORY_MANPATH			/usr/man
+MANDATORY_MANPATH			/usr/share/man
+MANDATORY_MANPATH			/usr/local/share/man
+MANPATH_MAP	/bin			/usr/share/man
+MANPATH_MAP	/usr/bin		/usr/share/man
+MANPATH_MAP	/sbin			/usr/share/man
+MANPATH_MAP	/usr/sbin		/usr/share/man
+MANPATH_MAP	/usr/local/bin		/usr/local/man
+MANPATH_MAP	/usr/local/bin		/usr/local/share/man
+MANPATH_MAP	/usr/local/sbin		/usr/local/man
+MANPATH_MAP	/usr/local/sbin		/usr/local/share/man
+MANPATH_MAP	/usr/X11R6/bin		/usr/X11R6/man
+MANPATH_MAP	/usr/bin/X11		/usr/X11R6/man
+MANPATH_MAP	/usr/games		/usr/share/man
+MANPATH_MAP	/opt/bin		/opt/man
+MANPATH_MAP	/opt/sbin		/opt/man
+MANDB_MAP	/usr/man		/var/cache/man/fsstnd
+MANDB_MAP	/usr/share/man		/var/cache/man
+MANDB_MAP	/usr/local/man		/var/cache/man/oldlocal
+MANDB_MAP	/usr/local/share/man	/var/cache/man/local
+MANDB_MAP	/usr/X11R6/man		/var/cache/man/X11R6
+MANDB_MAP	/opt/man		/var/cache/man/opt
+MANDB_MAP	/var/lib/snapd/snap/man		/var/cache/man/snap
+SECTION		1 1p 8 2 3 3p 3pm 4 5 6 7 9 0p n l p o 1x 2x 3x 4x 5x 6x 7x 8x
+
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/installed_packages.txt
+
+Installed Packages
+NetworkManager.aarch64                1:1.46.0-8.el9_4              @anaconda   
+NetworkManager-libnm.aarch64          1:1.46.0-8.el9_4              @anaconda   
+NetworkManager-team.aarch64           1:1.46.0-8.el9_4              @anaconda   
+NetworkManager-tui.aarch64            1:1.46.0-8.el9_4              @anaconda   
+acl.aarch64                           2.3.1-4.el9                   @anaconda   
+almalinux-gpg-keys.aarch64            9.4-1.el9                     @anaconda   
+almalinux-release.aarch64             9.4-1.el9                     @anaconda   
+almalinux-repos.aarch64               9.4-1.el9                     @anaconda   
+alternatives.aarch64                  1.24-1.el9                    @anaconda   
+audit.aarch64                         3.1.2-2.el9                   @anaconda   
+audit-libs.aarch64                    3.1.2-2.el9                   @anaconda   
+authselect.aarch64                    1.2.6-2.el9                   @anaconda   
+authselect-libs.aarch64               1.2.6-2.el9                   @anaconda   
+basesystem.noarch                     11-13.el9                     @anaconda   
+bash.aarch64                          5.1.8-9.el9                   @anaconda   
+binutils.aarch64                      2.35.2-43.el9                 @anaconda   
+binutils-gold.aarch64                 2.35.2-43.el9                 @anaconda   
+bzip2-libs.aarch64                    1.0.8-8.el9                   @anaconda   
+c-ares.aarch64                        1.19.1-2.el9_4                @anaconda   
+ca-certificates.noarch                2023.2.60_v7.0.306-90.1.el9_2 @anaconda   
+checkpolicy.aarch64                   3.6-1.el9                     @appstream  
+chrony.aarch64                        4.5-1.el9                     @anaconda   
+cloud-init.noarch                     23.4-7.el9_4.3.alma.1         @appstream  
+cloud-utils-growpart.aarch64          0.33-1.el9                    @appstream  
+coreutils.aarch64                     8.32-35.el9                   @anaconda   
+coreutils-common.aarch64              8.32-35.el9                   @anaconda   
+cpio.aarch64                          2.13-16.el9                   @anaconda   
+cracklib.aarch64                      2.9.6-27.el9                  @anaconda   
+cracklib-dicts.aarch64                2.9.6-27.el9                  @anaconda   
+cronie.aarch64                        1.5.7-11.el9                  @anaconda   
+cronie-anacron.aarch64                1.5.7-11.el9                  @anaconda   
+crontabs.noarch                       1.11-27.20190603git.el9_0     @anaconda   
+crypto-policies.noarch                20240202-1.git283706d.el9     @anaconda   
+crypto-policies-scripts.noarch        20240202-1.git283706d.el9     @anaconda   
+cryptsetup.aarch64                    2.6.0-3.el9                   @baseos     
+cryptsetup-libs.aarch64               2.6.0-3.el9                   @anaconda   
+curl.aarch64                          7.76.1-29.el9_4               @anaconda   
+cyrus-sasl-lib.aarch64                2.1.27-21.el9                 @anaconda   
+dbus.aarch64                          1:1.12.20-8.el9               @anaconda   
+dbus-broker.aarch64                   28-7.el9                      @anaconda   
+dbus-common.noarch                    1:1.12.20-8.el9               @anaconda   
+dbus-libs.aarch64                     1:1.12.20-8.el9               @anaconda   
+dejavu-sans-fonts.noarch              2.37-18.el9                   @anaconda   
+device-mapper.aarch64                 9:1.02.197-2.el9              @anaconda   
+device-mapper-event.aarch64           9:1.02.197-2.el9              @baseos     
+device-mapper-event-libs.aarch64      9:1.02.197-2.el9              @baseos     
+device-mapper-libs.aarch64            9:1.02.197-2.el9              @anaconda   
+device-mapper-persistent-data.aarch64 1.0.9-3.el9_4                 @baseos     
+dhcp-client.aarch64                   12:4.4.2-19.b1.el9            @baseos     
+dhcp-common.noarch                    12:4.4.2-19.b1.el9            @baseos     
+diffutils.aarch64                     3.7-12.el9                    @anaconda   
+dmidecode.aarch64                     1:3.5-3.el9                   @anaconda   
+dnf.noarch                            4.14.0-9.el9.alma.1           @anaconda   
+dnf-data.noarch                       4.14.0-9.el9.alma.1           @anaconda   
+dnf-plugins-core.noarch               4.3.0-13.el9                  @anaconda   
+dosfstools.aarch64                    4.2-3.el9                     @anaconda   
+dracut.aarch64                        057-53.git20240104.el9        @anaconda   
+dracut-config-rescue.aarch64          057-53.git20240104.el9        @anaconda   
+dracut-network.aarch64                057-53.git20240104.el9        @anaconda   
+dracut-squash.aarch64                 057-53.git20240104.el9        @anaconda   
+e2fsprogs.aarch64                     1.46.5-5.el9                  @anaconda   
+e2fsprogs-libs.aarch64                1.46.5-5.el9                  @anaconda   
+efi-filesystem.noarch                 6-2.el9_0.0.1                 @anaconda   
+efibootmgr.aarch64                    16-12.el9                     @anaconda   
+efivar-libs.aarch64                   38-3.el9                      @anaconda   
+elfutils-debuginfod-client.aarch64    0.190-2.el9                   @anaconda   
+elfutils-default-yama-scope.noarch    0.190-2.el9                   @anaconda   
+elfutils-libelf.aarch64               0.190-2.el9                   @anaconda   
+elfutils-libs.aarch64                 0.190-2.el9                   @anaconda   
+emacs-filesystem.noarch               1:27.2-9.el9                  @appstream  
+ethtool.aarch64                       2:6.2-1.el9                   @anaconda   
+expat.aarch64                         2.5.0-2.el9_4                 @anaconda   
+file.aarch64                          5.39-16.el9                   @anaconda   
+file-libs.aarch64                     5.39-16.el9                   @anaconda   
+filesystem.aarch64                    3.16-2.el9                    @anaconda   
+findutils.aarch64                     1:4.8.0-6.el9                 @anaconda   
+flashrom.aarch64                      1.2-10.el9                    @AppStream  
+fonts-filesystem.noarch               1:2.0.5-7.el9.1               @anaconda   
+fuse-libs.aarch64                     2.9.9-15.el9                  @anaconda   
+fwupd.aarch64                         1.9.13-2.el9.alma.1           @anaconda   
+fwupd-plugin-flashrom.aarch64         1.9.13-2.el9.alma.1           @AppStream  
+gawk.aarch64                          5.1.0-6.el9                   @anaconda   
+gawk-all-langpacks.aarch64            5.1.0-6.el9                   @AppStream  
+gdbm-libs.aarch64                     1:1.19-4.el9                  @anaconda   
+gdisk.aarch64                         1.0.7-5.el9                   @AppStream  
+geolite2-city.noarch                  20191217-6.el9                @appstream  
+geolite2-country.noarch               20191217-6.el9                @appstream  
+gettext.aarch64                       0.21-8.el9                    @anaconda   
+gettext-libs.aarch64                  0.21-8.el9                    @anaconda   
+git.aarch64                           2.43.5-1.el9_4                @appstream  
+git-core.aarch64                      2.43.5-1.el9_4                @appstream  
+git-core-doc.noarch                   2.43.5-1.el9_4                @appstream  
+glib2.aarch64                         2.68.4-14.el9                 @anaconda   
+glibc.aarch64                         2.34-100.el9_4.2              @anaconda   
+glibc-common.aarch64                  2.34-100.el9_4.2              @anaconda   
+glibc-gconv-extra.aarch64             2.34-100.el9_4.2              @anaconda   
+glibc-langpack-en.aarch64             2.34-100.el9_4.2              @anaconda   
+gmp.aarch64                           1:6.2.0-13.el9                @anaconda   
+gnupg2.aarch64                        2.3.3-4.el9                   @anaconda   
+gnutls.aarch64                        3.8.3-4.el9_4                 @anaconda   
+gpgme.aarch64                         1.15.1-6.el9                  @anaconda   
+gpm-libs.aarch64                      1.20.7-29.el9                 @appstream  
+grep.aarch64                          3.6-5.el9                     @anaconda   
+groff-base.aarch64                    1.22.4-10.el9                 @anaconda   
+grub2-common.noarch                   1:2.06-80.el9_4.alma.1        @anaconda   
+grub2-efi-aa64.aarch64                1:2.06-80.el9_4.alma.1        @anaconda   
+grub2-tools.aarch64                   1:2.06-80.el9_4.alma.1        @anaconda   
+grub2-tools-minimal.aarch64           1:2.06-80.el9_4.alma.1        @anaconda   
+grubby.aarch64                        8.40-64.el9                   @anaconda   
+gzip.aarch64                          1.12-1.el9                    @anaconda   
+hc-utils.noarch                       0.0.4-1.el8                   @@commandline
+hostname.aarch64                      3.23-6.el9                    @anaconda   
+hwdata.noarch                         0.348-9.13.el9                @anaconda   
+ima-evm-utils.aarch64                 1.4-4.el9                     @anaconda   
+inih.aarch64                          49-6.el9                      @anaconda   
+initscripts-rename-device.aarch64     10.11.6-1.el9                 @anaconda   
+initscripts-service.noarch            10.11.6-1.el9                 @anaconda   
+ipcalc.aarch64                        1.0.0-5.el9                   @baseos     
+iproute.aarch64                       6.2.0-6.el9_4                 @anaconda   
+iproute-tc.aarch64                    6.2.0-6.el9_4                 @anaconda   
+iptables-libs.aarch64                 1.8.10-2.el9                  @anaconda   
+iptables-nft.aarch64                  1.8.10-2.el9                  @baseos     
+iputils.aarch64                       20210202-9.el9                @anaconda   
+irqbalance.aarch64                    2:1.9.2-3.el9                 @anaconda   
+jansson.aarch64                       2.14-1.el9                    @anaconda   
+jq.aarch64                            1.6-16.el9                    @anaconda   
+json-c.aarch64                        0.14-11.el9                   @anaconda   
+json-glib.aarch64                     1.6.6-1.el9                   @anaconda   
+kbd.aarch64                           2.4.0-9.el9                   @anaconda   
+kbd-legacy.noarch                     2.4.0-9.el9                   @anaconda   
+kbd-misc.noarch                       2.4.0-9.el9                   @anaconda   
+kernel.aarch64                        5.14.0-427.24.1.el9_4         @anaconda   
+kernel.aarch64                        5.14.0-427.26.1.el9_4         @baseos     
+kernel-core.aarch64                   5.14.0-427.24.1.el9_4         @anaconda   
+kernel-core.aarch64                   5.14.0-427.26.1.el9_4         @baseos     
+kernel-modules.aarch64                5.14.0-427.24.1.el9_4         @anaconda   
+kernel-modules.aarch64                5.14.0-427.26.1.el9_4         @baseos     
+kernel-modules-core.aarch64           5.14.0-427.24.1.el9_4         @anaconda   
+kernel-modules-core.aarch64           5.14.0-427.26.1.el9_4         @baseos     
+kernel-tools.aarch64                  5.14.0-427.26.1.el9_4         @baseos     
+kernel-tools-libs.aarch64             5.14.0-427.26.1.el9_4         @baseos     
+kexec-tools.aarch64                   2.0.27-8.el9                  @anaconda   
+keyutils-libs.aarch64                 1.6.3-1.el9                   @anaconda   
+kmod.aarch64                          28-9.el9                      @anaconda   
+kmod-libs.aarch64                     28-9.el9                      @anaconda   
+kpartx.aarch64                        0.8.7-27.el9                  @anaconda   
+krb5-libs.aarch64                     1.21.1-1.el9                  @anaconda   
+langpacks-core-en.noarch              3.0-16.el9                    @AppStream  
+langpacks-core-font-en.noarch         3.0-16.el9                    @AppStream  
+langpacks-en.noarch                   3.0-16.el9                    @AppStream  
+less.aarch64                          590-4.el9_4                   @anaconda   
+libacl.aarch64                        2.3.1-4.el9                   @anaconda   
+libaio.aarch64                        0.3.111-13.el9                @baseos     
+libarchive.aarch64                    3.5.3-4.el9                   @anaconda   
+libassuan.aarch64                     2.5.5-3.el9                   @anaconda   
+libatasmart.aarch64                   0.19-22.el9                   @AppStream  
+libatomic.aarch64                     11.4.1-3.el9.alma.1           @anaconda   
+libattr.aarch64                       2.5.1-3.el9                   @anaconda   
+libbasicobjects.aarch64               0.1.1-53.el9                  @anaconda   
+libblkid.aarch64                      2.37.4-18.el9                 @anaconda   
+libblockdev.aarch64                   2.28-10.el9                   @AppStream  
+libblockdev-crypto.aarch64            2.28-10.el9                   @AppStream  
+libblockdev-fs.aarch64                2.28-10.el9                   @AppStream  
+libblockdev-loop.aarch64              2.28-10.el9                   @AppStream  
+libblockdev-mdraid.aarch64            2.28-10.el9                   @AppStream  
+libblockdev-part.aarch64              2.28-10.el9                   @AppStream  
+libblockdev-swap.aarch64              2.28-10.el9                   @AppStream  
+libblockdev-utils.aarch64             2.28-10.el9                   @AppStream  
+libbpf.aarch64                        2:1.3.0-2.el9                 @anaconda   
+libbrotli.aarch64                     1.0.9-6.el9                   @anaconda   
+libbytesize.aarch64                   2.5-3.el9                     @AppStream  
+libcap.aarch64                        2.48-9.el9_2                  @anaconda   
+libcap-ng.aarch64                     0.8.2-7.el9                   @anaconda   
+libcbor.aarch64                       0.7.0-5.el9                   @anaconda   
+libcollection.aarch64                 0.7.0-53.el9                  @anaconda   
+libcom_err.aarch64                    1.46.5-5.el9                  @anaconda   
+libcomps.aarch64                      0.1.18-1.el9                  @anaconda   
+libcurl.aarch64                       7.76.1-29.el9_4               @anaconda   
+libdaemon.aarch64                     0.14-23.el9                   @anaconda   
+libdb.aarch64                         5.3.28-53.el9                 @anaconda   
+libdhash.aarch64                      0.5.0-53.el9                  @anaconda   
+libdnf.aarch64                        0.69.0-8.el9.alma.1           @anaconda   
+libeconf.aarch64                      0.4.1-3.el9_2                 @anaconda   
+libedit.aarch64                       3.1-38.20210216cvs.el9        @anaconda   
+libestr.aarch64                       0.1.11-4.el9                  @AppStream  
+libevent.aarch64                      2.1.12-6.el9                  @anaconda   
+libfastjson.aarch64                   0.99.9-5.el9                  @AppStream  
+libfdisk.aarch64                      2.37.4-18.el9                 @anaconda   
+libffi.aarch64                        3.4.2-8.el9                   @anaconda   
+libfido2.aarch64                      1.13.0-2.el9                  @anaconda   
+libgcc.aarch64                        11.4.1-3.el9.alma.1           @anaconda   
+libgcrypt.aarch64                     1.10.0-10.el9_2               @anaconda   
+libgomp.aarch64                       11.4.1-3.el9.alma.1           @anaconda   
+libgpg-error.aarch64                  1.42-5.el9                    @anaconda   
+libgudev.aarch64                      237-1.el9                     @anaconda   
+libgusb.aarch64                       0.3.8-2.el9                   @anaconda   
+libidn2.aarch64                       2.3.0-7.el9                   @anaconda   
+libini_config.aarch64                 1.3.1-53.el9                  @anaconda   
+libjcat.aarch64                       0.1.6-3.el9                   @anaconda   
+libkcapi.aarch64                      1.4.0-2.el9                   @anaconda   
+libkcapi-hmaccalc.aarch64             1.4.0-2.el9                   @anaconda   
+libksba.aarch64                       1.5.1-6.el9_1                 @anaconda   
+libldb.aarch64                        2.8.0-1.el9                   @anaconda   
+libmaxminddb.aarch64                  1.5.2-3.el9                   @appstream  
+libmnl.aarch64                        1.0.4-15.el9                  @anaconda   
+libmodulemd.aarch64                   2.13.0-2.el9                  @anaconda   
+libmount.aarch64                      2.37.4-18.el9                 @anaconda   
+libndp.aarch64                        1.8-4.el9                     @anaconda   
+libnetfilter_conntrack.aarch64        1.0.9-1.el9                   @anaconda   
+libnfnetlink.aarch64                  1.0.1-21.el9                  @anaconda   
+libnftnl.aarch64                      1.2.6-2.el9                   @baseos     
+libnghttp2.aarch64                    1.43.0-5.el9_4.3              @anaconda   
+libnl3.aarch64                        3.9.0-1.el9                   @anaconda   
+libnl3-cli.aarch64                    3.9.0-1.el9                   @anaconda   
+libpath_utils.aarch64                 0.2.1-53.el9                  @anaconda   
+libpipeline.aarch64                   1.5.3-4.el9                   @anaconda   
+libpsl.aarch64                        0.21.1-5.el9                  @anaconda   
+libpwquality.aarch64                  1.4.4-8.el9                   @anaconda   
+libref_array.aarch64                  0.1.5-53.el9                  @anaconda   
+librepo.aarch64                       1.14.5-2.el9                  @anaconda   
+libreport-filesystem.noarch           2.15.2-6.el9.alma             @anaconda   
+libseccomp.aarch64                    2.5.2-2.el9                   @anaconda   
+libselinux.aarch64                    3.6-1.el9                     @anaconda   
+libselinux-utils.aarch64              3.6-1.el9                     @anaconda   
+libsemanage.aarch64                   3.6-1.el9                     @anaconda   
+libsepol.aarch64                      3.6-1.el9                     @anaconda   
+libsigsegv.aarch64                    2.13-4.el9                    @anaconda   
+libsmartcols.aarch64                  2.37.4-18.el9                 @anaconda   
+libsolv.aarch64                       0.7.24-2.el9                  @anaconda   
+libss.aarch64                         1.46.5-5.el9                  @anaconda   
+libssh.aarch64                        0.10.4-13.el9                 @anaconda   
+libssh-config.noarch                  0.10.4-13.el9                 @anaconda   
+libsss_certmap.aarch64                2.9.4-6.el9_4                 @anaconda   
+libsss_idmap.aarch64                  2.9.4-6.el9_4                 @anaconda   
+libsss_nss_idmap.aarch64              2.9.4-6.el9_4                 @anaconda   
+libsss_sudo.aarch64                   2.9.4-6.el9_4                 @anaconda   
+libstdc++.aarch64                     11.4.1-3.el9.alma.1           @anaconda   
+libsysfs.aarch64                      2.1.1-10.el9                  @anaconda   
+libtalloc.aarch64                     2.4.1-1.el9                   @anaconda   
+libtasn1.aarch64                      4.16.0-8.el9_1                @anaconda   
+libtdb.aarch64                        1.4.9-1.el9                   @anaconda   
+libteam.aarch64                       1.31-16.el9_1                 @anaconda   
+libtevent.aarch64                     0.16.0-1.el9                  @anaconda   
+libudisks2.aarch64                    2.9.4-9.el9                   @AppStream  
+libunistring.aarch64                  0.9.10-15.el9                 @anaconda   
+liburing.aarch64                      2.5-1.el9                     @AppStream  
+libusbx.aarch64                       1.0.26-1.el9                  @anaconda   
+libuser.aarch64                       0.63-13.el9                   @anaconda   
+libutempter.aarch64                   1.2.1-6.el9                   @anaconda   
+libuuid.aarch64                       2.37.4-18.el9                 @anaconda   
+libverto.aarch64                      0.3.2-3.el9                   @anaconda   
+libxcrypt.aarch64                     4.4.18-3.el9                  @anaconda   
+libxml2.aarch64                       2.9.13-6.el9_4                @anaconda   
+libxmlb.aarch64                       0.3.10-1.el9                  @anaconda   
+libyaml.aarch64                       0.2.5-7.el9                   @anaconda   
+libzstd.aarch64                       1.5.1-2.el9                   @anaconda   
+lmdb-libs.aarch64                     0.9.29-3.el9                  @anaconda   
+logrotate.aarch64                     3.18.0-8.el9                  @anaconda   
+lshw.aarch64                          B.02.19.2-10.el9              @anaconda   
+lsscsi.aarch64                        0.32-6.el9                    @anaconda   
+lua-libs.aarch64                      5.4.4-4.el9                   @anaconda   
+lvm2.aarch64                          9:2.03.23-2.el9               @baseos     
+lvm2-libs.aarch64                     9:2.03.23-2.el9               @baseos     
+lz4-libs.aarch64                      1.9.3-5.el9                   @anaconda   
+lzo.aarch64                           2.10-7.el9                    @anaconda   
+man-db.aarch64                        2.9.3-7.el9                   @anaconda   
+mc.aarch64                            1:4.8.26-5.el9                @appstream  
+mdadm.aarch64                         4.2-12.el9_4                  @anaconda   
+mokutil.aarch64                       2:0.6.0-4.el9                 @anaconda   
+mpfr.aarch64                          4.1.0-7.el9                   @anaconda   
+ncurses.aarch64                       6.2-10.20210508.el9           @anaconda   
+ncurses-base.noarch                   6.2-10.20210508.el9           @anaconda   
+ncurses-libs.aarch64                  6.2-10.20210508.el9           @anaconda   
+nettle.aarch64                        3.9.1-1.el9                   @anaconda   
+newt.aarch64                          0.52.21-11.el9                @anaconda   
+nftables.aarch64                      1:1.0.9-1.el9                 @baseos     
+npth.aarch64                          1.6-8.el9                     @anaconda   
+nspr.aarch64                          4.35.0-7.el9_4                @AppStream  
+nss.aarch64                           3.90.0-7.el9_4                @AppStream  
+nss-softokn.aarch64                   3.90.0-7.el9_4                @AppStream  
+nss-softokn-freebl.aarch64            3.90.0-7.el9_4                @AppStream  
+nss-sysinit.aarch64                   3.90.0-7.el9_4                @AppStream  
+nss-util.aarch64                      3.90.0-7.el9_4                @AppStream  
+numactl-libs.aarch64                  2.0.16-3.el9                  @anaconda   
+oniguruma.aarch64                     6.9.6-1.el9.5                 @anaconda   
+openldap.aarch64                      2.6.6-3.el9                   @anaconda   
+openssh.aarch64                       8.7p1-38.el9_4.4              @anaconda   
+openssh-clients.aarch64               8.7p1-38.el9_4.4              @anaconda   
+openssh-server.aarch64                8.7p1-38.el9_4.4              @anaconda   
+openssl.aarch64                       1:3.0.7-27.el9                @anaconda   
+openssl-libs.aarch64                  1:3.0.7-27.el9                @anaconda   
+os-prober.aarch64                     1.77-10.el9                   @anaconda   
+p11-kit.aarch64                       0.25.3-2.el9                  @anaconda   
+p11-kit-trust.aarch64                 0.25.3-2.el9                  @anaconda   
+pam.aarch64                           1.5.1-19.el9                  @anaconda   
+parted.aarch64                        3.5-2.el9                     @anaconda   
+passwd.aarch64                        0.80-12.el9                   @anaconda   
+pciutils-libs.aarch64                 3.7.0-5.el9                   @anaconda   
+pcre.aarch64                          8.44-3.el9.3                  @anaconda   
+pcre2.aarch64                         10.40-5.el9                   @anaconda   
+pcre2-syntax.noarch                   10.40-5.el9                   @anaconda   
+perl-AutoLoader.noarch                5.74-481.el9                  @appstream  
+perl-B.aarch64                        1.80-481.el9                  @appstream  
+perl-Carp.noarch                      1.50-460.el9                  @appstream  
+perl-Class-Struct.noarch              0.66-481.el9                  @appstream  
+perl-Data-Dumper.aarch64              2.174-462.el9                 @appstream  
+perl-Digest.noarch                    1.19-4.el9                    @appstream  
+perl-Digest-MD5.aarch64               2.58-4.el9                    @appstream  
+perl-DynaLoader.aarch64               1.47-481.el9                  @appstream  
+perl-Encode.aarch64                   4:3.08-462.el9                @appstream  
+perl-Errno.aarch64                    1.30-481.el9                  @appstream  
+perl-Error.noarch                     1:0.17029-7.el9               @appstream  
+perl-Exporter.noarch                  5.74-461.el9                  @appstream  
+perl-Fcntl.aarch64                    1.13-481.el9                  @appstream  
+perl-File-Basename.noarch             2.85-481.el9                  @appstream  
+perl-File-Find.noarch                 1.37-481.el9                  @appstream  
+perl-File-Path.noarch                 2.18-4.el9                    @appstream  
+perl-File-Temp.noarch                 1:0.231.100-4.el9             @appstream  
+perl-File-stat.noarch                 1.09-481.el9                  @appstream  
+perl-FileHandle.noarch                2.03-481.el9                  @appstream  
+perl-Getopt-Long.noarch               1:2.52-4.el9                  @appstream  
+perl-Getopt-Std.noarch                1.12-481.el9                  @appstream  
+perl-Git.noarch                       2.43.5-1.el9_4                @appstream  
+perl-HTTP-Tiny.noarch                 0.076-462.el9                 @appstream  
+perl-IO.aarch64                       1.43-481.el9                  @appstream  
+perl-IO-Socket-IP.noarch              0.41-5.el9                    @appstream  
+perl-IO-Socket-SSL.noarch             2.073-1.el9                   @appstream  
+perl-IPC-Open3.noarch                 1.21-481.el9                  @appstream  
+perl-MIME-Base64.aarch64              3.16-4.el9                    @appstream  
+perl-Mozilla-CA.noarch                20200520-6.el9                @appstream  
+perl-NDBM_File.aarch64                1.15-481.el9                  @appstream  
+perl-Net-SSLeay.aarch64               1.92-2.el9                    @appstream  
+perl-POSIX.aarch64                    1.94-481.el9                  @appstream  
+perl-PathTools.aarch64                3.78-461.el9                  @appstream  
+perl-Pod-Escapes.noarch               1:1.07-460.el9                @appstream  
+perl-Pod-Perldoc.noarch               3.28.01-461.el9               @appstream  
+perl-Pod-Simple.noarch                1:3.42-4.el9                  @appstream  
+perl-Pod-Usage.noarch                 4:2.01-4.el9                  @appstream  
+perl-Scalar-List-Utils.aarch64        4:1.56-461.el9                @appstream  
+perl-SelectSaver.noarch               1.02-481.el9                  @appstream  
+perl-Socket.aarch64                   4:2.031-4.el9                 @appstream  
+perl-Storable.aarch64                 1:3.21-460.el9                @appstream  
+perl-Symbol.noarch                    1.08-481.el9                  @appstream  
+perl-Term-ANSIColor.noarch            5.01-461.el9                  @appstream  
+perl-Term-Cap.noarch                  1.17-460.el9                  @appstream  
+perl-TermReadKey.aarch64              2.38-11.el9                   @appstream  
+perl-Text-ParseWords.noarch           3.30-460.el9                  @appstream  
+perl-Text-Tabs+Wrap.noarch            2013.0523-460.el9             @appstream  
+perl-Time-Local.noarch                2:1.300-7.el9                 @appstream  
+perl-URI.noarch                       5.09-3.el9                    @appstream  
+perl-base.noarch                      2.27-481.el9                  @appstream  
+perl-constant.noarch                  1.33-461.el9                  @appstream  
+perl-if.noarch                        0.60.800-481.el9              @appstream  
+perl-interpreter.aarch64              4:5.32.1-481.el9              @appstream  
+perl-lib.aarch64                      0.65-481.el9                  @appstream  
+perl-libnet.noarch                    3.13-4.el9                    @appstream  
+perl-libs.aarch64                     4:5.32.1-481.el9              @appstream  
+perl-mro.aarch64                      1.23-481.el9                  @appstream  
+perl-overload.noarch                  1.31-481.el9                  @appstream  
+perl-overloading.noarch               0.02-481.el9                  @appstream  
+perl-parent.noarch                    1:0.238-460.el9               @appstream  
+perl-podlators.noarch                 1:4.14-460.el9                @appstream  
+perl-subs.noarch                      1.03-481.el9                  @appstream  
+perl-vars.noarch                      1.05-481.el9                  @appstream  
+pigz.aarch64                          2.5-4.el9                     @anaconda   
+policycoreutils.aarch64               3.6-2.1.el9                   @anaconda   
+polkit.aarch64                        0.117-11.el9                  @anaconda   
+polkit-libs.aarch64                   0.117-11.el9                  @anaconda   
+polkit-pkla-compat.aarch64            0.1-21.el9                    @anaconda   
+popt.aarch64                          1.18-8.el9                    @anaconda   
+prefixdevname.aarch64                 0.1.0-8.el9                   @anaconda   
+procps-ng.aarch64                     3.3.17-14.el9                 @anaconda   
+psmisc.aarch64                        23.4-3.el9                    @anaconda   
+publicsuffix-list-dafsa.noarch        20210518-3.el9                @anaconda   
+python-unversioned-command.noarch     3.9.18-3.el9_4.1              @AppStream  
+python3.aarch64                       3.9.18-3.el9_4.1              @anaconda   
+python3-attrs.noarch                  20.3.0-7.el9                  @appstream  
+python3-audit.aarch64                 3.1.2-2.el9                   @appstream  
+python3-babel.noarch                  2.9.1-2.el9                   @appstream  
+python3-chardet.noarch                4.0.0-5.el9                   @baseos     
+python3-configobj.noarch              5.0.6-25.el9                  @appstream  
+python3-dateutil.noarch               1:2.8.1-7.el9                 @anaconda   
+python3-dbus.aarch64                  1.2.18-2.el9                  @anaconda   
+python3-distro.noarch                 1.5.0-7.el9                   @appstream  
+python3-dnf.noarch                    4.14.0-9.el9.alma.1           @anaconda   
+python3-dnf-plugins-core.noarch       4.3.0-13.el9                  @anaconda   
+python3-gpg.aarch64                   1.15.1-6.el9                  @anaconda   
+python3-hawkey.aarch64                0.69.0-8.el9.alma.1           @anaconda   
+python3-idna.noarch                   2.10-7.el9_4.1                @baseos     
+python3-jinja2.noarch                 2.11.3-5.el9                  @appstream  
+python3-jsonpatch.noarch              1.21-16.el9                   @appstream  
+python3-jsonpointer.noarch            2.0-4.el9                     @appstream  
+python3-jsonschema.noarch             3.2.0-13.el9                  @appstream  
+python3-libcomps.aarch64              0.1.18-1.el9                  @anaconda   
+python3-libdnf.aarch64                0.69.0-8.el9.alma.1           @anaconda   
+python3-libs.aarch64                  3.9.18-3.el9_4.1              @anaconda   
+python3-libselinux.aarch64            3.6-1.el9                     @AppStream  
+python3-libsemanage.aarch64           3.6-1.el9                     @appstream  
+python3-markupsafe.aarch64            1.1.1-12.el9                  @appstream  
+python3-netifaces.aarch64             0.10.6-15.el9                 @appstream  
+python3-oauthlib.noarch               3.1.1-5.el9                   @appstream  
+python3-pip-wheel.noarch              21.2.3-8.el9                  @anaconda   
+python3-policycoreutils.noarch        3.6-2.1.el9                   @appstream  
+python3-prettytable.noarch            0.7.2-27.el9                  @appstream  
+python3-pyrsistent.aarch64            0.17.3-8.el9                  @appstream  
+python3-pyserial.noarch               3.4-12.el9                    @appstream  
+python3-pysocks.noarch                1.7.1-12.el9                  @baseos     
+python3-pytz.noarch                   2021.1-5.el9                  @appstream  
+python3-pyyaml.aarch64                5.4.1-6.el9                   @baseos     
+python3-requests.noarch               2.25.1-8.el9                  @baseos     
+python3-rpm.aarch64                   4.16.1.3-29.el9               @anaconda   
+python3-setools.aarch64               4.4.4-1.el9                   @baseos     
+python3-setuptools.noarch             53.0.0-12.el9                 @baseos     
+python3-setuptools-wheel.noarch       53.0.0-12.el9                 @anaconda   
+python3-six.noarch                    1.15.0-9.el9                  @anaconda   
+python3-systemd.aarch64               234-18.el9                    @anaconda   
+python3-urllib3.noarch                1.26.5-5.el9                  @baseos     
+qemu-guest-agent.aarch64              17:8.2.0-11.el9_4.4           @AppStream  
+readline.aarch64                      8.1-4.el9                     @anaconda   
+rootfiles.noarch                      8.1-31.el9                    @anaconda   
+rpm.aarch64                           4.16.1.3-29.el9               @anaconda   
+rpm-build-libs.aarch64                4.16.1.3-29.el9               @anaconda   
+rpm-libs.aarch64                      4.16.1.3-29.el9               @anaconda   
+rpm-plugin-audit.aarch64              4.16.1.3-29.el9               @anaconda   
+rpm-plugin-selinux.aarch64            4.16.1.3-29.el9               @anaconda   
+rpm-plugin-systemd-inhibit.aarch64    4.16.1.3-29.el9               @AppStream  
+rpm-sign-libs.aarch64                 4.16.1.3-29.el9               @anaconda   
+rsync.aarch64                         3.2.3-19.el9                  @anaconda   
+rsyslog.aarch64                       8.2310.0-4.el9                @AppStream  
+rsyslog-logrotate.aarch64             8.2310.0-4.el9                @AppStream  
+sed.aarch64                           4.8-9.el9                     @anaconda   
+selinux-policy.noarch                 38.1.35-2.el9_4.2             @anaconda   
+selinux-policy-targeted.noarch        38.1.35-2.el9_4.2             @anaconda   
+setup.noarch                          2.13.7-10.el9                 @anaconda   
+sg3_utils.aarch64                     1.47-9.el9                    @anaconda   
+sg3_utils-libs.aarch64                1.47-9.el9                    @anaconda   
+shadow-utils.aarch64                  2:4.9-8.el9                   @anaconda   
+shared-mime-info.aarch64              2.1-5.el9                     @anaconda   
+shim-aa64.aarch64                     15.8-4.el9_3.alma.1           @anaconda   
+slang.aarch64                         2.3.2-11.el9                  @anaconda   
+snappy.aarch64                        1.1.8-8.el9                   @anaconda   
+sqlite-libs.aarch64                   3.34.1-7.el9_3                @anaconda   
+squashfs-tools.aarch64                4.4-10.git1.el9               @anaconda   
+sssd-client.aarch64                   2.9.4-6.el9_4                 @anaconda   
+sssd-common.aarch64                   2.9.4-6.el9_4                 @anaconda   
+sssd-kcm.aarch64                      2.9.4-6.el9_4                 @anaconda   
+sudo.aarch64                          1.9.5p2-10.el9_3              @anaconda   
+systemd.aarch64                       252-32.el9_4.alma.1           @anaconda   
+systemd-libs.aarch64                  252-32.el9_4.alma.1           @anaconda   
+systemd-pam.aarch64                   252-32.el9_4.alma.1           @anaconda   
+systemd-rpm-macros.noarch             252-32.el9_4.alma.1           @anaconda   
+systemd-udev.aarch64                  252-32.el9_4.alma.1           @anaconda   
+tar.aarch64                           2:1.34-6.el9_1                @baseos     
+teamd.aarch64                         1.31-16.el9_1                 @anaconda   
+tpm2-tss.aarch64                      3.2.2-2.el9                   @anaconda   
+tzdata.noarch                         2024a-1.el9                   @anaconda   
+udisks2.aarch64                       2.9.4-9.el9                   @AppStream  
+userspace-rcu.aarch64                 0.12.1-6.el9                  @anaconda   
+util-linux.aarch64                    2.37.4-18.el9                 @anaconda   
+util-linux-core.aarch64               2.37.4-18.el9                 @anaconda   
+vim-minimal.aarch64                   2:8.2.2637-20.el9_1           @anaconda   
+volume_key-libs.aarch64               0.3.12-15.el9                 @AppStream  
+wget.aarch64                          1.21.1-7.el9                  @appstream  
+which.aarch64                         2.21-29.el9                   @anaconda   
+xfsprogs.aarch64                      6.3.0-1.el9                   @anaconda   
+xz.aarch64                            5.2.5-8.el9_0                 @anaconda   
+xz-libs.aarch64                       5.2.5-8.el9_0                 @anaconda   
+yum.noarch                            4.14.0-9.el9.alma.1           @anaconda   
+zlib.aarch64                          1.2.11-40.el9                 @anaconda   
+
+
+================================================================================
+
+File: /var/www/HostMaster/README.md
+
+# HostMaster
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access_user.log
+
+84.0.241.66 - - [22/Jul/2024:19:39:30 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:39:30 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:39:42 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:40:05 +0000] "GET / HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:40:57 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET / HTTP/1.1" 200 1273 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 1255 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:36:44 +0000] "GET /assets/js/scripts.js HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:37:37 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET / HTTP/1.1" 200 1460 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2329 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:12 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET / HTTP/1.1" 200 1460 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:43:19 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:44:11 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET / HTTP/1.1" 200 1440 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:34 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:35 +0000] "GET / HTTP/1.1" 200 1440 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:35 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:35 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:35 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:45:35 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:46:26 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2329 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:09 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2329 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:49:12 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2329 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:51:42 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2285 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:52 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 398 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:55:56 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:20:56:45 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 3187 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:44 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:47 +0000] "GET / HTTP/1.1" 200 1425 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:47 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:47 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:47 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:47 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:57 +0000] "GET /login.php HTTP/1.1" 200 781 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:05:57 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:06:18 +0000] "\x16\x03\x01\x06\xd6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:18 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:18 +0000] "\x16\x03\x01\x06\xd6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:18 +0000] "\x16\x03\x01\x06\xf6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:21 +0000] "\x16\x03\x01\x06\xb6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:21 +0000] "\x16\x03\x01\x06\xf6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:21 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:21 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:33 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:33 +0000] "\x16\x03\x01\x06\xd6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:33 +0000] "\x16\x03\x01\x06\xd6\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:33 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:06:40 +0000] "GET /login.php HTTP/1.1" 200 781 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:06:40 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /index.php HTTP/1.1" 200 1425 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:07:09 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /index.php HTTP/1.1" 200 1425 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 3187 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:08:01 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /index.php HTTP/1.1" 200 1425 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2496 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:21 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:11:32 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:12:13 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /index.php HTTP/1.1" 200 1553 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 2590 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:16:43 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /index.php HTTP/1.1" 200 1553 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:34 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:36 +0000] "GET /logout.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:36 +0000] "GET /login.php HTTP/1.1" 200 781 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:17:46 +0000] "GET /login.php HTTP/1.1" 200 781 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:18:38 +0000] "-" 408 - "-" "-"
+84.0.241.66 - - [22/Jul/2024:21:20:32 +0000] "GET /login.php HTTP/1.1" 200 781 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:20:32 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 3525 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:20 +0000] "GET /login.php HTTP/1.1" 200 781 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:20 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:31 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /index.php HTTP/1.1" 200 1553 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:32 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:38 +0000] "GET /logout.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:38 +0000] "GET /login.php HTTP/1.1" 200 781 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:38 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /index.php HTTP/1.1" 200 1553 "http://s8.hostfix.hu:8085/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /assets/images/icon2.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /assets/images/icon3.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /assets/images/icon4.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:43 +0000] "GET /assets/js/scripts.js HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:21:51 +0000] "GET /assets/css/styles.css HTTP/1.1" 304 - "http://s8.hostfix.hu:8085/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:21:22:35 +0000] "-" 408 - "-" "-"
+206.168.32.102 - - [22/Jul/2024:22:52:48 +0000] "\x16\x03\x01" 400 226 "-" "-"
+206.168.32.102 - - [22/Jul/2024:22:52:52 +0000] "GET / HTTP/1.1" 200 1553 "-" "-"
+206.168.32.102 - - [22/Jul/2024:22:52:55 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+206.168.32.102 - - [22/Jul/2024:22:52:55 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+206.168.32.102 - - [22/Jul/2024:22:52:55 +0000] "PRI * HTTP/2.0" 400 226 "-" "-"
+206.168.32.105 - - [23/Jul/2024:07:38:03 +0000] "\x16\x03\x01" 400 226 "-" "-"
+206.168.32.105 - - [23/Jul/2024:07:38:06 +0000] "GET / HTTP/1.1" 200 1553 "-" "-"
+206.168.32.105 - - [23/Jul/2024:07:38:09 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+206.168.32.105 - - [23/Jul/2024:07:38:09 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+206.168.32.105 - - [23/Jul/2024:07:38:09 +0000] "PRI * HTTP/2.0" 400 226 "-" "-"
+87.236.176.89 - - [23/Jul/2024:08:03:30 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/)"
+198.235.24.38 - - [23/Jul/2024:09:38:46 +0000] "GET / HTTP/1.1" 200 1553 "-" "Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com"
+167.94.145.97 - - [23/Jul/2024:10:46:37 +0000] "\x16\x03\x01" 400 226 "-" "-"
+167.94.145.97 - - [23/Jul/2024:10:46:40 +0000] "GET / HTTP/1.1" 200 1553 "-" "-"
+167.94.145.97 - - [23/Jul/2024:10:46:43 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+167.94.145.97 - - [23/Jul/2024:10:46:43 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+167.94.145.97 - - [23/Jul/2024:10:46:44 +0000] "PRI * HTTP/2.0" 400 226 "-" "-"
+185.242.226.39 - - [23/Jul/2024:11:31:13 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+115.231.78.3 - - [23/Jul/2024:12:07:25 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.2623.112 Safari/537.36"
+115.231.78.3 - - [23/Jul/2024:12:07:26 +0000] "GET / HTTP/1.1" 200 1553 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE"
+115.231.78.3 - - [23/Jul/2024:12:07:26 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE"
+115.231.78.3 - - [23/Jul/2024:12:07:27 +0000] "GET /robots.txt HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE"
+115.231.78.3 - - [23/Jul/2024:12:07:27 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 450 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE"
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error_admin.log
+
+[Mon Jul 22 19:39:35.338663 2024] [autoindex:error] [pid 7845:tid 7942] [client 84.0.241.66:54524] AH01276: Cannot serve directory /var/www/HostMaster/admin/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Jul 23 11:05:42.901440 2024] [autoindex:error] [pid 8351:tid 8403] [client 64.62.197.202:43291] AH01276: Cannot serve directory /var/www/HostMaster/admin/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access_admin.log
+
+84.0.241.66 - - [22/Jul/2024:19:39:35 +0000] "GET / HTTP/1.1" 403 4681 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:39:35 +0000] "GET /icons/poweredby.png HTTP/1.1" 200 4194 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:39:35 +0000] "GET /poweredby.png HTTP/1.1" 200 5714 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.241.66 - - [22/Jul/2024:19:39:35 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+64.62.197.202 - - [23/Jul/2024:11:05:42 +0000] "GET / HTTP/1.1" 403 4681 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15"
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error_user.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/index.php
+
+<?php
+// index.php
+
+include '../config/config.php';
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostMaster Felhasználói Oldal</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <?php include 'includes/header.php'; ?>
+    <div class="container">
+        <h1>Üdvözöljük a HostMaster Felhasználói Oldalon</h1>
+        <div class="icon-grid">
+            <div class="icon-item">
+                <img src="assets/images/icon1.png" alt="Ikon 1">
+                <p>Modul 1</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon2.png" alt="Ikon 2">
+                <p>Modul 2</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon3.png" alt="Ikon 3">
+                <p>Modul 3</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon4.png" alt="Ikon 4">
+                <p>Modul 4</p>
+            </div>
+        </div>
+    </div>
+    <?php include 'includes/sidebar.php'; ?>
+    <?php include 'includes/footer.php'; ?>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/register.php
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/logout.php
+
+<?php
+// logout.php
+
+session_start();
+session_unset();
+session_destroy();
+header("Location: login.php");
+exit();
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/login.php
+
+<?php
+// login.php
+
+include '../config/config.php';
+session_start();
+
+// CSRF token generálása
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+$error = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitize_input($_POST['username']);
+    $password = sanitize_input($_POST['password']);
+    $csrf_token = $_POST['csrf_token'];
+
+    if (hash_equals($_SESSION['csrf_token'], $csrf_token)) {
+        $pdo = get_db_connection();
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
+
+        if ($user && verify_password($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = 'Hibás felhasználónév vagy jelszó.';
+        }
+    } else {
+        $error = 'Érvénytelen CSRF token.';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés - HostMaster</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bejelentkezés</h2>
+        <?php if ($error): ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+        <?php endif; ?>
+        <form method="post" action="login.php">
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+            <input type="text" name="username" placeholder="Felhasználónév" required>
+            <input type="password" name="password" placeholder="Jelszó" required>
+            <input type="submit" value="Bejelentkezés">
+        </form>
+    </div>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/sidebar.php
+
+<?php
+// sidebar.php
+
+// Hostnév és PHP verzió lekérdezése
+$hostname = gethostname();
+$php_version = phpversion();
+?>
+
+<div class="sidebar">
+    <h2>Szerver Információk</h2>
+    <div class="info">Hostnév: <?php echo $hostname; ?></div>
+    <div class="info">PHP verzió: <?php echo $php_version; ?></div>
+</div>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/footer.php
+
+<footer>
+    &copy; 2024 HostMaster. Minden jog fenntartva.
+</footer>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/functions.php
+
+<?php
+// functions.php
+
+function sanitize_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
+function hash_password($password) {
+    return password_hash($password, PASSWORD_BCRYPT);
+}
+
+function verify_password($password, $hash) {
+    return password_verify($password, $hash);
+}
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/header.php
+
+<header>
+    <h1>HostMaster</h1>
+    <div>
+        <button class="menu-btn">&#9776;</button>
+        <button class="logout-btn" onclick="window.location.href='logout.php'">Kijelentkezés</button>
+    </div>
+</header>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/js/scripts.js
+
+/* scripts.js */
+
+// Oldalsáv megjelenítése/elrejtése
+document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+    const container = document.querySelector('.container');
+
+    menuBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        container.classList.toggle('sidebar-open');
+    });
+});
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/css/styles.css
+
+/* styles.css */
+
+/* Alapértelmezett stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Fejléc stílusok */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header .menu-btn,
+header .logout-btn {
+    background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .menu-btn:focus,
+header .logout-btn:focus {
+    outline: none;
+}
+
+header .logout-btn {
+    font-size: 1em;
+}
+
+/* Oldalsáv stílusok */
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 60px - 40px);
+    /* Fejléc és lábléc magasságának levonása */
+    background-color: #1e3a5f;
+    color: white;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+}
+
+.sidebar .info {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Tartalom stílusok */
+.container {
+    margin-right: 250px;
+    /* Oldalsáv szélessége */
+    padding: 20px;
+    flex: 1;
+    transition: margin-right 0.3s ease;
+}
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-grid .icon-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 0 0 calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon-grid .icon-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.icon-grid .icon-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Lábléc stílusok */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Bejelentkezési oldal stílusok */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #1e3a5f;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #163a4f;
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .container {
+        margin-right: 0;
+    }
+
+    header .menu-btn {
+        display: block;
+    }
+
+    .container.sidebar-open {
+        margin-right: 0;
+        /* Kis kijelzőn a tartalom fölé csúszik */
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/config/config.php
+
+<?php
+// config.php
+
+// Az adatbázis kapcsolat beállításai
+define('DB_HOST', 'localhost');
+define('DB_USER', 'hostmaster_panel');
+define('DB_PASS', 'erős_jelszó');
+define('DB_NAME', 'hostmaster');
+define('DB_CHARSET', 'utf8mb4');
+
+// Titkos kulcs a jelszavak és egyéb érzékeny adatok titkosításához
+define('SECRET_KEY', 'EzEgyNagyonErősTitkosKulcs_2024!');
+
+// Adatbázis kapcsolat létrehozása PDO-val
+function get_db_connection() {
+    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=' . DB_CHARSET;
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+
+    try {
+        $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+        return $pdo;
+    } catch (PDOException $e) {
+        die('Database connection failed: ' . $e->getMessage());
+    }
+}
+
+// Input adatokat tisztító funkció
+function sanitize_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
+// Jelszó hashelése
+function hash_password($password) {
+    return password_hash($password, PASSWORD_BCRYPT);
+}
+
+// Jelszó ellenőrzése
+function verify_password($password, $hash) {
+    return password_verify($password, $hash);
+}
+
+// CSRF token generálása
+function get_csrf_token() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+// CSRF token ellenőrzése
+function verify_csrf_token($token) {
+    return hash_equals($_SESSION['csrf_token'], $token);
+}
+
+// Példa használat
+// session_start();
+// $pdo = get_db_connection();
+// $hashed_password = hash_password('your_password');
+
+?>
+
+
+================================================================================
+

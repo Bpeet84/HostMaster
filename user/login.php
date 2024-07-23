@@ -1,8 +1,7 @@
 <?php
 // login.php
 
-include '../config/config.php';
-session_start();
+require_once __DIR__ . '/includes/init.php';
 
 // CSRF token generálása
 if (empty($_SESSION['csrf_token'])) {
@@ -13,9 +12,11 @@ $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize_input($_POST['username']);
     $password = sanitize_input($_POST['password']);
-    $csrf_token = $_POST['csrf_token'];
+    $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
 
-    if (hash_equals($_SESSION['csrf_token'], $csrf_token)) {
+    if (!verify_csrf_token($csrf_token)) {
+        $error = 'Érvénytelen CSRF token.';
+    } else {
         $pdo = get_db_connection();
         $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
         $stmt->execute([$username]);
@@ -29,8 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $error = 'Hibás felhasználónév vagy jelszó.';
         }
-    } else {
-        $error = 'Érvénytelen CSRF token.';
     }
 }
 ?>
@@ -47,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-container">
         <h2>Bejelentkezés</h2>
         <?php if ($error): ?>
-            <p style="color: red;"><?php echo $error; ?></p>
+            <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
         <form method="post" action="login.php">
-            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
             <input type="text" name="username" placeholder="Felhasználónév" required>
             <input type="password" name="password" placeholder="Jelszó" required>
             <input type="submit" value="Bejelentkezés">

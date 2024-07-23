@@ -27,38 +27,4 @@ function get_db_connection() {
         die('Database connection failed: ' . $e->getMessage());
     }
 }
-
-// Input adatokat tisztító funkció
-function sanitize_input($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
-}
-
-// Jelszó hashelése
-function hash_password($password) {
-    return password_hash($password, PASSWORD_BCRYPT);
-}
-
-// Jelszó ellenőrzése
-function verify_password($password, $hash) {
-    return password_verify($password, $hash);
-}
-
-// CSRF token generálása
-function get_csrf_token() {
-    if (empty($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
-    return $_SESSION['csrf_token'];
-}
-
-// CSRF token ellenőrzése
-function verify_csrf_token($token) {
-    return hash_equals($_SESSION['csrf_token'], $token);
-}
-
-// Példa használat
-// session_start();
-// $pdo = get_db_connection();
-// $hashed_password = hash_password('your_password');
-
 ?>

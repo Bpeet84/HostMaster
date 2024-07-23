@@ -1,0 +1,2 @@
+[Mon Jul 22 19:39:35.338663 2024] [autoindex:error] [pid 7845:tid 7942] [client 84.0.241.66:54524] AH01276: Cannot serve directory /var/www/HostMaster/admin/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Jul 23 11:05:42.901440 2024] [autoindex:error] [pid 8351:tid 8403] [client 64.62.197.202:43291] AH01276: Cannot serve directory /var/www/HostMaster/admin/: No matching DirectoryIndex (index.html,index.php) found, and server-generated directory index forbidden by Options directive

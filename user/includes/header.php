@@ -11,7 +11,9 @@ $admin_return_url = (isset($_SESSION['original_admin_id'])) ? "http://$_SERVER[S
 ?>
 
 <header>
-    <h1>HostMaster</h1>
+    <div class="logo">
+        <span class="host">Host</span><span class="master">Master</span>
+    </div>
     <div>
         <?php if ($admin_return_url): ?>
             <a href="<?php echo htmlspecialchars($admin_return_url); ?>" class="admin-return-btn">Vissza az admin felületre</a>

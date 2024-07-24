@@ -9,16 +9,42 @@ header {
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-header .menu-btn,
-header .logout-btn {
+.logo .host {
+    color: #00bfff;
+    /* Világos kék */
+}
+
+.logo .master {
+    color: white;
+    /* Fehér */
+}
+
+header .menu-btn {
     background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .logout-btn,
+header .admin-return-btn {
+    background-color: #6b6d6e;
+    border-radius: 5px;
+    padding: 10px 20px;
     border: none;
     color: white;
     font-size: 1.5em;
@@ -31,15 +57,12 @@ header .logout-btn:focus {
     outline: none;
 }
 
-header .logout-btn {
+header .logout-btn,
+header .admin-return-btn {
     font-size: 1em;
 }
 
 /* Reszponzív menü gomb */
-header .menu-btn {
-    display: none;
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;

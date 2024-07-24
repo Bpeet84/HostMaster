@@ -12,7 +12,7 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px 20px 20px 250px;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -36,11 +36,22 @@ button {
 .icon-item {
     flex: 1 1 200px;
     text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .icon-item img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {

@@ -4,7 +4,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ footer {
 /* Lábléc reszponzív módon */
 @media (max-width: 768px) {
     footer {
-        position: relative;
+        position: fixed;
         padding: 20px 0;
     }
 }

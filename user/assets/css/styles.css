@@ -256,3 +256,12 @@ footer {
         display: none;
     }
 }
+
+.admin-return-btn {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}

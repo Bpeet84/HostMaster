@@ -1,0 +1,1 @@
+[Wed Jul 24 15:51:29.320587 2024] [proxy_fcgi:error] [pid 2494:tid 2525] [client 84.0.241.66:64185] AH01071: Got error 'Primary script unknown', referer: http://s8.hostfix.hu:8086/login.php

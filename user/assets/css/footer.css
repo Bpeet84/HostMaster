@@ -1,0 +1,19 @@
+/* Lábléc stílusok */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Lábléc reszponzív módon */
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+        padding: 20px 0;
+    }
+}

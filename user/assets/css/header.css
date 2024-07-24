@@ -1,0 +1,62 @@
+/* Fejléc stílusok */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header .menu-btn,
+header .logout-btn {
+    background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .menu-btn:focus,
+header .logout-btn:focus {
+    outline: none;
+}
+
+header .logout-btn {
+    font-size: 1em;
+}
+
+/* Reszponzív menü gomb */
+header .menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-btn {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+}

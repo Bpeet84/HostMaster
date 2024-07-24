@@ -26,9 +26,14 @@ if (!$user) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HostMaster Felhasználói Oldal</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
+    <?php include 'includes/sidebar.php'; ?>
     <div class="container">
         <h1>Üdvözöljük, <?php echo htmlspecialchars($user['username']); ?>!</h1>
         <div class="icon-grid">
@@ -50,7 +55,6 @@ if (!$user) {
             </div>
         </div>
     </div>
-    <?php include 'includes/sidebar.php'; ?>
     <?php include 'includes/footer.php'; ?>
 </body>
 </html>

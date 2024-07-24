@@ -1,11 +1,12 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const sidebar = document.querySelector('.sidebar');
-    const container = document.querySelector('.container');
+    const headerNav = document.querySelector('header nav');
 
-    menuBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
-        container.classList.toggle('sidebar-open');
-    });
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+            headerNav.classList.toggle('active');
+        });
+    }
 });

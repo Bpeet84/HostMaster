@@ -29,9 +29,14 @@ $csrf_token = get_csrf_token();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felhasználói Profil - HostMaster</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/profile/style.css">
 </head>
 <body>
     <?php include '../../includes/header.php'; ?>
+    <?php include '../../includes/sidebar.php'; ?>
     <div class="container">
         <div class="profile-container">
             <h1>Felhasználói Profil</h1>
@@ -55,7 +60,6 @@ $csrf_token = get_csrf_token();
             </form>
         </div>
     </div>
-    <?php include '../../includes/sidebar.php'; ?>
     <?php include '../../includes/footer.php'; ?>
 </body>
 </html>

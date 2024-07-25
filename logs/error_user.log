@@ -1,3 +1,0 @@
-[Wed Jul 24 15:56:50.905236 2024] [proxy_fcgi:error] [pid 707:tid 770] [client 84.0.241.66:64307] AH01071: Got error 'Primary script unknown'
-[Wed Jul 24 16:07:22.718407 2024] [proxy_fcgi:error] [pid 709:tid 879] [client 84.0.241.66:64468] AH01071: Got error 'Primary script unknown'
-[Wed Jul 24 16:07:45.607483 2024] [proxy_fcgi:error] [pid 2494:tid 2528] [client 84.0.241.66:64490] AH01071: Got error 'Primary script unknown'

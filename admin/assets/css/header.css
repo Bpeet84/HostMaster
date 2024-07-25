@@ -1,0 +1,124 @@
+/* Admin fejléc stílusok - HostMaster */
+
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo .host {
+    color: #00bfff;
+}
+
+.logo .master {
+    color: white;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.user-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 1em;
+    height: 40px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-select:focus {
+    border-color: #1e3a5f;
+    box-shadow: 0 0 5px rgba(30, 58, 95, 0.5);
+}
+
+header .menu-btn {
+    background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none;
+    /* Nagy képernyőn rejtve */
+}
+
+header .btn {
+    background-color: #6b6d6e;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .menu-btn:focus,
+header .btn:focus {
+    outline: none;
+}
+
+/* Reszponzív menü gomb */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-btn {
+        display: block;
+        /* Kis képernyőn látható */
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .user-switch {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .user-select {
+        flex: 1;
+        margin-right: 10px;
+    }
+}

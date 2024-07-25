@@ -1,4 +1,6 @@
 <?php
+// Admin bejelentkezési oldal - HostMaster
+
 require_once __DIR__ . '/includes/init.php';
 
 // CSRF token generálása
@@ -6,7 +8,8 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
-$error = '';
+$error = '';  // Inicializáljuk a $error változót
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize_input($_POST['username']);
     $password = sanitize_input($_POST['password']);
@@ -39,13 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejelentkezés - HostMaster Admin</title>
-    <link rel="stylesheet" href="assets/css/admin_styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
     <div class="login-container">
         <h2>Bejelentkezés</h2>
         <?php if ($error): ?>
-            <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
+            <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
         <form method="post" action="login.php">
             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">

@@ -1,4 +1,6 @@
 <?php
+// Admin felhasználói váltás - HostMaster
+
 require_once 'includes/init.php';
 
 if (isset($_GET['user_id'])) {

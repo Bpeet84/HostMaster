@@ -1,3 +1,3 @@
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> HostMaster Admin</p>
+    &copy; 2024 HostMaster Admin. Minden jog fenntartva.
 </footer>

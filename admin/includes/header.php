@@ -1,38 +1,44 @@
 <?php
-require_once __DIR__ . '/init.php';
+// Admin fejléc - HostMaster
+
+require_once 'init.php';
 
 // Lekérjük az összes felhasználót
-$users = get_all_users();
+$pdo = get_db_connection();
+$stmt = $pdo->prepare('SELECT id, username FROM users WHERE role = "user"');
+$stmt->execute();
+$users = $stmt->fetchAll();
+
+$base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]:8086";
+
+// A kijelentkezési URL meghatározása
+$logout_url = $base_url . '/logout.php';
+
+// Admin visszalépés URL meghatározása
+$admin_return_url = (isset($_SESSION['original_admin_id'])) ? "http://$_SERVER[SERVER_NAME]:8086/switch_back.php" : null;
 ?>
 
 <header>
-    <h1>HostMaster Admin</h1>
-    <div>
-        <?php if (isset($_SESSION['original_admin_id'])): ?>
-            <a href="switch_back.php" class="admin-return-btn">Vissza az admin felületre</a>
+    <div class="logo">
+        <span class="host">Host</span><span class="master">Master</span>
+    </div>
+    <div class="header-actions">
+        <?php if ($admin_return_url): ?>
+            <a href="<?php echo htmlspecialchars($admin_return_url); ?>" class="btn admin-return-btn">Vissza az admin felületre</a>
         <?php endif; ?>
-        <div class="search-container">
-            <input type="text" id="user-search" placeholder="Felhasználó keresése...">
-            <select id="user-select">
+        <div class="user-switch">
+            <select id="user-select" class="user-select">
                 <option value="">Válassz felhasználót</option>
                 <?php foreach ($users as $user): ?>
                     <option value="<?php echo $user['id']; ?>"><?php echo htmlspecialchars($user['username']); ?></option>
                 <?php endforeach; ?>
             </select>
-            <button id="switch-user-btn">Átlépés felhasználói fiókba</button>
+            <button id="switch-user-btn" class="btn">Átlépés</button>
         </div>
-        <form method="post" action="logout.php" style="display:inline;">
+        <form method="post" action="<?php echo htmlspecialchars($logout_url); ?>" style="display:inline;">
             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(get_csrf_token()); ?>">
-            <button class="logout-btn" type="submit">Kijelentkezés</button>
+            <button class="btn logout-btn" type="submit">Kijelentkezés</button>
         </form>
         <button class="menu-btn">&#9776;</button>
     </div>
 </header>
-<nav class="sidebar">
-    <ul>
-        <li><a href="/index.php">Kezdőlap</a></li>
-        <li><a href="/modules/profile/index.php">Felhasználók Kezelése</a></li>
-        <!-- További admin menüpontok itt -->
-    </ul>
-</nav>
-<script src="assets/js/admin_scripts.js"></script>

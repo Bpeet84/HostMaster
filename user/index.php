@@ -1,21 +1,24 @@
 <?php
-// index.php
+// user/index.php - Felhasználói főoldal
 
 require_once __DIR__ . '/includes/init.php';
 
 // Ellenőrizzük, hogy a felhasználó be van-e jelentkezve
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'user') {
     header('Location: login.php');
     exit();
 }
 
 $pdo = get_db_connection();
-$stmt = $pdo->prepare('SELECT username FROM users WHERE id = ?');
+$stmt = $pdo->prepare('SELECT username FROM users WHERE id = ? AND role = "user"');
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
 
 if (!$user) {
-    die('A felhasználói adatok lekérése sikertelen.');
+    // Ha nem található a felhasználó vagy nem felhasználói szerepkörrel rendelkezik
+    session_destroy();
+    header('Location: login.php');
+    exit();
 }
 ?>
 

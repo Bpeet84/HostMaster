@@ -1,7 +1,13 @@
 <?php
-// login.php
+// user/login.php - Felhasználói bejelentkezés kezelése
 
 require_once __DIR__ . '/includes/init.php';
+
+// Ellenőrizzük, hogy a felhasználó már be van-e jelentkezve
+if (isset($_SESSION['user_id'])) {
+    header("Location: index.php");
+    exit();
+}
 
 // CSRF token generálása
 if (empty($_SESSION['csrf_token'])) {
@@ -18,13 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = 'Érvénytelen CSRF token.';
     } else {
         $pdo = get_db_connection();
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? AND role = 'user'");
         $stmt->execute([$username]);
         $user = $stmt->fetch();
 
         if ($user && verify_password($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
             header("Location: index.php");
             exit();
         } else {

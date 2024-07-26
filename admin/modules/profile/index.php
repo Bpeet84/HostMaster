@@ -9,15 +9,9 @@ error_reporting(E_ALL);
 // Időzóna beállítása a pontos időbélyegekhez
 date_default_timezone_set('Europe/Budapest');
 
-// Debug log funkció
-function debug_log($message) {
-    error_log(date('Y-m-d H:i:s') . " - " . $message . "\n", 3, __DIR__ . '/debug.log');
-}
-
-debug_log("Script started");
-
 require_once '../../includes/init.php';
 
+debug_log("Script started");
 debug_log("Init file loaded");
 
 // Ellenőrizzük, hogy az admin be van-e jelentkezve
@@ -29,31 +23,36 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 
 debug_log("Admin authentication passed");
 
-// PHP verzió és szerver információk kiírása
-echo "<pre>";
-echo "PHP Version: " . phpversion() . "\n";
-echo "Server Software: " . $_SERVER['SERVER_SOFTWARE'] . "\n";
-echo "Server Protocol: " . $_SERVER['SERVER_PROTOCOL'] . "\n";
-echo "</pre>";
+try {
+    $pdo = get_db_connection();
+    debug_log("Database connection established");
 
-$pdo = get_db_connection();
-debug_log("Database connection established");
+    // Először ellenőrizzük, hogy milyen mezők vannak a users táblában
+    $stmt = $pdo->prepare("DESCRIBE users");
+    $stmt->execute();
+    $table_structure = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    debug_log("Table structure: " . json_encode($table_structure));
 
-$query = 'SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"';
-debug_log("Query: " . $query);
+    $query = 'SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"';
+    debug_log("Query: " . $query);
 
-$stmt = $pdo->prepare($query);
-$stmt->execute();
-$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-debug_log("Query executed and data fetched");
+    debug_log("Query executed and data fetched");
+    debug_log("Fetched data before header include: " . json_encode($users));
 
-// Adatbázis eredmények kiírása
-echo "<pre>";
-echo "Database Query Results:\n";
-var_dump($users);
-echo "</pre>";
+} catch (PDOException $e) {
+    debug_log("Database error: " . $e->getMessage());
+    die("Adatbázis hiba történt. Kérjük, próbálja újra később.");
+}
 
+include '../../includes/header.php';
+debug_log("Fetched data after header include: " . json_encode($users));
+
+include '../../includes/sidebar.php';
+debug_log("Fetched data after sidebar include: " . json_encode($users));
 ?>
 
 <!DOCTYPE html>
@@ -68,23 +67,8 @@ echo "</pre>";
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        // JavaScript Debug funkció
-        function debugLog(message) {
-            console.log("Debug: " + message);
-        }
-    </script>
 </head>
 <body>
-    <?php 
-    debug_log("Starting to include header");
-    include '../../includes/header.php';
-    debug_log("Header included");
-    
-    debug_log("Starting to include sidebar");
-    include '../../includes/sidebar.php';
-    debug_log("Sidebar included");
-    ?>
     <div class="main-content">
         <div class="container">
             <h1>Felhasználók Kezelése</h1>
@@ -94,8 +78,7 @@ echo "</pre>";
                 </a>
             </div>
             <div class="table-responsive">
-                <!-- Táblázat kezdete -->
-                <?php debug_log("Starting table generation"); ?>
+                <?php debug_log("Before table generation, users: " . json_encode($users)); ?>
                 <table class="user-table">
                     <thead>
                         <tr>
@@ -109,13 +92,13 @@ echo "</pre>";
                     </thead>
                     <tbody>
                         <?php foreach ($users as $user): ?>
-                            <?php debug_log("Processing user: " . $user['username']); ?>
+                            <?php debug_log("Processing user in table: " . json_encode($user)); ?>
                             <tr>
                                 <td><?php echo htmlspecialchars($user['username']); ?></td>
-                                <td><?php echo htmlspecialchars($user['email']); ?></td>
-                                <td><?php echo htmlspecialchars($user['default_domain']); ?></td>
-                                <td><?php echo htmlspecialchars($user['bandwidth_limit']); ?></td>
-                                <td><?php echo htmlspecialchars($user['disk_space_limit']); ?></td>
+                                <td><?php echo htmlspecialchars($user['email'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($user['default_domain'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($user['bandwidth_limit'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($user['disk_space_limit'] ?? 'N/A'); ?></td>
                                 <td class="actions">
                                     <a href="edit_user.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-edit" title="Szerkesztés">
                                         <i data-feather="edit-2"></i>
@@ -128,32 +111,13 @@ echo "</pre>";
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <!-- Táblázat vége -->
-                <?php debug_log("Table generation completed"); ?>
+                <?php debug_log("After table generation, users: " . json_encode($users)); ?>
             </div>
         </div>
     </div>
-    <?php 
-    debug_log("Starting to include footer");
-    include '../../includes/footer.php';
-    debug_log("Footer included");
-    ?>
+    <?php include '../../includes/footer.php'; ?>
     <script>
       feather.replace();
-      debugLog("Feather icons replaced");
-
-      // Táblázat tartalmának ellenőrzése
-      let table = document.querySelector('.user-table');
-      if (table) {
-          debugLog("Table found");
-          let rows = table.querySelectorAll('tbody tr');
-          debugLog("Number of rows: " + rows.length);
-          rows.forEach((row, index) => {
-              debugLog("Row " + (index + 1) + " content: " + row.textContent);
-          });
-      } else {
-          debugLog("Table not found");
-      }
     </script>
 </body>
 </html>

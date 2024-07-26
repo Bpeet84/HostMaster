@@ -1,0 +1,2921 @@
+File: /var/www/HostMaster/README.md
+
+# HostMaster
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access_user.log
+
+84.0.247.188 - - [26/Jul/2024:12:48:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:46 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:48 +0000] "GET /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "\x16\x03\x01\x06\xf6\x01" 400 226 "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "\x16\x03\x01\x07\x16\x01" 400 226 "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET / HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:25 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:26 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:26 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:26 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:32 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:33 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:35 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:40 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:49:41 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:11 +0000] "GET /login.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:03 +0000] "-" 408 - "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:08 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:27 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:28 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:38 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:51:39 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"
+84.0.247.188 - - [26/Jul/2024:12:52:00 +0000] "-" 408 - "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:52:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:10 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:10 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:11 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:31 +0000] "GET /login.php HTTP/1.1" 302 952 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:20 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:21 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:22 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:23 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:28 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:29 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:45 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:46 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:47 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /index.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:49 +0000] "GET /login.php HTTP/1.1" 302 952 "http://s8.hostfix.hu:8086/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error_admin.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/access_admin.log
+
+84.0.247.188 - - [26/Jul/2024:12:48:32 +0000] "GET /index.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:32 +0000] "GET /login.php HTTP/1.1" 200 1014 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:32 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:42 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:42 +0000] "GET /index.php HTTP/1.1" 200 2394 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:42 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:48:46 +0000] "GET /switch_user.php?user_id=4 HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:50:19 +0000] "-" 408 - "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:52:00 +0000] "-" 408 - "-" "-"
+84.0.247.188 - - [26/Jul/2024:12:52:35 +0000] "GET /login.php HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:35 +0000] "GET /favicon.ico HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:52:38 +0000] "GET /login.php HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /login.php HTTP/1.1" 200 1013 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /assets/css/styles.css HTTP/1.1" 200 1460 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /assets/css/header.css HTTP/1.1" 200 2217 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /assets/css/sidebar.css HTTP/1.1" 200 1171 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /assets/css/footer.css HTTP/1.1" 200 364 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:08 +0000] "GET /assets/js/scripts.js HTTP/1.1" 200 819 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:10 +0000] "GET /login.php HTTP/1.1" 200 1013 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:17 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:17 +0000] "GET /index.php HTTP/1.1" 200 2394 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:17 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:20 +0000] "GET /switch_user.php?user_id=3 HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:25 +0000] "GET /index.php HTTP/1.1" 200 2519 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:32 +0000] "GET /login.php HTTP/1.1" 200 1013 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:38 +0000] "POST /login.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:38 +0000] "GET /index.php HTTP/1.1" 200 2526 "http://s8.hostfix.hu:8086/login.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:38 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:42 +0000] "GET /switch_back.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:42 +0000] "GET /index.php HTTP/1.1" 200 2394 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:42 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:44 +0000] "GET /switch_user.php?user_id=4 HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:50 +0000] "GET /index.php HTTP/1.1" 200 2520 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:53 +0000] "GET /switch_back.php HTTP/1.1" 302 - "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:53 +0000] "GET /index.php HTTP/1.1" 200 2394 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:53 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:54 +0000] "GET /index.php HTTP/1.1" 200 2394 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:54 +0000] "GET /assets/images/icon1.png HTTP/1.1" 404 196 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:56 +0000] "GET /modules/profile/index.php HTTP/1.1" 200 11883 "http://s8.hostfix.hu:8086/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+84.0.247.188 - - [26/Jul/2024:12:53:56 +0000] "GET /modules/profile/style.css HTTP/1.1" 200 3284 "http://s8.hostfix.hu:8086/modules/profile/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/logs/error_user.log
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/search_users.php
+
+<?php
+require_once 'includes/init.php';
+
+$query = isset($_GET['query']) ? sanitize_input($_GET['query']) : '';
+
+$pdo = get_db_connection();
+$stmt = $pdo->prepare("SELECT id, username FROM users WHERE username LIKE ?");
+$stmt->execute(["%$query%"]);
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+header('Content-Type: application/json');
+echo json_encode($users);
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/index.php
+
+<?php
+// Admin főoldal - HostMaster
+
+require_once 'includes/init.php';
+
+// Ellenőrizzük, hogy az admin be van-e jelentkezve
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header('Location: login.php');
+    exit();
+}
+
+$pdo = get_db_connection();
+$stmt = $pdo->prepare('SELECT username FROM users WHERE id = ?');
+$stmt->execute([$_SESSION['user_id']]);
+$admin = $stmt->fetch();
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminisztrációs Kezelőfelület</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/scripts.js" defer></script>
+</head>
+<body>
+    <?php include 'includes/header.php'; ?>
+    <?php include 'includes/sidebar.php'; ?>
+    <div class="container">
+        <h1>Üdvözöljük az Adminisztrációs Kezelőfelületen, <?php echo htmlspecialchars($admin['username']); ?>!</h1>
+        <div class="icon-grid">
+            <div class="icon-item">
+                <a href="/modules/profile/index.php">
+                    <img src="assets/images/icon1.png" alt="Modul 1 Ikon">
+                    <p>Felhasználók Kezelése</p>
+                </a>
+            </div>
+            <!-- További modulok itt -->
+        </div>
+    </div>
+    <?php include 'includes/footer.php'; ?>
+</body>
+</html>
+
+================================================================================
+
+File: /var/www/HostMaster/admin/switch_user.php
+
+<?php
+// Admin felhasználói váltás - HostMaster
+
+require_once 'includes/init.php';
+
+if (isset($_GET['user_id'])) {
+    $user_id = intval($_GET['user_id']);
+    
+    // Ellenőrizzük, hogy az admin be van-e jelentkezve
+    if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'admin') {
+        $_SESSION['original_admin_id'] = $_SESSION['user_id'];
+        $_SESSION['user_id'] = $user_id;
+        header('Location: http://' . $_SERVER['SERVER_NAME'] . ':8085/index.php');
+        exit();
+    }
+}
+header('Location: index.php');
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/logout.php
+
+<?php
+require_once 'includes/init.php';
+
+session_unset();
+session_destroy();
+
+header('Location: login.php');
+exit();
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/switch_back.php
+
+<?php
+require_once 'includes/init.php';
+
+if (isset($_SESSION['original_admin_id'])) {
+    $_SESSION['user_id'] = $_SESSION['original_admin_id'];
+    unset($_SESSION['original_admin_id']);
+    header('Location: http://' . $_SERVER['SERVER_NAME'] . ':8086/index.php');
+    exit();
+}
+header('Location: http://' . $_SERVER['SERVER_NAME'] . ':8085/index.php');
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/login.php
+
+<?php
+// Admin bejelentkezési oldal - HostMaster
+
+require_once __DIR__ . '/includes/init.php';
+
+// CSRF token generálása
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+$error = '';  // Inicializáljuk a $error változót
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitize_input($_POST['username']);
+    $password = sanitize_input($_POST['password']);
+    $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+
+    if (!verify_csrf_token($csrf_token)) {
+        $error = 'Érvénytelen CSRF token.';
+    } else {
+        $pdo = get_db_connection();
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
+
+        if ($user && verify_password($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = 'Hibás felhasználónév vagy jelszó.';
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés - HostMaster Admin</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bejelentkezés</h2>
+        <?php if ($error): ?>
+            <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+        <form method="post" action="login.php">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <input type="text" name="username" placeholder="Felhasználónév" required>
+            <input type="password" name="password" placeholder="Jelszó" required>
+            <input type="submit" value="Bejelentkezés">
+        </form>
+    </div>
+</body>
+</html>
+
+================================================================================
+
+File: /var/www/HostMaster/admin/includes/sidebar.php
+
+<aside class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="/index.php">Kezdőlap</a></li>
+            <li><a href="/modules/profile/index.php">Felhasználók Kezelése</a></li>
+            <!-- További admin menüpontok itt -->
+        </ul>
+    </nav>
+</aside>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/includes/footer.php
+
+<footer>
+    &copy; 2024 HostMaster Admin. Minden jog fenntartva.
+</footer>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/includes/admin_functions.php
+
+<?php
+function sanitize_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
+function hash_password($password) {
+    return password_hash($password, PASSWORD_BCRYPT);
+}
+
+function verify_password($password, $hash) {
+    return password_verify($password, $hash);
+}
+
+function get_csrf_token() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+function verify_csrf_token($token) {
+    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+}
+
+function get_all_users() {
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('SELECT id, username FROM users');
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/includes/init.php
+
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/admin_functions.php';
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/includes/header.php
+
+<?php
+// Admin fejléc - HostMaster
+
+require_once 'init.php';
+
+// Lekérjük az összes felhasználót
+$pdo = get_db_connection();
+$stmt = $pdo->prepare('SELECT id, username FROM users WHERE role = "user"');
+$stmt->execute();
+$users = $stmt->fetchAll();
+
+$base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]:8086";
+
+// A kijelentkezési URL meghatározása
+$logout_url = $base_url . '/logout.php';
+
+// Admin visszalépés URL meghatározása
+$admin_return_url = (isset($_SESSION['original_admin_id'])) ? "http://$_SERVER[SERVER_NAME]:8086/switch_back.php" : null;
+?>
+
+<header>
+    <div class="logo">
+        <span class="host">Host</span><span class="master">Master</span>
+    </div>
+    <div class="header-actions">
+        <?php if ($admin_return_url): ?>
+            <a href="<?php echo htmlspecialchars($admin_return_url); ?>" class="btn admin-return-btn">Vissza az admin felületre</a>
+        <?php endif; ?>
+        <div class="user-switch">
+            <select id="user-select" class="user-select">
+                <option value="">Válassz felhasználót</option>
+                <?php foreach ($users as $user): ?>
+                    <option value="<?php echo $user['id']; ?>"><?php echo htmlspecialchars($user['username']); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <button id="switch-user-btn" class="btn">Átlépés</button>
+        </div>
+        <form method="post" action="<?php echo htmlspecialchars($logout_url); ?>" style="display:inline;">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(get_csrf_token()); ?>">
+            <button class="btn logout-btn" type="submit">Kijelentkezés</button>
+        </form>
+        <button class="menu-btn">&#9776;</button>
+    </div>
+</header>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/index.php
+
+<?php
+// modules/profile/index.php - Felhasználók kezelése oldal
+
+// Maximális hibajelentés bekapcsolása
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Időzóna beállítása a pontos időbélyegekhez
+date_default_timezone_set('Europe/Budapest');
+
+// Debug log funkció
+function debug_log($message) {
+    error_log(date('Y-m-d H:i:s') . " - " . $message . "\n", 3, __DIR__ . '/debug.log');
+}
+
+debug_log("Script started");
+
+require_once '../../includes/init.php';
+
+debug_log("Init file loaded");
+
+// Ellenőrizzük, hogy az admin be van-e jelentkezve
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    debug_log("User not logged in or not admin. Redirecting to login page.");
+    header('Location: ../../login.php');
+    exit();
+}
+
+debug_log("Admin authentication passed");
+
+// PHP verzió és szerver információk kiírása
+echo "<pre>";
+echo "PHP Version: " . phpversion() . "\n";
+echo "Server Software: " . $_SERVER['SERVER_SOFTWARE'] . "\n";
+echo "Server Protocol: " . $_SERVER['SERVER_PROTOCOL'] . "\n";
+echo "</pre>";
+
+$pdo = get_db_connection();
+debug_log("Database connection established");
+
+$query = 'SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"';
+debug_log("Query: " . $query);
+
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+debug_log("Query executed and data fetched");
+
+// Adatbázis eredmények kiírása
+echo "<pre>";
+echo "Database Query Results:\n";
+var_dump($users);
+echo "</pre>";
+
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználók Kezelése - HostMaster Admin</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        // JavaScript Debug funkció
+        function debugLog(message) {
+            console.log("Debug: " + message);
+        }
+    </script>
+</head>
+<body>
+    <?php 
+    debug_log("Starting to include header");
+    include '../../includes/header.php';
+    debug_log("Header included");
+    
+    debug_log("Starting to include sidebar");
+    include '../../includes/sidebar.php';
+    debug_log("Sidebar included");
+    ?>
+    <div class="main-content">
+        <div class="container">
+            <h1>Felhasználók Kezelése</h1>
+            <div class="action-bar">
+                <a href="add_user.php" class="btn btn-primary">
+                    <i data-feather="user-plus"></i> Új Felhasználó
+                </a>
+            </div>
+            <div class="table-responsive">
+                <!-- Táblázat kezdete -->
+                <?php debug_log("Starting table generation"); ?>
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Felhasználónév</th>
+                            <th>Email</th>
+                            <th>Alapértelmezett Domain</th>
+                            <th>Sávszélesség Limit (GB)</th>
+                            <th>Lemezterület Limit (MB)</th>
+                            <th>Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($users as $user): ?>
+                            <?php debug_log("Processing user: " . $user['username']); ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($user['username']); ?></td>
+                                <td><?php echo htmlspecialchars($user['email']); ?></td>
+                                <td><?php echo htmlspecialchars($user['default_domain']); ?></td>
+                                <td><?php echo htmlspecialchars($user['bandwidth_limit']); ?></td>
+                                <td><?php echo htmlspecialchars($user['disk_space_limit']); ?></td>
+                                <td class="actions">
+                                    <a href="edit_user.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-edit" title="Szerkesztés">
+                                        <i data-feather="edit-2"></i>
+                                    </a>
+                                    <a href="delete_user.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-delete" title="Törlés" onclick="return confirm('Biztosan törölni szeretné ezt a felhasználót?');">
+                                        <i data-feather="trash-2"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <!-- Táblázat vége -->
+                <?php debug_log("Table generation completed"); ?>
+            </div>
+        </div>
+    </div>
+    <?php 
+    debug_log("Starting to include footer");
+    include '../../includes/footer.php';
+    debug_log("Footer included");
+    ?>
+    <script>
+      feather.replace();
+      debugLog("Feather icons replaced");
+
+      // Táblázat tartalmának ellenőrzése
+      let table = document.querySelector('.user-table');
+      if (table) {
+          debugLog("Table found");
+          let rows = table.querySelectorAll('tbody tr');
+          debugLog("Number of rows: " + rows.length);
+          rows.forEach((row, index) => {
+              debugLog("Row " + (index + 1) + " content: " + row.textContent);
+          });
+      } else {
+          debugLog("Table not found");
+      }
+    </script>
+</body>
+</html>
+<?php
+debug_log("Script ended");
+?>
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/add_user.php
+
+<?php
+// add_user.php - Felhasználó hozzáadása funkció - HostMaster
+
+require_once '../../includes/init.php';
+
+// Ellenőrizzük, hogy az admin be van-e jelentkezve
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+
+$error = '';
+$success = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = sanitize_input($_POST['username'] ?? '');
+    $email = sanitize_input($_POST['email'] ?? '');
+    $password = sanitize_input($_POST['password'] ?? '');
+    $default_domain = sanitize_input($_POST['default_domain'] ?? '');
+    $bandwidth_limit = intval($_POST['bandwidth_limit'] ?? 0);
+    $disk_space_limit = intval($_POST['disk_space_limit'] ?? 0);
+    $inode_limit = intval($_POST['inode_limit'] ?? 0);
+    $domains_limit = intval($_POST['domains_limit'] ?? 0);
+    $subdomains_limit = intval($_POST['subdomains_limit'] ?? 0);
+    $domain_pointers_limit = intval($_POST['domain_pointers_limit'] ?? 0);
+    $email_accounts_limit = intval($_POST['email_accounts_limit'] ?? 0);
+    $email_forwarders_limit = intval($_POST['email_forwarders_limit'] ?? 0);
+    $autoresponders_limit = intval($_POST['autoresponders_limit'] ?? 0);
+    $mysql_databases_limit = intval($_POST['mysql_databases_limit'] ?? 0);
+    $ftp_accounts_limit = intval($_POST['ftp_accounts_limit'] ?? 0);
+
+    // CSRF token ellenőrzése
+    if (!verify_csrf_token($_POST['csrf_token'] ?? '')) {
+        $error = 'Érvénytelen CSRF token. Kérjük, próbálja újra.';
+    } else {
+        // Szerver oldali validáció
+        if (empty($username) || empty($email) || empty($password)) {
+            $error = 'Minden kötelező mezőt ki kell tölteni.';
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error = 'Érvénytelen email cím.';
+        } elseif (strlen($password) < 8) {
+            $error = 'A jelszónak legalább 8 karakter hosszúnak kell lennie.';
+        } else {
+            $pdo = get_db_connection();
+            
+            try {
+                $pdo->beginTransaction();
+
+                // Ellenőrizzük, hogy a felhasználónév vagy email már létezik-e
+                $stmt = $pdo->prepare('SELECT COUNT(*) FROM users WHERE username = ? OR email = ?');
+                $stmt->execute([$username, $email]);
+                if ($stmt->fetchColumn() > 0) {
+                    throw new Exception('A felhasználónév vagy email cím már foglalt.');
+                }
+
+                $password_hashed = password_hash($password, PASSWORD_DEFAULT);
+                $stmt = $pdo->prepare('INSERT INTO users (username, email, password, default_domain, bandwidth_limit, disk_space_limit, inode_limit, domains_limit, subdomains_limit, domain_pointers_limit, email_accounts_limit, email_forwarders_limit, autoresponders_limit, mysql_databases_limit, ftp_accounts_limit, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "user")');
+                $stmt->execute([$username, $email, $password_hashed, $default_domain, $bandwidth_limit, $disk_space_limit, $inode_limit, $domains_limit, $subdomains_limit, $domain_pointers_limit, $email_accounts_limit, $email_forwarders_limit, $autoresponders_limit, $mysql_databases_limit, $ftp_accounts_limit]);
+
+                $pdo->commit();
+                $success = 'Felhasználó sikeresen hozzáadva!';
+            } catch (Exception $e) {
+                $pdo->rollBack();
+                $error = 'Hiba történt: ' . $e->getMessage();
+            }
+        }
+    }
+}
+
+$csrf_token = get_csrf_token();
+
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Új Felhasználó Hozzáadása - HostMaster Admin</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../assets/js/validation.js" defer></script>
+</head>
+<body>
+    <?php include '../../includes/header.php'; ?>
+    <div class="container">
+        <h1>Új Felhasználó Hozzáadása</h1>
+        <?php if ($error): ?>
+            <div class="error-message"><?php echo htmlspecialchars($error); ?></div>
+        <?php endif; ?>
+        <?php if ($success): ?>
+            <div class="success-message"><?php echo htmlspecialchars($success); ?></div>
+        <?php endif; ?>
+        <form id="addUserForm" method="post" action="add_user.php">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrf_token); ?>">
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="username">Felhasználónév:</label>
+                        <input type="text" id="username" name="username" required>
+                        <span class="validation-icon" id="username-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="validation-icon" id="email-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Jelszó:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="validation-icon" id="password-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="default_domain">Alapértelmezett Domain:</label>
+                        <input type="text" id="default_domain" name="default_domain" required>
+                        <span class="validation-icon" id="default_domain-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="bandwidth_limit">Sávszélesség Limit (GB):</label>
+                        <input type="number" id="bandwidth_limit" name="bandwidth_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="disk_space_limit">Lemezterület Limit (MB):</label>
+                        <input type="number" id="disk_space_limit" name="disk_space_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inode_limit">Inode Limit:</label>
+                        <input type="number" id="inode_limit" name="inode_limit" value="0" required>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="domains_limit">Domain Nevek Limit:</label>
+                        <input type="number" id="domains_limit" name="domains_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subdomains_limit">Aldomainek Limit:</label>
+                        <input type="number" id="subdomains_limit" name="subdomains_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="domain_pointers_limit">Domain Pointerek Limit:</label>
+                        <input type="number" id="domain_pointers_limit" name="domain_pointers_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_accounts_limit">Email Fiókok Limit:</label>
+                        <input type="number" id="email_accounts_limit" name="email_accounts_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_forwarders_limit">Email Továbbítók Limit:</label>
+                        <input type="number" id="email_forwarders_limit" name="email_forwarders_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="autoresponders_limit">Automatikus Válaszolók Limit:</label>
+                        <input type="number" id="autoresponders_limit" name="autoresponders_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mysql_databases_limit">MySQL Adatbázisok Limit:</label>
+                        <input type="number" id="mysql_databases_limit" name="mysql_databases_limit" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ftp_accounts_limit">FTP Fiókok Limit:</label>
+                        <input type="number" id="ftp_accounts_limit" name="ftp_accounts_limit" value="0" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group submit-group">
+                <button type="submit">Felhasználó Hozzáadása</button>
+            </div>
+        </form>
+    </div>
+    <?php include '../../includes/footer.php'; ?>
+</body>
+</html>
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/debug.log
+
+2024-07-26 14:53:56 - Script started
+2024-07-26 14:53:56 - Init file loaded
+2024-07-26 14:53:56 - Admin authentication passed
+2024-07-26 14:53:56 - Database connection established
+2024-07-26 14:53:56 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 14:53:56 - Query executed and data fetched
+2024-07-26 14:53:56 - Starting to include header
+2024-07-26 14:53:56 - Header included
+2024-07-26 14:53:56 - Starting to include sidebar
+2024-07-26 14:53:56 - Sidebar included
+2024-07-26 14:53:56 - Starting table generation
+2024-07-26 14:53:56 - Processing user: panel_user
+2024-07-26 14:53:56 - Processing user: safe
+2024-07-26 14:53:56 - Processing user: asasa
+2024-07-26 14:53:56 - Table generation completed
+2024-07-26 14:53:56 - Starting to include footer
+2024-07-26 14:53:56 - Footer included
+2024-07-26 14:53:56 - Script ended
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/edit_user.php
+
+<?php
+// edit_user.php - Felhasználó szerkesztése - HostMaster
+require_once '../../includes/init.php';
+
+// Ellenőrizzük, hogy az admin be van-e jelentkezve
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+
+$error = '';
+$success = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
+    $user_id = intval($_GET['id']);
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?');
+    $stmt->execute([$user_id]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!$user) {
+        die('Felhasználó nem található.');
+    }
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $user_id = intval($_POST['id']);
+    $username = sanitize_input($_POST['username']);
+    $email = sanitize_input($_POST['email']);
+    $default_domain = sanitize_input($_POST['default_domain']);
+    $bandwidth_limit = intval($_POST['bandwidth_limit']);
+    $disk_space_limit = intval($_POST['disk_space_limit']);
+    $inode_limit = intval($_POST['inode_limit']);
+    $domains_limit = intval($_POST['domains_limit']);
+    $subdomains_limit = intval($_POST['subdomains_limit']);
+    $domain_pointers_limit = intval($_POST['domain_pointers_limit']);
+    $email_accounts_limit = intval($_POST['email_accounts_limit']);
+    $email_forwarders_limit = intval($_POST['email_forwarders_limit']);
+    $autoresponders_limit = intval($_POST['autoresponders_limit']);
+    $mysql_databases_limit = intval($_POST['mysql_databases_limit']);
+    $ftp_accounts_limit = intval($_POST['ftp_accounts_limit']);
+
+    $pdo = get_db_connection();
+
+    try {
+        $pdo->beginTransaction();
+
+        if (!empty($_POST['password'])) {
+            $password = hash_password(sanitize_input($_POST['password']));
+            $stmt = $pdo->prepare('UPDATE users SET username = ?, email = ?, password = ?, default_domain = ?, bandwidth_limit = ?, disk_space_limit = ?, inode_limit = ?, domains_limit = ?, subdomains_limit = ?, domain_pointers_limit = ?, email_accounts_limit = ?, email_forwarders_limit = ?, autoresponders_limit = ?, mysql_databases_limit = ?, ftp_accounts_limit = ? WHERE id = ?');
+            $stmt->execute([$username, $email, $password, $default_domain, $bandwidth_limit, $disk_space_limit, $inode_limit, $domains_limit, $subdomains_limit, $domain_pointers_limit, $email_accounts_limit, $email_forwarders_limit, $autoresponders_limit, $mysql_databases_limit, $ftp_accounts_limit, $user_id]);
+        } else {
+            $stmt = $pdo->prepare('UPDATE users SET username = ?, email = ?, default_domain = ?, bandwidth_limit = ?, disk_space_limit = ?, inode_limit = ?, domains_limit = ?, subdomains_limit = ?, domain_pointers_limit = ?, email_accounts_limit = ?, email_forwarders_limit = ?, autoresponders_limit = ?, mysql_databases_limit = ?, ftp_accounts_limit = ? WHERE id = ?');
+            $stmt->execute([$username, $email, $default_domain, $bandwidth_limit, $disk_space_limit, $inode_limit, $domains_limit, $subdomains_limit, $domain_pointers_limit, $email_accounts_limit, $email_forwarders_limit, $autoresponders_limit, $mysql_databases_limit, $ftp_accounts_limit, $user_id]);
+        }
+
+        $pdo->commit();
+        $success = 'Felhasználó sikeresen frissítve!';
+        
+        // Frissítsük a $user változót a legfrissebb adatokkal
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?');
+        $stmt->execute([$user_id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $error = 'Hiba történt: ' . $e->getMessage();
+    }
+}
+
+$csrf_token = get_csrf_token();
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználó Szerkesztése - HostMaster Admin</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../assets/js/validation.js" defer></script>
+</head>
+<body>
+    <?php include '../../includes/header.php'; ?>
+    <?php include '../../includes/sidebar.php'; ?>
+    <div class="main-content">
+        <div class="container">
+            <h1>Felhasználó Szerkesztése</h1>
+            <?php if ($error): ?>
+                <div class="error-message"><?php echo htmlspecialchars($error); ?></div>
+            <?php endif; ?>
+            <?php if ($success): ?>
+                <div class="success-message"><?php echo htmlspecialchars($success); ?></div>
+            <?php endif; ?>
+            <form id="editUserForm" method="post" action="edit_user.php">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrf_token); ?>">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($user['id']); ?>">
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="username">Felhasználónév:</label>
+                            <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Új Jelszó (ha változtatni szeretnél):</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="default_domain">Alapértelmezett Domain:</label>
+                            <input type="text" id="default_domain" name="default_domain" value="<?php echo htmlspecialchars($user['default_domain']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bandwidth_limit">Sávszélesség Limit (GB):</label>
+                            <input type="number" id="bandwidth_limit" name="bandwidth_limit" value="<?php echo htmlspecialchars($user['bandwidth_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="disk_space_limit">Lemezterület Limit (MB):</label>
+                            <input type="number" id="disk_space_limit" name="disk_space_limit" value="<?php echo htmlspecialchars($user['disk_space_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inode_limit">Inode Limit:</label>
+                            <input type="number" id="inode_limit" name="inode_limit" value="<?php echo htmlspecialchars($user['inode_limit']); ?>" required>
+                        </div>
+                    </div><div class="form-column">
+                        <div class="form-group">
+                            <label for="domains_limit">Domain Nevek Limit:</label>
+                            <input type="number" id="domains_limit" name="domains_limit" value="<?php echo htmlspecialchars($user['domains_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subdomains_limit">Aldomainek Limit:</label>
+                            <input type="number" id="subdomains_limit" name="subdomains_limit" value="<?php echo htmlspecialchars($user['subdomains_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="domain_pointers_limit">Domain Pointerek Limit:</label>
+                            <input type="number" id="domain_pointers_limit" name="domain_pointers_limit" value="<?php echo htmlspecialchars($user['domain_pointers_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_accounts_limit">Email Fiókok Limit:</label>
+                            <input type="number" id="email_accounts_limit" name="email_accounts_limit" value="<?php echo htmlspecialchars($user['email_accounts_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_forwarders_limit">Email Továbbítók Limit:</label>
+                            <input type="number" id="email_forwarders_limit" name="email_forwarders_limit" value="<?php echo htmlspecialchars($user['email_forwarders_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="autoresponders_limit">Automatikus Válaszolók Limit:</label>
+                            <input type="number" id="autoresponders_limit" name="autoresponders_limit" value="<?php echo htmlspecialchars($user['autoresponders_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mysql_databases_limit">MySQL Adatbázisok Limit:</label>
+                            <input type="number" id="mysql_databases_limit" name="mysql_databases_limit" value="<?php echo htmlspecialchars($user['mysql_databases_limit']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ftp_accounts_limit">FTP Fiókok Limit:</label>
+                            <input type="number" id="ftp_accounts_limit" name="ftp_accounts_limit" value="<?php echo htmlspecialchars($user['ftp_accounts_limit']); ?>" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group submit-group">
+                    <button type="submit">Felhasználó Frissítése</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include '../../includes/footer.php'; ?>
+</body>
+</html>
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/delete_user.php
+
+<?php
+require_once '../../includes/init.php';
+
+if (isset($_POST['id'])) {
+    $user_id = intval($_POST['id']);
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('DELETE FROM users WHERE id = ?');
+    $stmt->execute([$user_id]);
+
+    header('Location: index.php');
+    exit();
+} elseif (isset($_GET['id'])) {
+    $user_id = intval($_GET['id']);
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?');
+    $stmt->execute([$user_id]);
+    $user = $stmt->fetch();
+
+    if (!$user) {
+        die('Felhasználó nem található.');
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználó Törlése</title>
+    <link rel="stylesheet" href="../../assets/css/admin_styles.css">
+</head>
+<body>
+    <?php include '../../includes/header.php'; ?>
+    <div class="container">
+        <h1>Felhasználó Törlése</h1>
+        <p>Biztosan törölni szeretnéd a következő felhasználót: <strong><?php echo htmlspecialchars($user['username']); ?></strong>?</p>
+        <form method="post" action="delete_user.php">
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($user['id']); ?>">
+            <button type="submit">Igen, törlés</button>
+            <a href="index.php">Mégsem</a>
+        </form>
+    </div>
+    <?php include '../../includes/footer.php'; ?>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/modules/profile/style.css
+
+/* style.css - Profile modul specifikus stílusok */
+
+/* Általános stílusok */
+.main-content {
+    margin-left: 250px;
+    /* Sidebar szélességéhez igazítva */
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #1e3a5f;
+    margin-bottom: 30px;
+}
+
+/* Gomb stílusok */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #15293f;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn-edit {
+    color: #17a2b8;
+}
+
+.btn-delete {
+    color: #dc3545;
+}
+
+/* Felhasználók kezelése oldal stílusok */
+.action-bar {
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.user-table thead {
+    background-color: #f8f9fa;
+}
+
+.user-table th {
+    font-weight: bold;
+    color: #1e3a5f;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.user-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+/* Felhasználó hozzáadása/szerkesztése űrlap stílusok */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.form-column {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1e3a5f;
+    box-shadow: 0 0 5px rgba(30, 58, 95, 0.2);
+}
+
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    font-size: 16px;
+}
+
+.validation-message {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+    min-height: 18px;
+}
+
+/* Hibaüzenet és sikeres művelet üzenet stílusok */
+.error-message,
+.success-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-column {
+        width: 100%;
+    }
+
+    .user-table {
+        font-size: 14px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/js/scripts.js
+
+// Admin általános JavaScript funkciók - HostMaster
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    }
+
+    const switchUserBtn = document.getElementById('switch-user-btn');
+    const userSelect = document.getElementById('user-select');
+
+    switchUserBtn.addEventListener('click', () => {
+        const selectedUserId = userSelect.value;
+        if (selectedUserId) {
+            window.location.href = `switch_user.php?user_id=${selectedUserId}`;
+        } else {
+            alert('Kérjük, válasszon egy felhasználót.');
+        }
+    });
+});
+
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/js/validation.js
+
+// validation.js - Kliens oldali validáció a felhasználó hozzáadása űrlaphoz
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('addUserForm');
+    const inputs = form.querySelectorAll('input');
+
+    const validationRules = {
+        username: {
+            pattern: /^[a-z0-9_][a-z0-9_-]{2,30}$/i,
+            message: 'A felhasználónév 3-31 karakter hosszú lehet, betűket, számokat, alulvonást és kötőjelet tartalmazhat.'
+        },
+        email: {
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            message: 'Kérjük, adjon meg egy érvényes e-mail címet.'
+        },
+        password: {
+            pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+            message: 'A jelszónak legalább 8 karakter hosszúnak kell lennie, és tartalmaznia kell nagybetűt, kisbetűt, számot és speciális karaktert.'
+        },
+        default_domain: {
+            pattern: /^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$/,
+            message: 'Kérjük, adjon meg egy érvényes domain nevet.'
+        }
+    };
+
+    inputs.forEach(input => {
+        const validationMessage = document.createElement('div');
+        validationMessage.className = 'validation-message';
+        input.parentNode.insertBefore(validationMessage, input.nextSibling);
+
+        input.addEventListener('input', function () {
+            validateInput(input);
+        });
+    });
+
+    function validateInput(input) {
+        const rule = validationRules[input.id];
+        const validationIcon = input.parentNode.querySelector('.validation-icon');
+        const validationMessage = input.parentNode.querySelector('.validation-message');
+
+        if (rule && input.value) {
+            if (rule.pattern.test(input.value)) {
+                validationIcon.textContent = '✔';
+                validationIcon.style.color = 'green';
+                validationMessage.textContent = '';
+            } else {
+                validationIcon.textContent = '❌';
+                validationIcon.style.color = 'red';
+                validationMessage.textContent = rule.message;
+            }
+        } else {
+            validationIcon.textContent = '';
+            validationMessage.textContent = '';
+        }
+    }
+
+    form.addEventListener('submit', function (event) {
+        let isValid = true;
+        inputs.forEach(input => {
+            if (validationRules[input.id] && !validationRules[input.id].pattern.test(input.value)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+            alert('Kérjük, javítsa a hibákat az űrlapon!');
+        }
+    });
+});
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/css/footer.css
+
+/* Admin lábléc stílusok - HostMaster */
+
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Lábléc reszponzív módon */
+@media (max-width: 768px) {
+    footer {
+        position: fixed;
+        padding: 20px 0;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/css/sidebar.css
+
+/* Admin oldalsáv stílusok - HostMaster */
+
+.sidebar {
+    width: 250px;
+    background-color: #1e3a5f;
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 66px);
+    position: fixed;
+    top: 66px;
+    left: 0;
+    /* Nagy képernyőn látható */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(-250px);
+    /* Kis képernyőn rejtve */
+}
+
+.sidebar .info {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Oldalsáv reszponzív módon */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+        /* Alapértelmezett rejtett állapot */
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        /* Megjelenítés kattintásra */
+    }
+
+    .sidebar h2,
+    .sidebar .info {
+        text-align: center;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/css/header.css
+
+/* Admin fejléc stílusok - HostMaster */
+
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo .host {
+    color: #00bfff;
+}
+
+.logo .master {
+    color: white;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.user-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 1em;
+    height: 40px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-select:focus {
+    border-color: #1e3a5f;
+    box-shadow: 0 0 5px rgba(30, 58, 95, 0.5);
+}
+
+header .menu-btn {
+    background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none;
+    /* Nagy képernyőn rejtve */
+}
+
+header .btn {
+    background-color: #6b6d6e;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .menu-btn:focus,
+header .btn:focus {
+    outline: none;
+}
+
+/* Reszponzív menü gomb */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-btn {
+        display: block;
+        /* Kis képernyőn látható */
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .user-switch {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .user-select {
+        flex: 1;
+        margin-right: 10px;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/admin/assets/css/styles.css
+
+/* Admin alapértelmezett stílusok - HostMaster */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px 20px 20px 250px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #1e3a5f;
+}
+
+button,
+.btn {
+    cursor: pointer;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #163a4f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox használata a reszponzivitáshoz */
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icon-item {
+    flex: 1 1 200px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icon-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .icon-item {
+        flex: 1 1 100%;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/user/index.php
+
+<?php
+// index.php
+
+require_once __DIR__ . '/includes/init.php';
+
+// Ellenőrizzük, hogy a felhasználó be van-e jelentkezve
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$pdo = get_db_connection();
+$stmt = $pdo->prepare('SELECT username FROM users WHERE id = ?');
+$stmt->execute([$_SESSION['user_id']]);
+$user = $stmt->fetch();
+
+if (!$user) {
+    die('A felhasználói adatok lekérése sikertelen.');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostMaster Felhasználói Oldal</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/scripts.js" defer></script>
+</head>
+<body>
+    <?php include 'includes/header.php'; ?>
+    <?php include 'includes/sidebar.php'; ?>
+    <div class="container">
+        <h1>Üdvözöljük, <?php echo htmlspecialchars($user['username']); ?>!</h1>
+        <div class="icon-grid">
+            <div class="icon-item">
+                <img src="assets/images/icon1.png" alt="Modul 1 Ikon">
+                <p>Modul 1</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon2.png" alt="Modul 2 Ikon">
+                <p>Modul 2</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon3.png" alt="Modul 3 Ikon">
+                <p>Modul 3</p>
+            </div>
+            <div class="icon-item">
+                <img src="assets/images/icon4.png" alt="Modul 4 Ikon">
+                <p>Modul 4</p>
+            </div>
+        </div>
+    </div>
+    <?php include 'includes/footer.php'; ?>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/register.php
+
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/logout.php
+
+<?php
+// logout.php
+
+require_once __DIR__ . '/includes/init.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+    
+    if (verify_csrf_token($csrf_token)) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php");
+        exit();
+    } else {
+        die('Érvénytelen CSRF token.');
+    }
+} else {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/login.php
+
+<?php
+// login.php
+
+require_once __DIR__ . '/includes/init.php';
+
+// CSRF token generálása
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+$error = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitize_input($_POST['username']);
+    $password = sanitize_input($_POST['password']);
+    $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+
+    if (!verify_csrf_token($csrf_token)) {
+        $error = 'Érvénytelen CSRF token.';
+    } else {
+        $pdo = get_db_connection();
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
+
+        if ($user && verify_password($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = 'Hibás felhasználónév vagy jelszó.';
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés - HostMaster</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bejelentkezés</h2>
+        <?php if ($error): ?>
+            <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+        <form method="post" action="login.php">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <input type="text" name="username" placeholder="Felhasználónév" required>
+            <input type="password" name="password" placeholder="Jelszó" required>
+            <input type="submit" value="Bejelentkezés">
+        </form>
+    </div>
+</body>
+</html>
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/sidebar.php
+
+<?php
+// sidebar.php
+
+// Hostnév és PHP verzió lekérdezése
+$hostname = gethostname();
+$php_version = phpversion();
+?>
+
+<div class="sidebar active">
+    <h2>Szerver Információk</h2>
+    <div class="info">Hostnév: <?php echo $hostname; ?></div>
+    <div class="info">PHP verzió: <?php echo $php_version; ?></div>
+</div>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/footer.php
+
+<footer>
+    &copy; 2024 HostMaster. Minden jog fenntartva.
+</footer>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/functions.php
+
+<?php
+// functions.php
+
+function sanitize_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
+function hash_password($password) {
+    return password_hash($password, PASSWORD_BCRYPT);
+}
+
+function verify_password($password, $hash) {
+    return password_verify($password, $hash);
+}
+
+function get_csrf_token() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+function verify_csrf_token($token) {
+    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+}
+?>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/init.php
+
+<?php
+// Admin felhasználói váltás - HostMaster
+
+require_once 'includes/init.php';
+
+if (isset($_GET['user_id'])) {
+    $user_id = intval($_GET['user_id']);
+    
+    // Ellenőrizzük, hogy az admin be van-e jelentkezve
+    if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'admin') {
+        $_SESSION['original_admin_id'] = $_SESSION['user_id'];
+        $_SESSION['user_id'] = $user_id;
+        header('Location: http://' . $_SERVER['SERVER_NAME'] . ':8085/index.php');
+        exit();
+    }
+}
+header('Location: index.php');
+?>
+
+================================================================================
+
+File: /var/www/HostMaster/user/includes/header.php
+
+<?php
+require_once 'init.php';
+
+$base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]:8085";
+
+// A kijelentkezési URL meghatározása
+$logout_url = $base_url . '/logout.php';
+
+// Admin visszalépés URL meghatározása
+$admin_return_url = (isset($_SESSION['original_admin_id'])) ? "http://$_SERVER[SERVER_NAME]:8086/switch_back.php" : null;
+?>
+
+<header>
+    <div class="logo">
+        <span class="host">Host</span><span class="master">Master</span>
+    </div>
+    <div>
+        <?php if ($admin_return_url): ?>
+            <a href="<?php echo htmlspecialchars($admin_return_url); ?>" class="admin-return-btn">Vissza az admin felületre</a>
+        <?php endif; ?>
+        <form method="post" action="<?php echo htmlspecialchars($logout_url); ?>" style="display:inline;">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(get_csrf_token()); ?>">
+            <button class="logout-btn" type="submit">Kijelentkezés</button>
+        </form>
+        <button class="menu-btn">&#9776;</button>
+    </div>
+</header>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/file_manager/style.css
+
+/* File manager module style */
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/emails/style.css
+
+/* EMAIL module style */
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/profile/index.php
+
+<?php
+// modules/profile/index.php
+
+require_once __DIR__ . '/../../includes/init.php';
+
+// Ellenőrizzük, hogy a felhasználó be van-e jelentkezve
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit();
+}
+
+$pdo = get_db_connection();
+$stmt = $pdo->prepare('SELECT username, email FROM users WHERE id = ?');
+$stmt->execute([$_SESSION['user_id']]);
+$user = $stmt->fetch();
+
+if (!$user) {
+    die('A felhasználói adatok lekérése sikertelen.');
+}
+
+// CSRF token generálása
+$csrf_token = get_csrf_token();
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználói Profil - HostMaster</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/profile/style.css">
+</head>
+<body>
+    <?php include '../../includes/header.php'; ?>
+    <?php include '../../includes/sidebar.php'; ?>
+    <div class="container">
+        <div class="profile-container">
+            <h1>Felhasználói Profil</h1>
+            <form action="update_profile.php" method="post">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrf_token); ?>">
+                <div>
+                    <label for="username">Felhasználónév:</label>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+                </div>
+                <div>
+                    <label for="password">Új jelszó:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <input type="submit" value="Profil frissítése">
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include '../../includes/footer.php'; ?>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/profile/update_profile.php
+
+<?php
+// modules/profile/update_profile.php
+
+require_once __DIR__ . '/../../includes/init.php';
+
+// Ellenőrizzük, hogy a felhasználó be van-e jelentkezve
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.php');
+    exit();
+}
+
+$pdo = get_db_connection();
+$error = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = sanitize_input($_POST['username']);
+    $email = sanitize_input($_POST['email']);
+    $password = sanitize_input($_POST['password']);
+    $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+
+    // CSRF token ellenőrzése
+    if (!verify_csrf_token($csrf_token)) {
+        $error = 'Érvénytelen CSRF token.';
+    } else {
+        // Felhasználói adatok frissítése
+        try {
+            if (!empty($password)) {
+                $hashed_password = hash_password($password);
+                $stmt = $pdo->prepare('UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?');
+                $stmt->execute([$username, $email, $hashed_password, $_SESSION['user_id']]);
+            } else {
+                $stmt = $pdo->prepare('UPDATE users SET username = ?, email = ? WHERE id = ?');
+                $stmt->execute([$username, $email, $_SESSION['user_id']]);
+            }
+            header('Location: index.php');
+            exit();
+        } catch (PDOException $e) {
+            $error = 'Hiba történt a profil frissítése során: ' . $e->getMessage();
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Frissítése - HostMaster</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/profile/style.css">
+</head>
+<body>
+    <?php include '../../includes/header.php'; ?>
+    <div class="container">
+        <div class="profile-container">
+            <h1>Profil Frissítése</h1>
+            <?php if ($error): ?>
+                <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+            <?php endif; ?>
+            <form action="update_profile.php" method="post">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(get_csrf_token()); ?>">
+                <div>
+                    <label for="username">Felhasználónév:</label>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                </div>
+                <div>
+                    <label for="password">Új jelszó:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <input type="submit" value="Profil frissítése">
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include '../../includes/sidebar.php'; ?>
+    <?php include '../../includes/footer.php'; ?>
+</body>
+</html>
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/profile/style.css
+
+/* Profil oldal stílusok */
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1e3a5f;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container form div {
+    margin-bottom: 15px;
+}
+
+.profile-container form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.profile-container form input[type="text"],
+.profile-container form input[type="email"],
+.profile-container form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-container form input[type="submit"] {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.profile-container form input[type="submit"]:hover {
+    background-color: #163a4f;
+}
+
+/* Profil oldal reszponzív módon */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-container h1 {
+        font-size: 1.5em;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/ftp/style.css
+
+/* FTP module style */
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/dns/style.css
+
+/* DNS module style */
+
+================================================================================
+
+File: /var/www/HostMaster/user/modules/domains/style.css
+
+/* Domain module style */
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/js/scripts.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    }
+});
+
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/css/footer.css
+
+/* Közös stílusok */
+/* Lábléc stílusok */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Lábléc reszponzív módon */
+@media (max-width: 768px) {
+    footer {
+        position: fixed;
+        padding: 20px 0;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/css/sidebar.css
+
+/* Oldalsáv stílusok */
+.sidebar {
+    width: 250px;
+    background-color: #1e3a5f;
+    /* Egyezzen meg a header és footer színével */
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 66px);
+    /* Header és footer magasságának kivonása */
+    position: fixed;
+    top: 66px;
+    /* Header magassága */
+    left: -250px;
+    /* Alapértelmezetten elrejtve kis felbontáson */
+    transform: translateX(0);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .info {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Oldalsáv reszponzív módon */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: calc(100% - 66px);
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar h2,
+    .sidebar .info {
+        text-align: center;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/css/header.css
+
+/* Fejléc stílusok */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo .host {
+    color: #00bfff;
+    /* Világos kék */
+}
+
+.logo .master {
+    color: white;
+    /* Fehér */
+}
+
+header .menu-btn {
+    background-color: #1e3a5f;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .logout-btn,
+header .admin-return-btn {
+    background-color: #6b6d6e;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .menu-btn:focus,
+header .logout-btn:focus {
+    outline: none;
+}
+
+header .logout-btn,
+header .admin-return-btn {
+    font-size: 1em;
+}
+
+/* Reszponzív menü gomb */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-btn {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/user/assets/css/styles.css
+
+/* Alapértelmezett stílusok */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px 20px 20px 250px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #1e3a5f;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Flexbox használata a reszponzivitáshoz */
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icon-item {
+    flex: 1 1 200px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .icon-item {
+        flex: 1 1 100%;
+    }
+}
+
+================================================================================
+
+File: /var/www/HostMaster/config/config.php
+
+<?php
+// Az adatbázis kapcsolat beállításai
+define('DB_HOST', 'localhost');
+define('DB_USER', 'hostmaster_panel');
+define('DB_PASS', 'erős_jelszó');
+define('DB_NAME', 'hostmaster');
+define('DB_CHARSET', 'utf8mb4');
+
+// Titkos kulcs a jelszavak és egyéb érzékeny adatok titkosításához
+define('SECRET_KEY', 'EzEgyNagyonErősTitkosKulcs_2024!');
+
+// Adatbázis kapcsolat létrehozása PDO-val
+function get_db_connection() {
+    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=' . DB_CHARSET;
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci"
+    ];
+
+    try {
+        $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+        return $pdo;
+    } catch (PDOException $e) {
+        die('Database connection failed: ' . $e->getMessage());
+    }
+}
+?>
+
+
+================================================================================
+

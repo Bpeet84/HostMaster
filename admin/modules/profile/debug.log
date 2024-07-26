@@ -16,3 +16,227 @@
 2024-07-26 14:53:56 - Starting to include footer
 2024-07-26 14:53:56 - Footer included
 2024-07-26 14:53:56 - Script ended
+2024-07-26 15:10:31 - Script started
+2024-07-26 15:10:31 - Init file loaded
+2024-07-26 15:10:31 - Admin authentication passed
+2024-07-26 15:10:31 - Database connection established
+2024-07-26 15:10:31 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:10:31 - Query executed and data fetched
+2024-07-26 15:10:31 - Starting to include header
+2024-07-26 15:10:31 - Header included
+2024-07-26 15:10:31 - Starting to include sidebar
+2024-07-26 15:10:31 - Sidebar included
+2024-07-26 15:10:31 - Starting table generation
+2024-07-26 15:10:31 - Processing user: panel_user
+2024-07-26 15:10:31 - Processing user: safe
+2024-07-26 15:10:31 - Processing user: asasa
+2024-07-26 15:10:31 - Table generation completed
+2024-07-26 15:10:31 - Starting to include footer
+2024-07-26 15:10:31 - Footer included
+2024-07-26 15:10:31 - Script ended
+2024-07-26 15:12:28 - Script started
+2024-07-26 15:12:28 - Init file loaded
+2024-07-26 15:12:28 - Admin authentication passed
+2024-07-26 15:12:28 - Database connection established
+2024-07-26 15:12:28 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:12:28 - Query executed and data fetched
+2024-07-26 15:12:28 - Starting to include header
+2024-07-26 15:12:28 - Header included
+2024-07-26 15:12:28 - Starting to include sidebar
+2024-07-26 15:12:28 - Sidebar included
+2024-07-26 15:12:28 - Starting table generation
+2024-07-26 15:12:28 - Processing user: panel_user
+2024-07-26 15:12:28 - Processing user: safe
+2024-07-26 15:12:28 - Processing user: asasa
+2024-07-26 15:12:28 - Table generation completed
+2024-07-26 15:12:28 - Starting to include footer
+2024-07-26 15:12:28 - Footer included
+2024-07-26 15:12:28 - Script ended
+2024-07-26 15:16:01 - Script started
+2024-07-26 15:16:01 - Init file loaded
+2024-07-26 15:16:01 - Admin authentication passed
+2024-07-26 15:16:01 - Database connection established
+2024-07-26 15:16:01 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:16:01 - Query executed and data fetched
+2024-07-26 15:16:01 - Starting to include header
+2024-07-26 15:16:01 - Header included
+2024-07-26 15:16:01 - Starting to include sidebar
+2024-07-26 15:16:01 - Sidebar included
+2024-07-26 15:16:01 - Starting table generation
+2024-07-26 15:16:01 - Processing user: panel_user
+2024-07-26 15:16:01 - Processing user: safe
+2024-07-26 15:16:01 - Processing user: asasa
+2024-07-26 15:16:01 - Table generation completed
+2024-07-26 15:16:01 - Starting to include footer
+2024-07-26 15:16:01 - Footer included
+2024-07-26 15:16:01 - Script ended
+2024-07-26 15:19:42 - Script started
+2024-07-26 15:19:42 - Init file loaded
+2024-07-26 15:19:42 - Admin authentication passed
+2024-07-26 15:19:42 - Database connection established
+2024-07-26 15:19:42 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:19:42 - Query executed and data fetched
+2024-07-26 15:19:42 - Starting to include header
+2024-07-26 15:19:42 - Header included
+2024-07-26 15:19:42 - Starting to include sidebar
+2024-07-26 15:19:42 - Sidebar included
+2024-07-26 15:19:42 - Starting table generation
+2024-07-26 15:19:42 - Processing user: panel_user
+2024-07-26 15:19:42 - Processing user: safe
+2024-07-26 15:19:42 - Processing user: asasa
+2024-07-26 15:19:42 - Table generation completed
+2024-07-26 15:19:42 - Starting to include footer
+2024-07-26 15:19:42 - Footer included
+2024-07-26 15:19:42 - Script ended
+2024-07-26 15:19:55 - Script started
+2024-07-26 15:19:55 - Init file loaded
+2024-07-26 15:19:55 - Admin authentication passed
+2024-07-26 15:19:55 - Database connection established
+2024-07-26 15:19:55 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:19:55 - Query executed and data fetched
+2024-07-26 15:19:55 - Starting to include header
+2024-07-26 15:19:55 - Header included
+2024-07-26 15:19:55 - Starting to include sidebar
+2024-07-26 15:19:55 - Sidebar included
+2024-07-26 15:19:55 - Starting table generation
+2024-07-26 15:19:55 - Processing user: panel_user
+2024-07-26 15:19:55 - Processing user: safe
+2024-07-26 15:19:55 - Processing user: asasa
+2024-07-26 15:19:55 - Table generation completed
+2024-07-26 15:19:55 - Starting to include footer
+2024-07-26 15:19:55 - Footer included
+2024-07-26 15:19:55 - Script ended
+2024-07-26 15:22:22 - Script started
+2024-07-26 15:22:22 - Init file loaded
+2024-07-26 15:22:22 - Admin authentication passed
+2024-07-26 15:22:22 - Database connection established
+2024-07-26 15:22:22 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:22:22 - Query executed and data fetched
+2024-07-26 15:22:22 - Starting to include header
+2024-07-26 15:22:22 - Header included
+2024-07-26 15:22:22 - Starting to include sidebar
+2024-07-26 15:22:22 - Sidebar included
+2024-07-26 15:22:22 - Starting table generation
+2024-07-26 15:22:22 - Processing user: {"id":2,"username":"panel_user"}
+2024-07-26 15:22:22 - Processing user: {"id":3,"username":"safe"}
+2024-07-26 15:22:22 - Processing user: {"id":4,"username":"asasa"}
+2024-07-26 15:22:22 - Table generation completed
+2024-07-26 15:22:22 - Starting to include footer
+2024-07-26 15:22:22 - Footer included
+2024-07-26 15:22:22 - Script ended
+2024-07-26 15:22:24 - Script started
+2024-07-26 15:22:24 - Init file loaded
+2024-07-26 15:22:24 - Admin authentication passed
+2024-07-26 15:22:24 - Database connection established
+2024-07-26 15:22:24 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:22:24 - Query executed and data fetched
+2024-07-26 15:22:24 - Starting to include header
+2024-07-26 15:22:24 - Header included
+2024-07-26 15:22:24 - Starting to include sidebar
+2024-07-26 15:22:24 - Sidebar included
+2024-07-26 15:22:24 - Starting table generation
+2024-07-26 15:22:24 - Processing user: {"id":2,"username":"panel_user"}
+2024-07-26 15:22:24 - Processing user: {"id":3,"username":"safe"}
+2024-07-26 15:22:24 - Processing user: {"id":4,"username":"asasa"}
+2024-07-26 15:22:24 - Table generation completed
+2024-07-26 15:22:24 - Starting to include footer
+2024-07-26 15:22:24 - Footer included
+2024-07-26 15:22:24 - Script ended
+2024-07-26 15:22:26 - Script started
+2024-07-26 15:22:26 - Init file loaded
+2024-07-26 15:22:26 - Admin authentication passed
+2024-07-26 15:22:26 - Database connection established
+2024-07-26 15:22:26 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:22:26 - Query executed and data fetched
+2024-07-26 15:22:26 - Starting to include header
+2024-07-26 15:22:26 - Header included
+2024-07-26 15:22:26 - Starting to include sidebar
+2024-07-26 15:22:26 - Sidebar included
+2024-07-26 15:22:26 - Starting table generation
+2024-07-26 15:22:26 - Processing user: {"id":2,"username":"panel_user"}
+2024-07-26 15:22:26 - Processing user: {"id":3,"username":"safe"}
+2024-07-26 15:22:26 - Processing user: {"id":4,"username":"asasa"}
+2024-07-26 15:22:26 - Table generation completed
+2024-07-26 15:22:26 - Starting to include footer
+2024-07-26 15:22:26 - Footer included
+2024-07-26 15:22:26 - Script ended
+2024-07-26 15:22:27 - Script started
+2024-07-26 15:22:27 - Init file loaded
+2024-07-26 15:22:27 - Admin authentication passed
+2024-07-26 15:22:27 - Database connection established
+2024-07-26 15:22:27 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:22:27 - Query executed and data fetched
+2024-07-26 15:22:27 - Starting to include header
+2024-07-26 15:22:27 - Header included
+2024-07-26 15:22:27 - Starting to include sidebar
+2024-07-26 15:22:27 - Sidebar included
+2024-07-26 15:22:27 - Starting table generation
+2024-07-26 15:22:27 - Processing user: {"id":2,"username":"panel_user"}
+2024-07-26 15:22:27 - Processing user: {"id":3,"username":"safe"}
+2024-07-26 15:22:27 - Processing user: {"id":4,"username":"asasa"}
+2024-07-26 15:22:27 - Table generation completed
+2024-07-26 15:22:27 - Starting to include footer
+2024-07-26 15:22:27 - Footer included
+2024-07-26 15:22:27 - Script ended
+2024-07-26 15:24:32 - Script started
+2024-07-26 15:24:32 - Init file loaded
+2024-07-26 15:24:32 - Admin authentication passed
+2024-07-26 15:24:32 - Database connection established
+2024-07-26 15:24:32 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-26 15:24:32 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:24:32 - Query executed and data fetched
+2024-07-26 15:24:32 - Fetched data: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-26 15:24:32 - Sample user keys: ["id","username","email","default_domain","bandwidth_limit","disk_space_limit"]
+2024-07-26 15:24:32 - Script ended
+2024-07-26 15:24:36 - Script started
+2024-07-26 15:24:36 - Init file loaded
+2024-07-26 15:24:36 - Admin authentication passed
+2024-07-26 15:24:36 - Database connection established
+2024-07-26 15:24:36 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-26 15:24:36 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:24:36 - Query executed and data fetched
+2024-07-26 15:24:36 - Fetched data: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-26 15:24:36 - Sample user keys: ["id","username","email","default_domain","bandwidth_limit","disk_space_limit"]
+2024-07-26 15:24:36 - Script ended
+2024-07-26 15:27:53 - Script started
+2024-07-26 15:27:53 - Init file loaded
+2024-07-26 15:27:53 - Admin authentication passed
+2024-07-26 15:27:53 - Database connection established
+2024-07-26 15:27:53 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-26 15:27:53 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:27:53 - Query executed and data fetched
+2024-07-26 15:27:53 - Fetched data: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-26 15:27:53 - Sample user keys: ["id","username","email","default_domain","bandwidth_limit","disk_space_limit"]
+2024-07-26 15:27:53 - Processing user in table: {"id":2,"username":"panel_user"}
+2024-07-26 15:27:53 - Processing user in table: {"id":3,"username":"safe"}
+2024-07-26 15:27:53 - Processing user in table: {"id":4,"username":"asasa"}
+2024-07-26 15:27:53 - Script ended
+2024-07-26 15:29:58 - Script started
+2024-07-26 15:29:58 - Init file loaded
+2024-07-26 15:29:58 - Admin authentication passed
+2024-07-26 15:29:58 - Database connection established
+2024-07-26 15:29:58 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-26 15:29:58 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:29:58 - Query executed and data fetched
+2024-07-26 15:29:58 - Fetched data: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-26 15:29:58 - Sample user keys: ["id","username","email","default_domain","bandwidth_limit","disk_space_limit"]
+2024-07-26 15:29:58 - Processing user in table: {"id":2,"username":"panel_user"}
+2024-07-26 15:29:58 - Processing user in table: {"id":3,"username":"safe"}
+2024-07-26 15:29:58 - Processing user in table: {"id":4,"username":"asasa"}
+2024-07-26 15:29:58 - Script ended
+2024-07-26 15:31:41 - Script started
+2024-07-26 15:31:41 - Init file loaded
+2024-07-26 15:31:41 - Admin authentication passed
+2024-07-26 15:31:41 - Database connection established
+2024-07-26 15:31:41 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-26 15:31:41 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 15:31:41 - Query executed and data fetched
+2024-07-26 15:31:41 - Fetched data: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-26 15:31:41 - Sample user keys: ["id","username","email","default_domain","bandwidth_limit","disk_space_limit"]
+2024-07-26 15:31:41 - Before table generation, users: [{"id":2,"username":"panel_user"},{"id":3,"username":"safe"},{"id":4,"username":"asasa"}]
+2024-07-26 15:31:41 - Processing user in table: {"id":2,"username":"panel_user"}
+2024-07-26 15:31:41 - Processing user in table: {"id":3,"username":"safe"}
+2024-07-26 15:31:41 - Processing user in table: {"id":4,"username":"asasa"}
+2024-07-26 15:31:41 - After table generation, users: [{"id":2,"username":"panel_user"},{"id":3,"username":"safe"},{"id":4,"username":"asasa"}]
+2024-07-26 15:31:41 - Script ended
+2024-07-26 15:40:17 - Script started

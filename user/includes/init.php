@@ -1,10 +1,18 @@
 <?php
-// includes/init.php
+// Admin felhasználói váltás - HostMaster
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+require_once 'includes/init.php';
+
+if (isset($_GET['user_id'])) {
+    $user_id = intval($_GET['user_id']);
+    
+    // Ellenőrizzük, hogy az admin be van-e jelentkezve
+    if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'admin') {
+        $_SESSION['original_admin_id'] = $_SESSION['user_id'];
+        $_SESSION['user_id'] = $user_id;
+        header('Location: http://' . $_SERVER['SERVER_NAME'] . ':8085/index.php');
+        exit();
+    }
 }
-
-require_once __DIR__ . '/../../config/config.php';
-require_once __DIR__ . '/functions.php';
+header('Location: index.php');
 ?>

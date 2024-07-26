@@ -1,48 +1,70 @@
-// validation.js - Form Validáció - HostMaster
+// validation.js - Kliens oldali validáció a felhasználó hozzáadása űrlaphoz
 
 document.addEventListener('DOMContentLoaded', function () {
-    const usernameInput = document.getElementById('username');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const defaultDomainInput = document.getElementById('default_domain');
+    const form = document.getElementById('addUserForm');
+    const inputs = form.querySelectorAll('input');
 
-    usernameInput.addEventListener('input', validateUsername);
-    emailInput.addEventListener('input', validateEmail);
-    passwordInput.addEventListener('input', validatePassword);
-    defaultDomainInput.addEventListener('input', validateDefaultDomain);
+    const validationRules = {
+        username: {
+            pattern: /^[a-z0-9_][a-z0-9_-]{2,30}$/i,
+            message: 'A felhasználónév 3-31 karakter hosszú lehet, betűket, számokat, alulvonást és kötőjelet tartalmazhat.'
+        },
+        email: {
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            message: 'Kérjük, adjon meg egy érvényes e-mail címet.'
+        },
+        password: {
+            pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+            message: 'A jelszónak legalább 8 karakter hosszúnak kell lennie, és tartalmaznia kell nagybetűt, kisbetűt, számot és speciális karaktert.'
+        },
+        default_domain: {
+            pattern: /^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$/,
+            message: 'Kérjük, adjon meg egy érvényes domain nevet.'
+        }
+    };
 
-    function validateUsername() {
-        const username = usernameInput.value;
-        const regex = /^[a-z0-9_][a-z0-9_-]{2,30}$/i;
-        updateValidationIcon(username, regex, 'username-validation');
-    }
+    inputs.forEach(input => {
+        const validationMessage = document.createElement('div');
+        validationMessage.className = 'validation-message';
+        input.parentNode.insertBefore(validationMessage, input.nextSibling);
 
-    function validateEmail() {
-        const email = emailInput.value;
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        updateValidationIcon(email, regex, 'email-validation');
-    }
+        input.addEventListener('input', function () {
+            validateInput(input);
+        });
+    });
 
-    function validatePassword() {
-        const password = passwordInput.value;
-        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-        updateValidationIcon(password, regex, 'password-validation');
-    }
+    function validateInput(input) {
+        const rule = validationRules[input.id];
+        const validationIcon = input.parentNode.querySelector('.validation-icon');
+        const validationMessage = input.parentNode.querySelector('.validation-message');
 
-    function validateDefaultDomain() {
-        const domain = defaultDomainInput.value;
-        const regex = /^(?!:\/\/)([a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.)+[a-z]{2,}$/;
-        updateValidationIcon(domain, regex, 'default_domain-validation');
-    }
-
-    function updateValidationIcon(value, regex, iconId) {
-        const icon = document.getElementById(iconId);
-        if (regex.test(value)) {
-            icon.textContent = '✔️';
-            icon.style.color = 'green';
+        if (rule && input.value) {
+            if (rule.pattern.test(input.value)) {
+                validationIcon.textContent = '✔';
+                validationIcon.style.color = 'green';
+                validationMessage.textContent = '';
+            } else {
+                validationIcon.textContent = '❌';
+                validationIcon.style.color = 'red';
+                validationMessage.textContent = rule.message;
+            }
         } else {
-            icon.textContent = '❌';
-            icon.style.color = 'red';
+            validationIcon.textContent = '';
+            validationMessage.textContent = '';
         }
     }
+
+    form.addEventListener('submit', function (event) {
+        let isValid = true;
+        inputs.forEach(input => {
+            if (validationRules[input.id] && !validationRules[input.id].pattern.test(input.value)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+            alert('Kérjük, javítsa a hibákat az űrlapon!');
+        }
+    });
 });

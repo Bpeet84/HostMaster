@@ -1,0 +1,18 @@
+2024-07-26 14:53:56 - Script started
+2024-07-26 14:53:56 - Init file loaded
+2024-07-26 14:53:56 - Admin authentication passed
+2024-07-26 14:53:56 - Database connection established
+2024-07-26 14:53:56 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-26 14:53:56 - Query executed and data fetched
+2024-07-26 14:53:56 - Starting to include header
+2024-07-26 14:53:56 - Header included
+2024-07-26 14:53:56 - Starting to include sidebar
+2024-07-26 14:53:56 - Sidebar included
+2024-07-26 14:53:56 - Starting table generation
+2024-07-26 14:53:56 - Processing user: panel_user
+2024-07-26 14:53:56 - Processing user: safe
+2024-07-26 14:53:56 - Processing user: asasa
+2024-07-26 14:53:56 - Table generation completed
+2024-07-26 14:53:56 - Starting to include footer
+2024-07-26 14:53:56 - Footer included
+2024-07-26 14:53:56 - Script ended

@@ -1,10 +1,20 @@
 <?php
-// admin/includes/header.php
+// Admin fejléc - HostMaster
 
 require_once 'init.php';
 
-// Ellenőrizzük, hogy nincs-e itt valami, ami felülírhatja a $users változót
-// Ha van ilyen kód, kommenteljük ki vagy töröljük
+// Ellenőrizzük, hogy a $users változó létezik-e, és ha nem, inicializáljuk üres tömbként
+if (!isset($users)) {
+    $users = [];
+}
+
+// Lekérjük az összes felhasználót, ha a változó üres
+if (empty($users)) {
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('SELECT id, username FROM users WHERE role = "user"');
+    $stmt->execute();
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]:8086";
 
@@ -13,8 +23,6 @@ $logout_url = $base_url . '/logout.php';
 
 // Admin visszalépés URL meghatározása
 $admin_return_url = (isset($_SESSION['original_admin_id'])) ? "$base_url/switch_back.php" : null;
-
-debug_log("Header.php loaded");
 ?>
 
 <header>

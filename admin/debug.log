@@ -1,0 +1,338 @@
+2024-07-27 08:19:46 - Init.php loaded
+2024-07-27 08:19:52 - Init.php loaded
+2024-07-27 08:19:53 - Init.php loaded
+2024-07-27 10:19:54 - Init.php loaded
+2024-07-27 10:19:54 - Script started
+2024-07-27 10:19:54 - Init file loaded
+2024-07-27 10:19:54 - Admin authentication passed
+2024-07-27 10:19:54 - Database connection established
+2024-07-27 10:19:54 - Table structure: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"username","Type":"varchar(50)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"password","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"email","Type":"varchar(100)","Null":"NO","Key":"UNI","Default":null,"Extra":""},{"Field":"role","Type":"enum('admin','user')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"default_domain","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"bandwidth_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"disk_space_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"inode_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"subdomains_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"domain_pointers_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"email_forwarders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"autoresponders_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"mysql_databases_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"ftp_accounts_limit","Type":"int(11)","Null":"NO","Key":"","Default":"0","Extra":""},{"Field":"admin_session","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":""},{"Field":"linked_admin_id","Type":"int(11)","Null":"YES","Key":"MUL","Default":null,"Extra":""},{"Field":"created_at","Type":"timestamp","Null":"NO","Key":"","Default":"current_timestamp()","Extra":""}]
+2024-07-27 10:19:54 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:19:54 - Query executed and data fetched
+2024-07-27 10:19:54 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:19:54 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:19:54 - Fetched data after sidebar include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:19:54 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:19:54 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:19:54 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:19:54 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:19:54 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:19:54 - Script ended
+2024-07-27 08:19:55 - Init.php loaded
+2024-07-27 08:33:08 - Init.php loaded
+2024-07-27 08:35:09 - Init.php loaded
+2024-07-27 08:36:04 - Init.php loaded
+2024-07-27 08:36:59 - Init.php loaded
+2024-07-27 08:39:23 - Init.php loaded
+2024-07-27 10:39:31 - Init.php loaded
+2024-07-27 10:39:31 - Script started
+2024-07-27 10:39:31 - Init file loaded
+2024-07-27 10:39:31 - Admin authentication passed
+2024-07-27 10:39:31 - Database connection established
+2024-07-27 10:39:31 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:39:31 - Query executed and data fetched
+2024-07-27 10:39:31 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:31 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:31 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:31 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:39:31 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:39:31 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:39:31 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:31 - Script ended
+2024-07-27 10:39:35 - Init.php loaded
+2024-07-27 10:39:35 - Script started
+2024-07-27 10:39:35 - Init file loaded
+2024-07-27 10:39:35 - Admin authentication passed
+2024-07-27 10:39:35 - Database connection established
+2024-07-27 10:39:35 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:39:35 - Query executed and data fetched
+2024-07-27 10:39:35 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:35 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:35 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:35 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:39:35 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:39:35 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:39:35 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:35 - Script ended
+2024-07-27 10:39:36 - Init.php loaded
+2024-07-27 10:39:36 - Script started
+2024-07-27 10:39:36 - Init file loaded
+2024-07-27 10:39:36 - Admin authentication passed
+2024-07-27 10:39:36 - Database connection established
+2024-07-27 10:39:36 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:39:36 - Query executed and data fetched
+2024-07-27 10:39:36 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:36 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:36 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:36 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:39:36 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:39:36 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:39:36 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:39:36 - Script ended
+2024-07-27 08:39:38 - Init.php loaded
+2024-07-27 08:39:43 - Init.php loaded
+2024-07-27 08:39:47 - Init.php loaded
+2024-07-27 08:40:53 - Init.php loaded
+2024-07-27 08:40:54 - Init.php loaded
+2024-07-27 08:41:04 - Init.php loaded
+2024-07-27 08:41:41 - Init.php loaded
+2024-07-27 10:41:42 - Init.php loaded
+2024-07-27 10:41:42 - Script started
+2024-07-27 10:41:42 - Init file loaded
+2024-07-27 10:41:42 - Admin authentication passed
+2024-07-27 10:41:42 - Database connection established
+2024-07-27 10:41:42 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:41:42 - Query executed and data fetched
+2024-07-27 10:41:42 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:41:42 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:41:42 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:41:42 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:41:42 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:41:42 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:41:42 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:41:42 - Script ended
+2024-07-27 08:43:39 - Init.php loaded
+2024-07-27 08:43:48 - Init.php loaded
+2024-07-27 08:43:48 - Init.php loaded
+2024-07-27 10:44:21 - Init.php loaded
+2024-07-27 10:44:21 - Script started
+2024-07-27 10:44:21 - Init file loaded
+2024-07-27 10:44:21 - Admin authentication passed
+2024-07-27 10:44:21 - Database connection established
+2024-07-27 10:44:21 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:44:21 - Query executed and data fetched
+2024-07-27 10:44:21 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:44:21 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:44:21 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:44:21 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:44:21 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:44:21 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:44:21 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:44:21 - Script ended
+2024-07-27 10:47:38 - Init.php loaded
+2024-07-27 10:47:38 - Script started
+2024-07-27 10:47:38 - Init file loaded
+2024-07-27 10:47:38 - Admin authentication passed
+2024-07-27 10:47:38 - Database connection established
+2024-07-27 10:47:38 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:47:38 - Query executed and data fetched
+2024-07-27 10:47:38 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:47:38 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:47:38 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:47:38 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:47:38 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:47:38 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:47:38 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:47:38 - Script ended
+2024-07-27 08:47:40 - Init.php loaded
+2024-07-27 08:49:03 - Init.php loaded
+2024-07-27 08:49:48 - Init.php loaded
+2024-07-27 10:49:50 - Init.php loaded
+2024-07-27 10:49:50 - Script started
+2024-07-27 10:49:50 - Init file loaded
+2024-07-27 10:49:50 - Admin authentication passed
+2024-07-27 10:49:50 - Database connection established
+2024-07-27 10:49:50 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:49:50 - Query executed and data fetched
+2024-07-27 10:49:50 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:50 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:50 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:50 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:49:50 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:49:50 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:49:50 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:50 - Script ended
+2024-07-27 08:49:54 - Init.php loaded
+2024-07-27 10:49:57 - Init.php loaded
+2024-07-27 10:49:57 - Script started
+2024-07-27 10:49:57 - Init file loaded
+2024-07-27 10:49:57 - Admin authentication passed
+2024-07-27 10:49:57 - Database connection established
+2024-07-27 10:49:57 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:49:57 - Query executed and data fetched
+2024-07-27 10:49:57 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:57 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:57 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:57 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:49:57 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:49:57 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:49:57 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:49:57 - Script ended
+2024-07-27 08:49:57 - Init.php loaded
+2024-07-27 08:49:59 - Init.php loaded
+2024-07-27 10:50:00 - Init.php loaded
+2024-07-27 10:50:00 - Script started
+2024-07-27 10:50:00 - Init file loaded
+2024-07-27 10:50:00 - Admin authentication passed
+2024-07-27 10:50:00 - Database connection established
+2024-07-27 10:50:00 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:50:00 - Query executed and data fetched
+2024-07-27 10:50:00 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:50:00 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:50:00 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:50:00 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:50:00 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:50:00 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:50:00 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:50:00 - Script ended
+2024-07-27 08:50:01 - Init.php loaded
+2024-07-27 08:50:22 - Init.php loaded
+2024-07-27 10:52:26 - Init.php loaded
+2024-07-27 10:52:26 - Script started
+2024-07-27 10:52:26 - Init file loaded
+2024-07-27 10:52:26 - Admin authentication passed
+2024-07-27 10:52:26 - Database connection established
+2024-07-27 10:52:26 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:52:26 - Query executed and data fetched
+2024-07-27 10:52:26 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:52:26 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:52:26 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:52:26 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:52:26 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:52:26 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:52:26 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:52:26 - Script ended
+2024-07-27 08:54:03 - Init.php loaded
+2024-07-27 10:54:08 - Init.php loaded
+2024-07-27 10:54:08 - Script started
+2024-07-27 10:54:08 - Init file loaded
+2024-07-27 10:54:08 - Admin authentication passed
+2024-07-27 10:54:08 - Database connection established
+2024-07-27 10:54:08 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:54:08 - Query executed and data fetched
+2024-07-27 10:54:08 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:54:08 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:54:08 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:54:08 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:54:08 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:54:08 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:54:08 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:54:08 - Script ended
+2024-07-27 08:54:11 - Init.php loaded
+2024-07-27 08:54:48 - Init.php loaded
+2024-07-27 08:55:39 - Init.php loaded
+2024-07-27 10:55:40 - Init.php loaded
+2024-07-27 10:55:40 - Script started
+2024-07-27 10:55:40 - Init file loaded
+2024-07-27 10:55:40 - Admin authentication passed
+2024-07-27 10:55:40 - Database connection established
+2024-07-27 10:55:40 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:40 - Query executed and data fetched
+2024-07-27 10:55:40 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:40 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:40 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:40 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:40 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:40 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:40 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:40 - Script ended
+2024-07-27 10:55:43 - Init.php loaded
+2024-07-27 10:55:43 - Script started
+2024-07-27 10:55:43 - Init file loaded
+2024-07-27 10:55:43 - Admin authentication passed
+2024-07-27 10:55:43 - Database connection established
+2024-07-27 10:55:43 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:43 - Query executed and data fetched
+2024-07-27 10:55:43 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:43 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:43 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:43 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:43 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:43 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:43 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:43 - Script ended
+2024-07-27 10:55:45 - Init.php loaded
+2024-07-27 10:55:45 - Script started
+2024-07-27 10:55:45 - Init file loaded
+2024-07-27 10:55:45 - Admin authentication passed
+2024-07-27 10:55:45 - Database connection established
+2024-07-27 10:55:45 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:45 - Query executed and data fetched
+2024-07-27 10:55:45 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:45 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:45 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:45 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:45 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:45 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:45 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:45 - Script ended
+2024-07-27 10:55:46 - Init.php loaded
+2024-07-27 10:55:46 - Script started
+2024-07-27 10:55:46 - Init file loaded
+2024-07-27 10:55:46 - Admin authentication passed
+2024-07-27 10:55:46 - Database connection established
+2024-07-27 10:55:46 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:46 - Query executed and data fetched
+2024-07-27 10:55:46 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:46 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:46 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:46 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Script ended
+2024-07-27 10:55:46 - Init.php loaded
+2024-07-27 10:55:46 - Script started
+2024-07-27 10:55:46 - Init file loaded
+2024-07-27 10:55:46 - Admin authentication passed
+2024-07-27 10:55:46 - Database connection established
+2024-07-27 10:55:46 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:46 - Query executed and data fetched
+2024-07-27 10:55:46 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:46 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:46 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:46 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Script ended
+2024-07-27 10:55:46 - Init.php loaded
+2024-07-27 10:55:46 - Script started
+2024-07-27 10:55:46 - Init file loaded
+2024-07-27 10:55:46 - Admin authentication passed
+2024-07-27 10:55:46 - Database connection established
+2024-07-27 10:55:46 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:55:46 - Query executed and data fetched
+2024-07-27 10:55:46 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:55:46 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:55:46 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:55:46 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:55:46 - Script ended
+2024-07-27 08:55:55 - Init.php loaded
+2024-07-27 10:56:03 - Init.php loaded
+2024-07-27 10:56:03 - Script started
+2024-07-27 10:56:03 - Init file loaded
+2024-07-27 10:56:03 - Admin authentication passed
+2024-07-27 10:56:03 - Database connection established
+2024-07-27 10:56:03 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 10:56:03 - Query executed and data fetched
+2024-07-27 10:56:03 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:56:03 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:56:03 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:56:03 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 10:56:03 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 10:56:03 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 10:56:03 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 10:56:03 - Script ended
+2024-07-27 08:56:17 - Init.php loaded
+2024-07-27 09:04:40 - Init.php loaded
+2024-07-27 11:07:59 - Init.php loaded
+2024-07-27 11:07:59 - Script started
+2024-07-27 11:07:59 - Init file loaded
+2024-07-27 11:07:59 - Admin authentication passed
+2024-07-27 11:07:59 - Database connection established
+2024-07-27 11:07:59 - Query: SELECT id, username, email, default_domain, bandwidth_limit, disk_space_limit FROM users WHERE role = "user"
+2024-07-27 11:07:59 - Query executed and data fetched
+2024-07-27 11:07:59 - Fetched data before header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 11:07:59 - Fetched data after header include: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 11:07:59 - Before table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 11:07:59 - Processing user in table: {"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000}
+2024-07-27 11:07:59 - Processing user in table: {"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0}
+2024-07-27 11:07:59 - Processing user in table: {"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}
+2024-07-27 11:07:59 - After table generation, users: [{"id":2,"username":"panel_user","email":"teszt@teszt.hu","default_domain":"teszt.hu","bandwidth_limit":100,"disk_space_limit":1000},{"id":3,"username":"safe","email":"gitt@git.hu","default_domain":"gitdomi.hu","bandwidth_limit":0,"disk_space_limit":0},{"id":4,"username":"asasa","email":"sadaad@dff.v","default_domain":"sss.hu","bandwidth_limit":10,"disk_space_limit":10}]
+2024-07-27 11:07:59 - Script ended
+2024-07-27 09:08:01 - Init.php loaded
+2024-07-27 09:08:37 - Init.php loaded

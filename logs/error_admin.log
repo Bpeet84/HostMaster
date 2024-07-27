@@ -1,0 +1,3 @@
+[Sat Jul 27 08:56:07.877658 2024] [proxy_fcgi:error] [pid 32651:tid 32802] [client 84.0.247.188:56200] AH01071: Got error 'Primary script unknown', referer: http://s8.hostfix.hu:8086/modules/profile/index.php
+[Sat Jul 27 08:56:10.668025 2024] [proxy_fcgi:error] [pid 32651:tid 32804] [client 84.0.247.188:56200] AH01071: Got error 'Primary script unknown', referer: http://s8.hostfix.hu:8086/modules/profile/index.php
+[Sat Jul 27 08:56:13.484886 2024] [proxy_fcgi:error] [pid 32651:tid 32808] [client 84.0.247.188:56200] AH01071: Got error 'Primary script unknown', referer: http://s8.hostfix.hu:8086/modules/profile/index.php

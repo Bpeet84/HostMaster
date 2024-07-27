@@ -25,6 +25,20 @@ $logout_url = $base_url . '/logout.php';
 $admin_return_url = (isset($_SESSION['original_admin_id'])) ? "$base_url/switch_back.php" : null;
 ?>
 
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostMaster Admin</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <script src="/assets/js/scripts.js" defer></script>
+    <!-- Oldal specifikus fájlok az adott oldalon kerülnek include-olásra -->
+</head>
+<body>
 <header>
     <div class="logo">
         <span class="host">Host</span><span class="master">Master</span>
@@ -49,3 +63,4 @@ $admin_return_url = (isset($_SESSION['original_admin_id'])) ? "$base_url/switch_
         <button class="menu-btn">&#9776;</button>
     </div>
 </header>
+<!-- Oldal tartalom itt kezdődik -->

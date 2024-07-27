@@ -1,6 +1,12 @@
 <?php
 require_once '../../includes/init.php';
 
+// Ellenőrizzük, hogy az admin be van-e jelentkezve
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+
 if (isset($_POST['id'])) {
     $user_id = intval($_POST['id']);
     $pdo = get_db_connection();
@@ -28,10 +34,14 @@ if (isset($_POST['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felhasználó Törlése</title>
-    <link rel="stylesheet" href="../../assets/css/admin_styles.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
 </head>
 <body>
-    <?php include '../../includes/header.php'; ?>
+    <?php include '../../includes/header.php'; // Közös fejléc include-olása ?>
+    <?php include '../../includes/sidebar.php'; // Közös sidebar include-olása ?>
     <div class="container">
         <h1>Felhasználó Törlése</h1>
         <p>Biztosan törölni szeretnéd a következő felhasználót: <strong><?php echo htmlspecialchars($user['username']); ?></strong>?</p>
@@ -41,6 +51,6 @@ if (isset($_POST['id'])) {
             <a href="index.php">Mégsem</a>
         </form>
     </div>
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '../../includes/footer.php'; // Közös lábléc include-olása ?>
 </body>
 </html>

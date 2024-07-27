@@ -1,208 +1,164 @@
-/* style.css - Profile modul specifikus stílusok */
+/* Profil modul specifikus stílusok */
 
-/* Általános stílusok */
-.main-content {
-    margin-left: 250px;
-    /* Sidebar szélességéhez igazítva */
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    color: #1e3a5f;
-    margin-bottom: 30px;
-}
-
-/* Gomb stílusok */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: #1e3a5f;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #15293f;
-}
-
-.btn-sm {
-    padding: 6px 12px;
-    font-size: 12px;
-}
-
-.btn i {
-    margin-right: 8px;
-}
-
-.btn-edit {
-    color: #17a2b8;
-}
-
-.btn-delete {
-    color: #dc3545;
-}
-
-/* Felhasználók kezelése oldal stílusok */
-.action-bar {
-    margin-bottom: 20px;
-}
-
-.table-responsive {
-    overflow-x: auto;
-}
-
-.user-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.user-table th,
-.user-table td {
-    padding: 15px;
-    text-align: left;
-}
-
-.user-table thead {
-    background-color: #f8f9fa;
-}
-
-.user-table th {
-    font-weight: bold;
+.profile-container h1 {
     color: #1e3a5f;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-}
-
-.user-table tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-.user-table tbody tr:hover {
-    background-color: #e9ecef;
-}
-
-.actions {
-    white-space: nowrap;
-}
-
-/* Felhasználó hozzáadása/szerkesztése űrlap stílusok */
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-.form-column {
-    flex: 1;
-    padding: 0 15px;
-    min-width: 300px;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     position: relative;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1e3a5f;
     font-weight: bold;
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
-.form-group input {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
     width: 100%;
-    padding: 10px;
+    padding: 15px 10px 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
-    outline: none;
     border-color: #1e3a5f;
-    box-shadow: 0 0 5px rgba(30, 58, 95, 0.2);
+    outline: none;
 }
 
-.validation-icon {
-    position: absolute;
-    right: 10px;
-    top: 38px;
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 10px;
+    color: #1e3a5f;
+}
+
+.btn {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.validation-message {
-    font-size: 12px;
-    margin-top: 5px;
-    color: #666;
-    min-height: 18px;
+.btn:hover {
+    background-color: #15293f;
 }
 
-/* Hibaüzenet és sikeres művelet üzenet stílusok */
-.error-message,
-.success-message {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.btn-primary {
+    background-color: #1e3a5f;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-danger {
+    background-color: #dc3545;
 }
 
 .error-message {
-    background-color: #ffebee;
-    color: #c62828;
-    border: 1px solid #ef9a9a;
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .success-message {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-    border: 1px solid #a5d6a7;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
-/* Reszponzív dizájn */
-@media (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-    }
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-    .form-row {
-        flex-direction: column;
-    }
+.user-table th,
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
-    .form-column {
-        width: 100%;
-    }
+.user-table th {
+    background-color: #f8f9fa;
+    color: #1e3a5f;
+    font-weight: bold;
+}
 
-    .user-table {
-        font-size: 14px;
-    }
+.user-table tr:hover {
+    background-color: #f5f5f5;
+}
 
-    .user-table th,
-    .user-table td {
-        padding: 10px;
-    }
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
 
-    .btn {
-        padding: 8px 16px;
-    }
+.btn-edit,
+.btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
 }

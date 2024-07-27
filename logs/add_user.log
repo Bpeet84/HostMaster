@@ -1,0 +1,65 @@
+2024-07-27 09:41:44 - Létrehozva a szükséges könyvtárak: /etc/httpd/sites-available és /etc/httpd/sites-enabled
+2024-07-27 09:41:44 - Felhasználó létrehozva: perry26
+2024-07-27 09:41:44 - Jelszó beállítva a felhasználónak: perry26
+2024-07-27 09:41:44 - Home könyvtár jogosultságai beállítva: /home/perry26
+2024-07-27 09:41:44 - Szükséges könyvtárak létrehozva: /home/perry26/domains/26teszt.hostfix.hu/public_html, /home/perry26/domains/26teszt.hostfix.hu/logs, /home/perry26/mail, /home/perry26/backup, /home/perry26/tmp, /home/perry26/private, /home/perry26/config
+2024-07-27 09:41:44 - Könyvtárak jogosultságai beállítva
+2024-07-27 09:41:44 - Virtuális Host konfiguráció létrehozva: /etc/httpd/sites-available/26teszt.hostfix.hu.conf
+2024-07-27 09:41:44 - Szimbolikus link létrehozva: /etc/httpd/sites-enabled/26teszt.hostfix.hu.conf (időtartam: 0 másodperc)
+2024-07-27 09:43:14 - Apache újraindítva
+2024-07-27 09:43:14 - Alapértelmezett index.html létrehozva és jogosultságok beállítva: /home/perry26/domains/26teszt.hostfix.hu/public_html/index.html
+2024-07-27 09:43:14 - User perry26 has been created successfully with domain 26teszt.hostfix.hu.
+2024-07-27 09:43:14 - Access the default index page at http://26teszt.hostfix.hu/index.html
+2024-07-27 09:43:14 - Lefutott add_user.sh script
+2024-07-27 10:03:01 - Létrehozva a szükséges könyvtárak: /etc/httpd/sites-available és /etc/httpd/sites-enabled
+2024-07-27 10:03:01 - Felhasználó létrehozva: perry27
+2024-07-27 10:03:01 - Jelszó beállítva a felhasználónak: perry27
+2024-07-27 10:03:01 - Home könyvtár jogosultságai beállítva: /home/perry27
+2024-07-27 10:03:01 - Szükséges könyvtárak létrehozva: /home/perry27/domains/27teszt.hostfix.hu/public_html, /home/perry27/domains/27teszt.hostfix.hu/logs, /home/perry27/mail, /home/perry27/backup, /home/perry27/tmp, /home/perry27/private, /home/perry27/config
+2024-07-27 10:03:01 - Könyvtárak jogosultságai beállítva
+2024-07-27 10:03:01 - Virtuális Host konfiguráció létrehozva: /etc/httpd/sites-available/27teszt.hostfix.hu.conf
+2024-07-27 10:03:01 - Szimbolikus link létrehozva: /etc/httpd/sites-enabled/27teszt.hostfix.hu.conf (időtartam: 0 másodperc)
+2024-07-27 10:04:31 - Apache újraindítva
+2024-07-27 10:04:31 - Alapértelmezett index.html létrehozva és jogosultságok beállítva: /home/perry27/domains/27teszt.hostfix.hu/public_html/index.html
+2024-07-27 10:04:31 - User perry27 has been created successfully with domain 27teszt.hostfix.hu.
+2024-07-27 10:04:31 - Access the default index page at http://27teszt.hostfix.hu/index.html
+2024-07-27 10:04:31 - Lefutott add_user.sh script
+2024-07-27 10:20:07 - Létrehozva a szükséges könyvtárak: /etc/httpd/sites-available és /etc/httpd/sites-enabled
+2024-07-27 10:20:07 - Felhasználó létrehozva: perry28
+2024-07-27 10:20:07 - Jelszó beállítva a felhasználónak: perry28
+2024-07-27 10:20:07 - Home könyvtár jogosultságai beállítva: /home/perry28
+2024-07-27 10:20:07 - Szükséges könyvtárak létrehozva: /home/perry28/domains/28teszt.hostfix.hu/public_html, /home/perry28/domains/28teszt.hostfix.hu/logs, /home/perry28/mail, /home/perry28/backup, /home/perry28/tmp, /home/perry28/private, /home/perry28/config
+2024-07-27 10:20:07 - Könyvtárak jogosultságai beállítva
+2024-07-27 10:20:07 - Virtuális Host konfiguráció létrehozva: /etc/httpd/sites-available/28teszt.hostfix.hu.conf
+2024-07-27 10:20:07 - Szimbolikus link létrehozva: /etc/httpd/sites-enabled/28teszt.hostfix.hu.conf (időtartam: 0 másodperc)
+2024-07-27 10:20:08 - Apache újraindítva
+2024-07-27 10:20:08 - Alapértelmezett index.html létrehozva és jogosultságok beállítva: /home/perry28/domains/28teszt.hostfix.hu/public_html/index.html
+2024-07-27 10:20:08 - User perry28 has been created successfully with domain 28teszt.hostfix.hu.
+2024-07-27 10:20:08 - Access the default index page at http://28teszt.hostfix.hu/index.html
+2024-07-27 10:20:08 - Lefutott add_user.sh script
+2024-07-27 10:21:41 - Létrehozva a szükséges könyvtárak: /etc/httpd/sites-available és /etc/httpd/sites-enabled
+2024-07-27 10:21:41 - Felhasználó létrehozva: perry29
+2024-07-27 10:21:42 - Jelszó beállítva a felhasználónak: perry29
+2024-07-27 10:21:42 - Home könyvtár jogosultságai beállítva: /home/perry29
+2024-07-27 10:21:42 - Szükséges könyvtárak létrehozva: /home/perry29/domains/29teszt.hostfix.hu/public_html, /home/perry29/domains/29teszt.hostfix.hu/logs, /home/perry29/mail, /home/perry29/backup, /home/perry29/tmp, /home/perry29/private, /home/perry29/config
+2024-07-27 10:21:42 - Könyvtárak jogosultságai beállítva
+2024-07-27 10:21:42 - Virtuális Host konfiguráció létrehozva: /etc/httpd/sites-available/29teszt.hostfix.hu.conf
+2024-07-27 10:21:42 - Szimbolikus link létrehozva: /etc/httpd/sites-enabled/29teszt.hostfix.hu.conf (időtartam: 0 másodperc)
+2024-07-27 10:21:43 - Apache újraindítva
+2024-07-27 10:21:43 - Alapértelmezett index.html létrehozva és jogosultságok beállítva: /home/perry29/domains/29teszt.hostfix.hu/public_html/index.html
+2024-07-27 10:21:43 - User perry29 has been created successfully with domain 29teszt.hostfix.hu.
+2024-07-27 10:21:43 - Access the default index page at http://29teszt.hostfix.hu/index.html
+2024-07-27 10:21:43 - Lefutott add_user.sh script
+2024-07-27 10:24:24 - Létrehozva a szükséges könyvtárak: /etc/httpd/sites-available és /etc/httpd/sites-enabled
+2024-07-27 10:24:24 - Felhasználó létrehozva: perry30
+2024-07-27 10:24:24 - Jelszó beállítva a felhasználónak: perry30
+2024-07-27 10:24:24 - Home könyvtár jogosultságai beállítva: /home/perry30
+2024-07-27 10:24:24 - Szükséges könyvtárak létrehozva: /home/perry30/domains/30teszt.hostfix.hu/public_html, /home/perry30/domains/30teszt.hostfix.hu/logs, /home/perry30/mail, /home/perry30/backup, /home/perry30/tmp, /home/perry30/private, /home/perry30/config
+2024-07-27 10:24:24 - Könyvtárak jogosultságai beállítva
+2024-07-27 10:24:24 - Virtuális Host konfiguráció létrehozva: /etc/httpd/sites-available/30teszt.hostfix.hu.conf
+2024-07-27 10:24:24 - Szimbolikus link létrehozva: /etc/httpd/sites-enabled/30teszt.hostfix.hu.conf (időtartam: 0 másodperc)
+2024-07-27 10:25:54 - Apache újraindítva
+2024-07-27 10:25:54 - Alapértelmezett index.html létrehozva és jogosultságok beállítva: /home/perry30/domains/30teszt.hostfix.hu/public_html/index.html
+2024-07-27 10:25:54 - User perry30 has been created successfully with domain 30teszt.hostfix.hu.
+2024-07-27 10:25:54 - Access the default index page at http://30teszt.hostfix.hu/index.html
+2024-07-27 10:25:54 - Lefutott add_user.sh script
